@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,281 +15,521 @@ import {
   Eye,
   Heart,
   ChevronDown,
+  User,
+  Library,
+  Wallet,
+  Settings,
+  LogOut,
+  Pen,
+  History,
+  TrendingUp,
+  Rocket,
+  PanelTop,
+  Bookmark,
+  ChevronRight,
+  Plus,
+  Minus,
+  AtSign,
+  Lock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Header } from "@/components/layout/header";
 
-export default function ProfilePage() {
-  const works = [
-    {
-      title: "Les Guerriers du Soleil",
-      subtitle: "Vol. 1 - L'Éveil",
-      category: "Sci-Fi",
-      likes: "1.2k",
-      views: "45k",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBFAprw70_w0wkJ6yVN1mIdYhoUMZMUvoBgawSqqkQ2nnoawhuaxqyLhZziFx44KBCMwbEVAhM_BVriNADtFRt1wH7NJ0XZFajCuNkoUTNlAduM-Ak7IVlxXxiMZm46r9T4GVu-ILtubQB_ae8tOpBDsM58rinYSQ2q4WO-Wv6z2Cq0nzd_AlHJFJXTu6_EQ4wF-grzi-y7C_CXgE7DYqSkh-PehYZdf9xmiREByS8IBXXwRf4aCNbkvFgW-JJlEOou-n4EJHzLCoPX",
-      alt: "Couverture de The Sun Warriors montrant un guerrier africain futuriste avec un bouclier lumineux",
-    },
-    {
-      title: "Contes du Baobab",
-      subtitle: "Série d'anthologies",
-      category: "Fantaisie",
-      likes: "856",
-      views: "12k",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuD4FT7TjF_USf8VcBAszWHRXJhAmN1ZFnqZ4GTiu47kQXu38O8D-GzFBIjEWO2GZ5UMBNq2PWoDKmskwzOsUtCgnHoZ7GQPlHprA96xwr9ILq86jafJ1WzwchA7XaO-bn9xTLsshecUDTb9N32mjVqVWjpje81BxnpWp2cgzSVBhmoMqVkRFiTw2bRx1qjQXU_gKREUprxFhssS2giQCDW8hgjY-ahpEMJBfk-5GXqT4BVYOEV7C6e3QMNJW8OABsp2mZD7ZR5sLX_E",
-      alt: "Couverture de Tales of the Baobab représentant un baobab magique et lumineux la nuit",
-    },
-    {
-      title: "Poussière Rouge",
-      subtitle: "Chapitre 1",
-      category: "Action",
-      likes: "342",
-      views: "8k",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuA9i2h-oEj3AZ9UcxZyoM2yMuEuBObWI5FivXXvcsN5SdnW4QWoWrkLVWmBfHxw-xQIunrKv-IRh_S9W87ozBPaJolOhVCYpYmYTRIlBN1dkP6rRUhpmS87XmvbKVVZ9Bzy5snh15y8zpfS66fOl9dNwIaaQ5o2wZ9OUrt4mVfD3LljgWt413T5kvNkAN2pJfy_8kOlEQpSfoUkpcU7yAcyJmtWEijyc5mbJOrQxIphNhMKHSr22JDP7FzFQ-8Ic8Z2uXIzPt6qt1nJ",
-      alt: "Art numérique abstrait rouge et noir représentant une action intense",
-    },
-    {
-      title: "Royaume d'Or",
-      subtitle: "Fiction historique",
-      category: "Histoire",
-      likes: "2.1k",
-      views: "89k",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCoOwDDstMo1mk2raXoGStgfXsFaI6Vh4_m_6a3HO6VB02s7sM4rWmtHMqhhLw3w-Li_DnhxO_jokjYmvLbVCS3FBmng0YViT247fdpSiy_GMC2x-iFfljQ1MDihfdsplsx5fmE-i6MCtxQsa6k-K8tL0lJbAntO4WBTPGN02haXf4hf8IP0m6Ga75pWCpLo8X9KLC7uDR8OCnH7nQYugyn7znxiByJStES8tNZ20UKt6bh-X89VJh-Xt3ikF0MDHO9FhAPe20m-JQ_",
-      alt: "Motifs dorés sur fond sombre représentant des artefacts historiques",
-    },
-  ];
-
+function Header() {
   return (
-    <>
-      <Header />
-      <main className="flex-grow">
-        <div className="w-full h-48 md:h-64 lg:h-80 overflow-hidden relative group">
-          <div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-10"></div>
-          <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaoApOEvOIR6xBzvn4BykblzhyHqZpHsM4m4Xw91mAY4Fq1WY_27b5zvQ8wQ3Vv3u0o4XyAJy7o-5244AaP_W6pLpThHpfnSIyRb-CQE__9h5LK2yphlKYJi-iRSyFM9z3AfVCQToPH1VFywxG8hJ1_IKr4IB0A4dBYzKHI1p1iMphe0MCVjRwtChgN03sT2__xXyOAWJh8jy6b5EUUgQ6lK8SinKY8DQgCqRHUrO64oUUw5JecU2gDZYqbqDvPuLBf53K6VsKj5RT"
-            alt="Bannière de motif géométrique africain abstrait et vibrant en orange et marron foncé"
-            layout="fill"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            objectFit="cover"
-            className="transform group-hover:scale-105 transition-transform duration-700"
+    <header className="relative z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#493c22] bg-white/90 dark:bg-[#231d10]/95 backdrop-blur-md px-6 lg:px-10 py-3 sticky top-0 w-full shadow-sm">
+      <div className="flex items-center gap-8">
+        <div className="flex items-center gap-3 text-slate-900 dark:text-white cursor-pointer group">
+          <div className="size-8 text-primary transition-transform group-hover:scale-110">
+            <svg
+              fill="currentColor"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
+                fillRule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <h2 className="text-xl font-bold leading-tight tracking-[-0.015em] font-display">
+            AfriStory
+          </h2>
+        </div>
+        <nav className="hidden md:flex items-center gap-8">
+          <a
+            className="text-slate-600 dark:text-white text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            Explorer
+          </a>
+          <a
+            className="text-slate-600 dark:text-white text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            Draft
+          </a>
+          <a
+            className="text-slate-600 dark:text-white text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            Pro
+          </a>
+          <a
+            className="text-slate-600 dark:text-white text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+            href="#"
+          >
+            Communauté
+          </a>
+        </nav>
+      </div>
+      <div className="flex items-center gap-6">
+        <div className="hidden sm:flex relative">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 dark:text-[#cbb790]">
+            <Search className="h-5 w-5" />
+          </span>
+          <input
+            className="w-full sm:w-64 bg-slate-100 dark:bg-[#493c22] text-slate-900 dark:text-white rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary border-none placeholder:text-slate-400 dark:placeholder:text-[#cbb790]/70"
+            placeholder="Rechercher des histoires, auteurs..."
+            type="text"
           />
         </div>
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 -mt-20 relative z-20 pb-12">
-          <div className="bg-white dark:bg-surface-dark rounded-xl shadow-xl border border-gray-200 dark:border-white/5 p-6 mb-8">
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="relative shrink-0">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-background-dark bg-gray-200 overflow-hidden shadow-lg">
-                  <Image
-                    alt="Profil de Kwame Osei"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqqIscv-TrWcBfIjhrzTQbklonGt_4mOFH46eQUJp_4MRFViPwnH22Acr6DVMDBPhb2dSqNoS7YG3cnzJcuweEp4ClgTV9fuJJR-06O1ewelkmeNcpExxcJOob6opG42Hjmxp2q0zLHDNe-5zEhoA6aXF-GwuoWSh5KdLcjjczLb_lrmU8oVpQ9al2huuH3SiNw-EmkpxojvC1n4dpHpp15R28zkU01wDHoOc8gRnvqRNkHlvqN6YK23AvlG9zhNuVVxTpDbFvYIM"
-                    width={160}
-                    height={160}
-                  />
+        <div className="flex items-center gap-3 border-l border-slate-200 dark:border-[#493c22] pl-6">
+          <div className="flex flex-col items-end hidden sm:flex">
+            <span className="text-xs font-medium text-slate-500 dark:text-[#cbb790]">
+              Solde
+            </span>
+            <span className="text-sm font-bold text-primary font-display">
+              2,450 AC
+            </span>
+          </div>
+          <div
+            className="h-10 w-10 rounded-full bg-cover bg-center ring-2 ring-primary/50 cursor-pointer hover:ring-primary transition-all"
+            style={{
+              backgroundImage:
+                'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC52iNmmR2nZq_5lgSSYhJ8Hq1zT0TRIhqURg-7EiBUOAofOamA1JD_9aV22mGGCuFOLg8CGGdAz-RsliFTJIMzsr_IqtxnEtrTelGlc8LEmtQpfHOInAU3_jIrBImTb9_bo4Qyg6ugpiNo8Oa_ChVOYCeBWY6r2y_fKtcusi4FghDWmv9JM-2UPNPYtV1n3pyfql8OMkqX1EMV86KS0nCEo3mTfv47LMBoO_SbWLChQ_BkKtkwydRRx8rL6W7WXm_IAc-C2w55d4ML")',
+            }}
+          ></div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default function ProfilePage() {
+  return (
+    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-text-main min-h-screen flex flex-col overflow-x-hidden transition-colors duration-200">
+      <div className="fixed inset-0 pointer-events-none bg-pattern z-0"></div>
+      <Header />
+      <div className="relative z-0 flex flex-1 w-full max-w-[1440px] mx-auto pt-6 pb-12 px-4 sm:px-6 lg:px-8 gap-8">
+        <aside className="hidden lg:flex flex-col w-72 shrink-0 gap-6">
+          <div className="bg-white dark:bg-[#2d261a] p-6 rounded-xl border border-slate-200 dark:border-[#493c22] shadow-sm flex flex-col items-center text-center">
+            <div className="relative mb-4">
+              <div
+                className="h-24 w-24 rounded-full bg-cover bg-center ring-4 ring-primary/20"
+                style={{
+                  backgroundImage:
+                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2vHOUHtQRuO70ehbA1IbudKwKiIagDx4YDoG-BDaUpuaZ8-U57C8U1Ir17vH05pu2PhuqN3iB3bqUsTCjDb5kPOMUV7J2ALvBwynMA-CJ0rRtHvjMKEDysNvG1T2z5emXPB-u4bRxCPpFP8nL8rpNTkzqIKFPAODQ2ESj5nWXe79NvwyZlOjX3zFub2jUurkGhBqXHb7XiVcglEeAayJ-wqXj4IiZnTK0IN-Luw0uPHjanEXqvmWD_pEDjPd5uKo094P6Sw-IErI_")',
+                }}
+              ></div>
+              <div className="absolute bottom-0 right-0 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-[#2d261a]">
+                PRO
+              </div>
+            </div>
+            <h1 className="text-slate-900 dark:text-white text-xl font-bold font-display">
+              Kwame Osei
+            </h1>
+            <p className="text-slate-500 dark:text-[#cbb790] text-sm mt-1">
+              Membre depuis Mars 2023
+            </p>
+            <div className="mt-4 w-full pt-4 border-t border-slate-200 dark:border-[#493c22]/50 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span className="block text-lg font-bold text-slate-900 dark:text-white font-display">
+                  124
+                </span>
+                <span className="text-xs text-slate-500 dark:text-[#cbb790]">
+                  Lus
+                </span>
+              </div>
+              <div>
+                <span className="block text-lg font-bold text-slate-900 dark:text-white font-display">
+                  42
+                </span>
+                <span className="text-xs text-slate-500 dark:text-[#cbb790]">
+                  Favoris
+                </span>
+              </div>
+            </div>
+          </div>
+          <nav className="flex flex-col gap-2">
+            <a
+              className="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-white shadow-md shadow-primary/20 transition-all"
+              href="#"
+            >
+              <User className="fill-current" />
+              <span className="font-medium">Info Personnelle</span>
+            </a>
+            <a
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#2d261a] hover:text-slate-900 dark:hover:text-white transition-all group"
+              href="#"
+            >
+              <Library className="group-hover:text-primary transition-colors" />
+              <span className="font-medium">Ma Bibliothèque</span>
+            </a>
+            <a
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#2d261a] hover:text-slate-900 dark:hover:text-white transition-all group"
+              href="#"
+            >
+              <Wallet className="group-hover:text-primary transition-colors" />
+              <span className="font-medium">Portefeuille</span>
+              <span className="ml-auto bg-primary/20 text-primary text-xs font-bold px-2 py-0.5 rounded-full">
+                New
+              </span>
+            </a>
+            <a
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#2d261a] hover:text-slate-900 dark:hover:text-white transition-all group"
+              href="#"
+            >
+              <Settings className="group-hover:text-primary transition-colors" />
+              <span className="font-medium">Préférences</span>
+            </a>
+            <a
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all mt-4"
+              href="#"
+            >
+              <LogOut />
+              <span className="font-medium">Déconnexion</span>
+            </a>
+          </nav>
+        </aside>
+        <main className="flex-1 flex flex-col gap-8 min-w-0">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white font-display tracking-tight">
+                Bonjour, Kwame !
+              </h1>
+              <p className="text-slate-500 dark:text-[#cbb790] mt-2 text-lg">
+                Prêt à continuer votre voyage narratif ?
+              </p>
+            </div>
+            <div className="hidden sm:block">
+              <button className="bg-[#2d261a] hover:bg-[#3d3324] border border-[#493c22] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
+                <Edit className="h-4 w-4" />
+                Modifier le profil
+              </button>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-white dark:bg-[#2d261a] p-6 rounded-xl border border-slate-200 dark:border-[#493c22] flex flex-col gap-1 relative overflow-hidden group">
+              <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Book className="h-16 w-16 text-primary" />
+              </div>
+              <p className="text-slate-500 dark:text-[#cbb790] text-sm font-medium">
+                Livres lus ce mois
+              </p>
+              <p className="text-slate-900 dark:text-white text-3xl font-bold font-display">
+                12
+              </p>
+              <div className="w-full bg-slate-100 dark:bg-[#493c22] h-1.5 rounded-full mt-2 overflow-hidden">
+                <div
+                  className="bg-primary h-full rounded-full w-[65%]"
+                ></div>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-[#2d261a] p-6 rounded-xl border border-slate-200 dark:border-[#493c22] flex flex-col gap-1 relative overflow-hidden group">
+              <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <History className="h-16 w-16 text-primary" />
+              </div>
+              <p className="text-slate-500 dark:text-[#cbb790] text-sm font-medium">
+                Commentaires
+              </p>
+              <p className="text-slate-900 dark:text-white text-3xl font-bold font-display">
+                45
+              </p>
+              <div className="flex items-center gap-1 mt-2 text-xs text-green-500 font-medium">
+                <TrendingUp className="h-3.5 w-3.5" />
+                <span>+12% vs mois dernier</span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-[#2d261a] to-[#231d10] p-6 rounded-xl border border-slate-200 dark:border-[#493c22] flex flex-col gap-1 relative overflow-hidden">
+              <div className="absolute inset-0 bg-primary/5"></div>
+              <p className="text-slate-500 dark:text-[#cbb790] text-sm font-medium relative z-10">
+                Badge actuel
+              </p>
+              <div className="flex items-center gap-3 mt-1 relative z-10">
+                <div className="bg-primary/20 p-1.5 rounded-full">
+                  <Rocket className="text-primary" />
+                </div>
+                <p className="text-slate-900 dark:text-white text-xl font-bold font-display">
+                  Explorateur
+                </p>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 relative z-10">
+                5 livres pour le niveau suivant
+              </p>
+            </div>
+          </div>
+          <section className="flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white font-display flex items-center gap-2">
+                <History className="text-primary" />
+                Reprendre la lecture
+              </h2>
+              <a
+                className="text-sm text-primary hover:text-primary-dark font-medium transition-colors"
+                href="#"
+              >
+                Voir tout
+              </a>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white dark:bg-[#2d261a] rounded-xl overflow-hidden border border-slate-200 dark:border-[#493c22] flex shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                <div
+                  className="w-24 h-full bg-cover bg-center shrink-0"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo5NICvMS4PJtkyWZgXXU_B7dAWEesqFZBwmitDIHbu1bbhDTZFoYEJ0bY9yzBYpuc19d824aW0J8ICNEPebiLGL-my7BjnXyETpgeBYtO_9VJlhNOVvVJmrxKuclU9lnTKFlwoRDbb5nnno7RcoeoOvyrq7lPmaIwmbpP002HosNcWkPKM-xPxupeygSU3rydFNhHutj3FWjuOtexKE-ZCUJDVWflS37o_sntI4kuiBly5wQ5WICd7n2kMXNKLewYoje8Mn7z1_XN")',
+                  }}
+                ></div>
+                <div className="p-4 flex flex-col justify-between flex-1">
+                  <div>
+                    <span className="text-[10px] font-bold text-primary tracking-wide uppercase">
+                      Afro-Fantasy
+                    </span>
+                    <h3 className="font-bold text-slate-900 dark:text-white font-display line-clamp-1 group-hover:text-primary transition-colors">
+                      Les Gardiens du Nil
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-[#cbb790] mt-1">
+                      Chapitre 14 / 28
+                    </p>
+                  </div>
+                  <div className="mt-3">
+                    <div className="w-full bg-slate-100 dark:bg-[#493c22] h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-primary h-full rounded-full w-[50%]"></div>
+                    </div>
+                    <p className="text-[10px] text-right text-slate-400 dark:text-slate-500 mt-1">
+                      50%
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div className="flex-1 w-full pt-2">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+              <div className="bg-white dark:bg-[#2d261a] rounded-xl overflow-hidden border border-slate-200 dark:border-[#493c22] flex shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                <div
+                  className="w-24 h-full bg-cover bg-center shrink-0"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlQStffIPS71gw5XzBmrqzD-4lgUiBCoKR2KR4eMSx0WkY-5p1O9E_pchWKxlk2NxxtSgNPXcAsLlPVRDhp2hCUcLw_TBT64rC5XFHXRs3Nu_kAeUyIUIpQSCO-3hJf5m7eDdZJQYsDcvTW7EwluXk02U5mBmi-2zCFZcy-rV8py0zQXs385kl-FQlVyvCnFbOSOTa2JrP4I3xOPsPOlddZs7FVwj8ZR_MayIFA3mc7HqX8C00vsvXAgG3zTYVu_PPPn12yCYCPPUE")',
+                  }}
+                ></div>
+                <div className="p-4 flex flex-col justify-between flex-1">
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <h1 className="text-3xl font-bold text-gray-900 dark:text-white leading-tight">
-                        Kwame Osei
-                      </h1>
-                      <div
-                        className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary"
-                        title="Compte Pro"
-                      >
-                        <Verified className="h-[18px] w-[18px] fill-current" />
-                        <span className="text-xs font-bold uppercase tracking-wide">
-                          Artiste Certifié
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-gray-500 dark:text-gray-400 text-lg">
-                      Illustrateur &amp; Conteur de{" "}
-                      <span className="text-gray-700 dark:text-gray-200 font-medium">
-                        Accra, Ghana
-                      </span>
+                    <span className="text-[10px] font-bold text-primary tracking-wide uppercase">
+                      Cyberpunk
+                    </span>
+                    <h3 className="font-bold text-slate-900 dark:text-white font-display line-clamp-1 group-hover:text-primary transition-colors">
+                      Lagos 2099
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-[#cbb790] mt-1">
+                      Chapitre 3 / 45
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-3 w-full md:w-auto">
-                    <Button className="flex-1 md:flex-none">
-                      <UserPlus className="h-5 w-5" />
-                      <span>Suivre</span>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="flex-1 md:flex-none border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-white/5"
-                    >
-                      <Mail className="h-5 w-5" />
-                      <span>Contact</span>
-                    </Button>
+                  <div className="mt-3">
+                    <div className="w-full bg-slate-100 dark:bg-[#493c22] h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-primary h-full rounded-full w-[8%]"></div>
+                    </div>
+                    <p className="text-[10px] text-right text-slate-400 dark:text-slate-500 mt-1">
+                      8%
+                    </p>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
-                  <div className="lg:col-span-2 space-y-4">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Créer des récits afro-futuristes qui inspirent et défient le statu quo. Spécialisé dans les bandes dessinées numériques et les romans graphiques qui mêlent folklore traditionnel et éléments de science-fiction. Travaille actuellement sur la saga "Les Guerriers du Soleil".
+              </div>
+              <div className="bg-white dark:bg-[#2d261a] rounded-xl overflow-hidden border border-slate-200 dark:border-[#493c22] flex shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                <div
+                  className="w-24 h-full bg-cover bg-center shrink-0"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAwkyN-xiDSPLkNhlS_4MuuKcFOv0rs9hO3tljox4Du_893wpUzdEbuAqr8s8Va0u_cUcahDp0em3vGJZWeOpddh9IIoV3cYDaeJFF_CxSYEqz4SwZ8V24nXXdM4kAC5ikONtzg5uTzPH-Dzvnl0kHG66Xr3IEZUsNAcufLnJdgxzSBQO9MpJg4NqP3Ez5r3pnY3EKBYazGxFicc25Frkhi7SZhxkAuZefkZxVqvRpHy7YOT08bBuwIwAAkUo5eGOQkGE6yfGi-gSu")',
+                  }}
+                ></div>
+                <div className="p-4 flex flex-col justify-between flex-1">
+                  <div>
+                    <span className="text-[10px] font-bold text-primary tracking-wide uppercase">
+                      Historique
+                    </span>
+                    <h3 className="font-bold text-slate-900 dark:text-white font-display line-clamp-1 group-hover:text-primary transition-colors">
+                      Terres Rouges
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-[#cbb790] mt-1">
+                      Terminé
                     </p>
-                    <div className="flex flex-wrap gap-4 pt-2">
-                      <a
-                        className="flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
-                        href="#"
-                      >
-                        <Languages className="h-5 w-5" />
-                        kwameosei.art
-                      </a>
-                      <a
-                        className="flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
-                        href="#"
-                      >
-                        <ShoppingBag className="h-5 w-5" />
-                        Boutique Amazon
-                      </a>
-                      <div className="w-px h-4 bg-gray-300 dark:bg-white/20 hidden sm:block"></div>
-                      <div className="flex gap-3">
-                        <a
-                          className="text-gray-400 hover:text-primary transition-colors"
-                          href="#"
-                        >
-                          <Languages />
-                        </a>
-                        <a
-                          className="text-gray-400 hover:text-primary transition-colors"
-                          href="#"
-                        >
-                          <Share2 />
-                        </a>
-                      </div>
-                    </div>
                   </div>
-                  <div className="flex flex-row lg:flex-col justify-between lg:justify-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/5">
-                    <div className="flex-1">
-                      <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                        12.5k
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Abonnés
-                      </p>
-                    </div>
-                    <div className="w-px h-auto lg:h-px lg:w-full bg-gray-200 dark:bg-white/10"></div>
-                    <div className="flex-1">
-                      <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                        850k
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Vues
-                      </p>
-                    </div>
-                    <div className="w-px h-auto lg:h-px lg:w-full bg-gray-200 dark:bg-white/10"></div>
-                    <div className="flex-1">
-                      <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                        24
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Oeuvres
-                      </p>
-                    </div>
+                  <div className="mt-3">
+                    <button className="text-xs font-medium text-slate-900 dark:text-white bg-slate-100 dark:bg-[#493c22] px-3 py-1 rounded hover:bg-slate-200 dark:hover:bg-primary/20 transition-colors w-full">
+                      Relire
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="border-b border-gray-200 dark:border-white/10 mb-8">
-            <nav
-              aria-label="Tabs"
-              className="-mb-px flex space-x-8 overflow-x-auto"
-            >
-              <a
-                className="border-primary text-primary whitespace-nowrap border-b-2 py-4 px-1 text-sm font-bold flex items-center gap-2"
-                href="#"
-              >
-                <Book className="h-[18px] w-[18px]" />
-                Oeuvres Publiées
-                <span className="bg-primary/10 text-primary text-xs py-0.5 px-2 rounded-full ml-1">
-                  Pro
-                </span>
-              </a>
-              <a
-                className="border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2"
-                href="#"
-              >
-                <Edit className="h-[18px] w-[18px]" />
-                Brouillons
-              </a>
-              <a
-                className="border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2"
-                href="#"
-              >
-                <Info className="h-[18px] w-[18px]" />
-                À Propos
-              </a>
-            </nav>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {works.map((work) => (
-              <div
-                key={work.title}
-                className="group relative flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-white/5 overflow-hidden"
-              >
-                <div className="aspect-[2/3] w-full overflow-hidden relative">
-                  <div className="absolute top-2 right-2 z-10 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded">
-                    {work.category}
-                  </div>
-                  <Image
-                    src={work.image}
-                    alt={work.alt}
-                    layout="fill"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    objectFit="cover"
-                    className="transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                    <Button>
-                      <Eye className="h-[18px] w-[18px]" />
-                      Lire maintenant
-                    </Button>
-                  </div>
+          </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white dark:bg-[#2d261a] p-6 rounded-xl border border-slate-200 dark:border-[#493c22]">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white font-display">
+                  Portefeuille AfriCoins
+                </h3>
+                <Wallet className="text-primary" />
+              </div>
+              <div className="bg-slate-900 dark:bg-[#231d10] rounded-xl p-5 mb-6 relative overflow-hidden">
+                <div className="absolute -right-4 -top-4 text-[#493c22] opacity-50 rotate-12">
+                  <Bookmark className="w-24 h-24" />
                 </div>
-                <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-tight mb-1 group-hover:text-primary transition-colors">
-                    {work.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                    {work.subtitle}
-                  </p>
-                  <div className="mt-auto flex items-center justify-between text-xs text-gray-400 border-t border-gray-100 dark:border-white/5 pt-3">
-                    <span className="flex items-center gap-1">
-                      <Heart className="h-[14px] w-[14px]" /> {work.likes}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Eye className="h-[14px] w-[14px]" /> {work.views}
-                    </span>
+                <p className="text-slate-400 dark:text-[#cbb790] text-sm mb-1 relative z-10">
+                  Solde Actuel
+                </p>
+                <p className="text-4xl font-bold text-white font-display tracking-tight relative z-10">
+                  2,450 <span className="text-primary text-2xl">AC</span>
+                </p>
+              </div>
+              <div className="flex gap-3 mb-6">
+                <button className="flex-1 bg-primary hover:bg-primary-dark text-white font-medium py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                  <Plus className="h-5 w-5" />
+                  Recharger
+                </button>
+                <button className="flex-1 bg-transparent border border-slate-200 dark:border-[#493c22] text-slate-700 dark:text-white hover:bg-slate-50 dark:hover:bg-[#493c22] font-medium py-2.5 rounded-lg transition-colors">
+                  Historique
+                </button>
+              </div>
+              <div className="space-y-3">
+                <p className="text-sm font-medium text-slate-500 dark:text-[#cbb790]">
+                  Dernières Transactions
+                </p>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-[#231d10]/50 border border-transparent dark:border-[#493c22]/30">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-red-500/10 p-1.5 rounded text-red-500">
+                      <Minus className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-slate-900 dark:text-white">
+                        Achat: "Les Gardiens"
+                      </p>
+                      <p className="text-xs text-slate-400 dark:text-slate-500">
+                        Auj, 14:30
+                      </p>
+                    </div>
                   </div>
+                  <span className="font-bold text-red-500">- 50 AC</span>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-slate-50 dark:bg-[#231d10]/50 border border-transparent dark:border-[#493c22]/30">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-green-500/10 p-1.5 rounded text-green-500">
+                      <Plus className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-slate-900 dark:text-white">
+                        Rechargement
+                      </p>
+                      <p className="text-xs text-slate-400 dark:text-slate-500">
+                        Hier, 09:15
+                      </p>
+                    </div>
+                  </div>
+                  <span className="font-bold text-green-500">+ 1000 AC</span>
                 </div>
               </div>
-            ))}
+            </div>
+            <div className="bg-white dark:bg-[#2d261a] p-6 rounded-xl border border-slate-200 dark:border-[#493c22]">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white font-display">
+                  Mes Informations
+                </h3>
+                <button className="text-primary text-sm font-medium hover:underline">
+                  Modifier
+                </button>
+              </div>
+              <form className="space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-medium text-slate-500 dark:text-[#cbb790] uppercase tracking-wide">
+                    Nom d'utilisateur
+                  </label>
+                  <div className="flex items-center bg-slate-50 dark:bg-[#231d10] border border-slate-200 dark:border-[#493c22] rounded-lg px-4 h-11">
+                    <AtSign className="text-slate-400 h-5 w-5 mr-3" />
+                    <input
+                      className="bg-transparent border-none text-slate-900 dark:text-white text-sm w-full focus:ring-0 p-0"
+                      readOnly
+                      type="text"
+                      value="KwameOsei"
+                    />
+                    <Lock className="text-slate-400 h-4 w-4" />
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <label className="text-xs font-medium text-slate-500 dark:text-[#cbb790] uppercase tracking-wide">
+                    Email
+                  </label>
+                  <div className="flex items-center bg-slate-50 dark:bg-[#231d10] border border-slate-200 dark:border-[#493c22] rounded-lg px-4 h-11">
+                    <Mail className="text-slate-400 h-5 w-5 mr-3" />
+                    <input
+                      className="bg-transparent border-none text-slate-900 dark:text-white text-sm w-full focus:ring-0 p-0"
+                      type="email"
+                      value="kwame.osei@example.com"
+                    />
+                  </div>
+                </div>
+                <div className="pt-4 border-t border-slate-200 dark:border-[#493c22]/50">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white font-display mb-3">
+                    Préférences de Lecture
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    <label className="cursor-pointer">
+                      <input
+                        checked
+                        className="peer sr-only"
+                        type="checkbox"
+                      />
+                      <div className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-[#231d10] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#493c22] peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all select-none">
+                        Afro-Futurism
+                      </div>
+                    </label>
+                    <label className="cursor-pointer">
+                      <input
+                        checked
+                        className="peer sr-only"
+                        type="checkbox"
+                      />
+                      <div className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-[#231d10] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#493c22] peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all select-none">
+                        Fantasy
+                      </div>
+                    </label>
+                    <label className="cursor-pointer">
+                      <input className="peer sr-only" type="checkbox" />
+                      <div className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-[#231d10] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#493c22] peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all select-none">
+                        Romance
+                      </div>
+                    </label>
+                    <label className="cursor-pointer">
+                      <input
+                        checked
+                        className="peer sr-only"
+                        type="checkbox"
+                      />
+                      <div className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-[#231d10] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#493c22] peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all select-none">
+                        Sci-Fi
+                      </div>
+                    </label>
+                    <label className="cursor-pointer">
+                      <input className="peer sr-only" type="checkbox" />
+                      <div className="px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-[#231d10] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-[#493c22] peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all select-none">
+                        Thriller
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div className="mt-12 flex justify-center">
-            <Button
-              variant="outline"
-              className="border-gray-300 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5"
-            >
-              Charger plus d'oeuvres
-              <ChevronDown className="h-[18px] w-[18px]" />
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
+        </main>
+      </div>
+    </body>
+</html>
