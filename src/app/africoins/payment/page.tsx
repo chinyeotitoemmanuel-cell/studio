@@ -366,9 +366,11 @@ export default function PaymentPage() {
                     <span>9,99 €</span>
                   </div>
                 </div>
-                <Button className="w-full py-4 bg-primary hover:bg-text-main text-white text-base font-bold rounded-lg transition-colors font-display shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group">
-                  <Lock className="group-hover:scale-110 transition-transform" />
-                  Payer 9,99 €
+                <Button asChild className="w-full py-4 bg-primary hover:bg-text-main text-white text-base font-bold rounded-lg transition-colors font-display shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group">
+                  <Link href="/africoins/payment/success">
+                    <Lock className="group-hover:scale-110 transition-transform" />
+                    Payer 9,99 €
+                  </Link>
                 </Button>
                 <p className="text-center text-xs text-text-muted mt-4 font-body italic leading-normal">
                   En confirmant votre achat, vous acceptez les{' '}
