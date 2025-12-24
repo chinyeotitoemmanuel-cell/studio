@@ -82,6 +82,7 @@ export default function DraftsPage() {
                 <div className="w-full md:w-5/12 aspect-[4/3] md:aspect-auto rounded-xl overflow-hidden relative shadow-lg">
                   <Image
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdSNayMwJLdSD0wB1nmc_wTfOOKyq1oLWCBRXisK3OlVIMxlD0tR1dCFbD2-CkEm7AlsmoTYetq3-LNwo2Xgn9gwDsz5bWswllih1KOeIBe-sAKWwtP7mgcun4rYm1hvjp1LLdroZz2xTTW8V8jheo0p1GD9FOCp8CnzrmgyqUVh_ZGhGXxgGyjqLpH1w5034H2PriKF8LBX7JC1mOgScPhyKlDxo8qDVPG6XYPwPPJuwmaGk-xHwdj1sfxwHAaBywOVUnyt0GujWP"
                     alt="Illustration abstraite style fiction africaine"
@@ -208,6 +209,7 @@ export default function DraftsPage() {
                   <div className="relative aspect-video bg-gray-800 overflow-hidden">
                     <Image
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM-XDzhroCDTysn9x-TUNPX3vX5TSvwND3HJLj2uIzK_9S25WTtUaEbsANbaC5tUJijYpORjawvbWob_07pq8mUGSjmWl-ifQMOScX3RxuQfrevO36f4BiW_cX_UZL76hR01ZowsD65ADGcz4OGAAlmk7uK3IHl9-2hdaUjRu9U9Fon_L-RB-kDQSAO44QZpvU2J3LCL63RFqYrHiAOHCye-hzpQycC2Cz0EHI8I1gYVjxxB_8dkpGNr8s-gQO1W4-rzOI2W1omxSa"
                       alt="Style art séquentiel et bulles"
@@ -286,6 +288,7 @@ export default function DraftsPage() {
                   <div className="relative aspect-video bg-gray-800 overflow-hidden">
                     <Image
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyyJt6jcQPC45U9u5JFT8iVjTweUJVZWdBNMJCbvSuKe8lgtAr8Cw3q0bGSraIGI_M2R0u3x7pZ5ySx1u7ZaUgG-YnirwX_QKY6TUiKvu3ukyT0AnBsBktDMnww_8lsw-GBq-BqezaPDxucLLVNI_ZetuQEAvOHr2x1sn-T6eSZyIzf0H0OfpvJ4-yQzyOFDF0Ux6IkRzw05Xx60oNwWLJzirv_Yj_aqPo8fwGGuVgrtJfvYb5J7gP0UgwC7ELlvlmWj8XKGddwMwv"
                       alt="Motifs abstraits lyriques et doux"
@@ -331,6 +334,7 @@ export default function DraftsPage() {
                   <div className="relative aspect-video bg-gray-800 overflow-hidden">
                     <Image
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNAEpRuN9Zk-TgRAK53_j4NFPK7SHtvnfmlff4xXwq6hwFNV5FzE1lQyCqSuBq-xjktOA78u4U0q3SndgRdi1N1qOrSJPHgBrn9Pw3_TCA4hdNnGRlJCcj4uP2AsX4Onkq3JfwIup3ZVKl5C1ZWV9qN0ZypGl1FvR5tGlklK0NMaA9ZmKF7cHV9Ccr5xl5ZrwUQx258O-B08XU2--yd-ZSGLEB5oeG9CFEN_hdYl61A5YjUPbUFuL_Gl3_DLbob5zqb326N9PG6Oq"
                       alt="Texture de vieux papier et symboles mythologiques"
@@ -381,13 +385,3 @@ export default function DraftsPage() {
                   Voir plus de projets
                   <ChevronDown className="group-hover:translate-y-0.5 transition-transform" />
                 </Button>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-    

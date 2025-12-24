@@ -173,7 +173,7 @@ export default function TrendingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <div className="lg:col-span-7 group relative">
                     <div className="w-full h-[500px] rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group-hover:border-primary transition-colors shadow-lg">
-                        <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqpuUcoKDHW-XRjdG9F7DCSsryToQtQvtZQDFkXM992uVdaxWA1gKhtxM5vxlF6VvIx6D6uTFyh_eYjho-OposvXGqRhNIWnn17RGilR-E8HVP4A6rcZWvmFM6kGcc_1ztGSrwUN4icq7k8jU_x80JOUCrTTd7Tv8aoOb95QmxyzFKXKuYKXK-FL0rcj25BAhVd1xGE1BkWtjVKNqjP2inwygB-Any8x4_DsdpY34IcWhR1dNRgZ3wK9WVJOs3aNz9HrKx7aGOpPG" alt="Digital art of a neon-lit cybernetic mask detailed" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqpuUcoKDHW-XRjdG9F7DCSsryToQtQvtZQDFkXM992uVdaxWA1gKhtxM5vxlF6VvIx6D6uTFyh_eYjho-OposvXGqRhNIWnn17RGilR-E8HVP4A6rcZWvmFM6kGcc_1ztGSrwUN4icq7k8jU_x80JOUCrTTd7Tv8aoOb95QmxyzFKXKuYKXK-FL0rcj25BAhVd1xGE1BkWtjVKNqjP2inwygB-Any8x4_DsdpY34IcWhR1dNRgZ3wK9WVJOs3aNz9HrKx7aGOpPG" alt="Digital art of a neon-lit cybernetic mask detailed" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                         <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent flex flex-col justify-end p-8">
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="px-3 py-1 bg-primary text-background-dark text-xs font-bold uppercase rounded-full">Top Sélection</span>
@@ -194,7 +194,7 @@ export default function TrendingPage() {
                 <div className="lg:col-span-5 flex flex-col gap-6">
                     <div className="flex-1 rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group hover:border-primary transition-colors flex">
                          <div className="w-1/3 relative">
-                           <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5vwEGVxMzShq0Ln-9YTiWEYe9YjF-tjOqnqKYgUSNwaDbE2BbV6ef5ruBgSXcB7pvDeITukT3bZbNsgF5tYh5ZqBW8tROTnSZFszmvhBbp9Mko-x17uq_KX6-vxxoeOSn7_bGXOROsELKtXGBbtOHoN_PhHRSGMCkn2Vn05MDDjpUFuqoJwPWRQmI5S4k6zYbZEvzoJY64BJD5klyfu-L2057YE27Eas-0FRRVQP3WwHAEEPjeoMv27enrZW-PqgbOEHmC8EP8yVT" alt="Illustration of a flying taxi" fill className="object-cover"/>
+                           <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5vwEGVxMzShq0Ln-9YTiWEYe9YjF-tjOqnqKYgUSNwaDbE2BbV6ef5ruBgSXcB7pvDeITukT3bZbNsgF5tYh5ZqBW8tROTnSZFszmvhBbp9Mko-x17uq_KX6-vxxoeOSn7_bGXOROsELKtXGBbtOHoN_PhHRSGMCkn2Vn05MDDjpUFuqoJwPWRQmI5S4k6zYbZEvzoJY64BJD5klyfu-L2057YE27Eas-0FRRVQP3WwHAEEPjeoMv27enrZW-PqgbOEHmC8EP8yVT" alt="Illustration of a flying taxi" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover"/>
                         </div>
                         <div className="w-2/3 p-5 flex flex-col justify-center">
                             <div className="flex items-center gap-2 mb-2">
@@ -210,7 +210,7 @@ export default function TrendingPage() {
                     </div>
                     <div className="flex-1 rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group hover:border-primary transition-colors flex">
                         <div className="w-1/3 relative">
-                          <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuYDvDm91UEfAnVissfxiNRACGaW8xSJAflKnMVoMyIEJsvZyR7qPCQyqhZH9jy1RtYyYXhNhBQCes6QW5HmBNwsiMUwADxdrhaMJCNx6rq83_zgbRP40Tet4OurD-4g9wuN1bCdYEgBu_JOQz_IJmL-FJuuTQEFDUbsI4Rj4BECpSATiiSk5mBHnhNGZV5qWb7UrshWikihu3LQ9hxs90LbIH4gYf2MvDZl0TcEKimVdGHm9x2K2SAUsh_v4DWviwhQVv5GmwwYf" alt="Cyberpunk character design" fill className="object-cover"/>
+                          <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuYDvDm91UEfAnVissfxiNRACGaW8xSJAflKnMVoMyIEJsvZyR7qPCQyqhZH9jy1RtYyYXhNhBQCes6QW5HmBNwsiMUwADxdrhaMJCNx6rq83_zgbRP40Tet4OurD-4g9wuN1bCdYEgBu_JOQz_IJmL-FJuuTQEFDUbsI4Rj4BECpSATiiSk5mBHnhNGZV5qWb7UrshWikihu3LQ9hxs90LbIH4gYf2MvDZl0TcEKimVdGHm9x2K2SAUsh_v4DWviwhQVv5GmwwYf" alt="Cyberpunk character design" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover"/>
                         </div>
                         <div className="w-2/3 p-5 flex flex-col justify-center">
                             <div className="flex items-center gap-2 mb-2">
@@ -237,12 +237,26 @@ export default function TrendingPage() {
                     Voir tout
                 </Button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                 {/* Rising artist cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                 {risingStarsData.map((star) => (
+                    <div key={star.title} className="group relative rounded-xl overflow-hidden bg-surface-dark border border-surface-border hover:border-primary/50 transition-all hover:-translate-y-1 shadow-lg">
+                        <div className="aspect-[3/4] relative">
+                            <Image src={star.imageUrl} alt={`Artwork for ${star.title}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div className="absolute top-3 right-3 text-xs font-bold px-2 py-1 rounded-full border" style={star.type === 'Pro' ? { color: '#f2a60d', backgroundColor: 'rgba(242, 166, 13, 0.1)', borderColor: 'rgba(242, 166, 13, 0.2)' } : { color: '#cbb790', backgroundColor: 'rgba(203, 183, 144, 0.1)', borderColor: 'rgba(203, 183, 144, 0.2)'}}>
+                                {star.type}
+                            </div>
+                        </div>
+                        <div className="p-4">
+                            <h3 className="text-white font-bold text-base truncate group-hover:text-primary">{star.title}</h3>
+                            <p className="text-text-muted text-sm">par {star.author}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
           
         </div>
       </main>
-    </body>
-    </html>
+    
+</body></html>

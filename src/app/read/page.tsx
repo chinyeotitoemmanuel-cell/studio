@@ -104,6 +104,7 @@ export default function ReadPage() {
                 alt={`Comic panel ${index + 1}`}
                 width={800}
                 height={1200}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -185,6 +186,7 @@ export default function ReadPage() {
                         alt={item.title}
                         width={200}
                         height={300}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -229,9 +231,4 @@ export default function ReadPage() {
         </div>
         <Button size="sm" className="font-medium">
           Next
-          <ArrowForward className="ml-1 h-4 w-4" />
-        </Button>
-      </div>
-    </div>
-  );
-}
+          <ArrowForward className="ml-1 h-4 w-4

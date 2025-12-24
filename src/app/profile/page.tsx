@@ -74,6 +74,7 @@ export default function ProfilePage() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaoApOEvOIR6xBzvn4BykblzhyHqZpHsM4m4Xw91mAY4Fq1WY_27b5zvQ8wQ3Vv3u0o4XyAJy7o-5244AaP_W6pLpThHpfnSIyRb-CQE__9h5LK2yphlKYJi-iRSyFM9z3AfVCQToPH1VFywxG8hJ1_IKr4IB0A4dBYzKHI1p1iMphe0MCVjRwtChgN03sT2__xXyOAWJh8jy6b5EUUgQ6lK8SinKY8DQgCqRHUrO64oUUw5JecU2gDZYqbqDvPuLBf53K6VsKj5RT"
             alt="Abstract vibrant African geometric pattern banner in orange and dark browns"
             layout="fill"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             objectFit="cover"
             className="transform group-hover:scale-105 transition-transform duration-700"
           />
@@ -252,6 +253,7 @@ export default function ProfilePage() {
                     src={work.image}
                     alt={work.alt}
                     layout="fill"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     objectFit="cover"
                     className="transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -293,5 +295,3 @@ export default function ProfilePage() {
         </div>
       </main>
     </>
-  );
-}

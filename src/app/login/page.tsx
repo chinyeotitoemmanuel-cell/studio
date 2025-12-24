@@ -164,6 +164,7 @@ export default function LoginPage() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjqLDVVZ3SsVuboFY-timDWFErBpJ_AAfjCxiwLwhZVnIZfXQwl8WymL0Och3Jk06wkdhNQsFt8z67cgrnPeddVe9D_Jmu6PytjAN2m_0lP9VO1rHPfjytDdEevGN_QXGuRkS06ZocfNNUPA9nMGyD65J8pireyqq1ipiNFrQS2hWMW5tbksInd9JNCAp2CU-dsZJksyghNtF7pvwwAxRnG-Kf1UpB5w2gSuQW_TcL0E5FcAG7q-VB6E_xjApivzGgoDQKxj2uCff"
               alt="Futuristic afro-centric digital art showing a person with glowing geometric patterns and traditional wear in a neon city"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90"></div>
@@ -214,12 +215,4 @@ export default function LoginPage() {
         </div>
         <div className="mt-6 text-center">
           <p className="text-xs text-muted-foreground/50">
-            © 2024 AfriStory. Tous droits réservés.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-    
+            ©

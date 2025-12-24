@@ -99,7 +99,7 @@ export default function ShopPage() {
             {trendingProducts.map((product) => (
               <div key={product.name} className="group flex flex-col gap-3">
                 <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-shop-surface-dark">
-                  <Image src={product.image} alt={product.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <Image src={product.image} alt={product.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                   <Button size="icon" className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary shadow-lg">
                     <ShoppingCart />
                   </Button>
@@ -124,7 +124,7 @@ export default function ShopPage() {
           <div className="mb-16 overflow-hidden rounded-2xl bg-shop-surface-dark">
             <div className="flex flex-col md:flex-row">
               <div className="relative h-64 w-full md:h-auto md:w-1/2">
-                <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfSl8XQaLN5ZwGhlYKt_cwJRHoR5mb83I5YaNp17OJ_fxYzf4chfstRydNyKKGF4_4SY94pT-HS7wKU1z1UDt7Ovtnh4_6yhmg1i-kLN6BweyEqrRl4EL3VZnt9y9pUWuGLcv6ItUlNvr9qskZGXq2fVagJkLVEDRrOeCqYZ331tkkOgez-g3Lc-tBpXmGYH_UP2XJBaA5WodX05Ag80KRU3UdMw9f6Jvtf4uGMFzDr8734nnZj683xMeikEqJpiuC9mUA1QT8fo7e" alt="Portrait of an African digital artist working on a tablet in a colorful studio" fill className="object-cover" />
+                <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfSl8XQaLN5ZwGhlYKt_cwJRHoR5mb83I5YaNp17OJ_fxYzf4chfstRydNyKKGF4_4SY94pT-HS7wKU1z1UDt7Ovtnh4_6yhmg1i-kLN6BweyEqrRl4EL3VZnt9y9pUWuGLcv6ItUlNvr9qskZGXq2fVagJkLVEDRrOeCqYZ331tkkOgez-g3Lc-tBpXmGYH_UP2XJBaA5WodX05Ag80KRU3UdMw9f6Jvtf4uGMFzDr8734nnZj683xMeikEqJpiuC9mUA1QT8fo7e" alt="Portrait of an African digital artist working on a tablet in a colorful studio" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent md:bg-gradient-to-r md:via-transparent"></div>
               </div>
               <div className="flex w-full flex-col justify-center p-8 md:w-1/2 md:p-12">
@@ -164,7 +164,7 @@ export default function ShopPage() {
             {freshDrops.map((product) => (
               <div key={product.name} className={`group flex flex-col gap-2 ${product.className || ''}`}>
                 <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-shop-surface-dark">
-                  <Image src={product.image} alt={product.alt} fill className="object-cover transition-transform group-hover:scale-105" />
+                  <Image src={product.image} alt={product.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform group-hover:scale-105" />
                 </div>
                 <div className="px-1">
                   <h4 className="truncate text-sm font-medium text-white">{product.name}</h4>
@@ -216,12 +216,4 @@ export default function ShopPage() {
               <p>© 2023 AfriStory. All rights reserved.</p>
               <div className="flex gap-4">
                 <Link href="#" className="hover:text-white">Privacy Policy</Link>
-                <Link href="#" className="hover:text-white">Terms of Service</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
+                <Link href="#" className="hover:text-white">Terms of Service</Link
