@@ -215,4 +215,10 @@ export default function LoginPage() {
         </div>
         <div className="mt-6 text-center">
           <p className="text-xs text-muted-foreground/50">
-            ©
+            © 2024 AfriStory. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
