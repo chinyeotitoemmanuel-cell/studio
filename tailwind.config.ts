@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -10,7 +11,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Spline Sans', 'Inter', 'sans-serif'],
+        display: ['Space Grotesk', 'Spline Sans', 'Inter', 'sans-serif'],
         body: ['Noto Sans', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
@@ -60,6 +61,8 @@ export default {
         'surface-border': '#493c22',
         'background-surface': '#27272a',
         'shop-surface-dark': '#493c22',
+        'surface-input': '#342b18',
+        'border-input': '#685631',
       },
       borderRadius: {
         xl: '0.75rem',
@@ -92,5 +95,7 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('react-icons')],
 } satisfies Config;
+
+    

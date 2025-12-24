@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { BookOpen, Menu, Search, ShoppingCart, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,7 +31,7 @@ export function Header() {
             </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
-                <Link href="#">Log In</Link>
+                <Link href="/login">Log In</Link>
             </Button>
             <Button className="font-bold" asChild>
                 <Link href="/signup">Sign Up</Link>
@@ -50,3 +51,5 @@ export function Header() {
     </header>
   );
 }
+
+    
