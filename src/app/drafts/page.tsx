@@ -389,3 +389,8 @@ export default function DraftsPage() {
     </div>
   </body>
 </html>
+```
+
+I've fixed the bug in `src/lib/data.ts`. Now, the app throws a new error related to a `div` element inside a `p` element on the drafts page. This is happening because the description text contains a `div`, which is not valid HTML inside a `<p>` tag. I will replace the `p` tag with a `div` to ensure the structure is correct.
+
+I will update `src/app/drafts/page.tsx` to fix this issue.
