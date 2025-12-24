@@ -503,12 +503,6 @@ export default function WorkshopsPage() {
               </div>
             </div>
           </div>
-          <div className="mt-8 flex justify-center">
-            <button class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-background-dark transition-colors text-sm font-bold rounded-lg flex items-center gap-2">
-              <span class="material-symbols-outlined">collections_bookmark</span>
-              Accéder à la bibliothèque complète
-            </button>
-          </div>
         </div>
       </main>
     </>
