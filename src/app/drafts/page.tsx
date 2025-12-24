@@ -13,6 +13,7 @@ import {
   User,
   Clock,
   ArrowRight,
+  Verified,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -64,7 +65,7 @@ export default function DraftsPage() {
             <section className="mb-16">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <Heart className="text-primary filled text-3xl" />
+                  <Heart className="text-primary fill-primary text-3xl" />
                   <h2 className="text-white text-2xl font-bold tracking-tight">
                     Coup de Cœur du Mois
                   </h2>
@@ -73,7 +74,7 @@ export default function DraftsPage() {
                   className="text-sm font-medium text-text-muted hover:text-primary transition-colors flex items-center gap-1"
                   href="#"
                 >
-                  Voir les archives <ArrowRight className="text-base" />
+                  Voir les archives <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
               <div className="bg-surface-dark rounded-2xl p-6 md:p-8 border border-border-dark flex flex-col md:flex-row gap-8 relative overflow-hidden group hover:border-primary/30 transition-all shadow-2xl">
@@ -86,7 +87,7 @@ export default function DraftsPage() {
                     alt="Illustration abstraite style fiction africaine"
                   />
                   <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1">
-                    <Award className="text-sm text-primary" />
+                    <Award className="h-3 w-3 text-primary" />
                     Sélection Communautaire
                   </div>
                 </div>
@@ -96,7 +97,7 @@ export default function DraftsPage() {
                       Concept Art
                     </div>
                     <span className="text-text-muted text-xs flex items-center gap-1">
-                      <Clock className="text-sm" /> Publié il y a 2 jours
+                      <Clock className="h-3 w-3" /> Publié il y a 2 jours
                     </span>
                   </div>
                   <h3 className="text-white text-3xl md:text-4xl font-bold font-display mb-4 leading-tight">
@@ -148,7 +149,7 @@ export default function DraftsPage() {
                         </div>
                       </div>
                       <span className="text-primary text-sm font-bold flex items-center gap-1.5 bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20">
-                        <MessageSquare className="text-lg" />
+                        <MessageSquare className="h-4 w-4" />
                         24 Retours
                       </span>
                     </div>
@@ -197,7 +198,7 @@ export default function DraftsPage() {
                       variant="ghost"
                       className="flex items-center gap-1 text-white font-bold"
                     >
-                      Plus récents <ChevronDown className="text-lg" />
+                      Plus récents <ChevronDown className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -238,7 +239,7 @@ export default function DraftsPage() {
                           className="absolute -bottom-1 -right-1 bg-primary text-[#231d10] rounded-full p-0.5"
                           title="Artiste Mentor"
                         >
-                          <Award className="!text-[10px] font-bold block" />
+                          <Verified className="h-2.5 w-2.5 font-bold block fill-current" />
                         </div>
                       </div>
                       <div>
@@ -269,13 +270,13 @@ export default function DraftsPage() {
                           className="flex items-center gap-1 hover:text-white transition-colors"
                           title="Soutenir"
                         >
-                          <ThumbsUp className="text-base" /> 42
+                          <ThumbsUp className="h-4 w-4" /> 42
                         </button>
                         <button
                           className="flex items-center gap-1 hover:text-white transition-colors"
                           title="Commentaires"
                         >
-                          <MessageSquare className="text-base" /> 8
+                          <MessageSquare className="h-4 w-4" /> 8
                         </button>
                       </div>
                     </div>
@@ -317,10 +318,10 @@ export default function DraftsPage() {
                       </div>
                       <div className="flex items-center gap-3 text-text-muted text-xs">
                         <button className="flex items-center gap-1 hover:text-white transition-colors">
-                          <ThumbsUp className="text-base" /> 15
+                          <ThumbsUp className="h-4 w-4" /> 15
                         </button>
                         <button className="flex items-center gap-1 hover:text-white transition-colors">
-                          <MessageSquare className="text-base" /> 3
+                          <MessageSquare className="h-4 w-4" /> 3
                         </button>
                       </div>
                     </div>
@@ -362,10 +363,10 @@ export default function DraftsPage() {
                       </div>
                       <div className="flex items-center gap-3 text-text-muted text-xs">
                         <button className="flex items-center gap-1 hover:text-white transition-colors">
-                          <ThumbsUp className="text-base" /> 56
+                          <ThumbsUp className="h-4 w-4" /> 56
                         </button>
                         <button className="flex items-center gap-1 hover:text-white transition-colors">
-                          <MessageSquare className="text-base" /> 12
+                          <MessageSquare className="h-4 w-4" /> 12
                         </button>
                       </div>
                     </div>
