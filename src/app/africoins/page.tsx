@@ -306,10 +306,12 @@ export default function AfriCoinsPage() {
                         </span>
                       </span>
                     </div>
-                    <button className="w-full py-4 bg-primary hover:bg-text-main text-white font-bold rounded-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
-                      <span>Confirmer et Payer</span>
-                      <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    <Button asChild className="w-full py-4 bg-primary hover:bg-text-main text-white font-bold rounded-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
+                      <Link href="/africoins/payment">
+                        <span>Confirmer et Payer</span>
+                        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
                     <p className="text-[10px] text-center text-text-muted mt-3 leading-tight">
                       En validant, vous acceptez les{' '}
                       <a
@@ -422,5 +424,3 @@ export default function AfriCoinsPage() {
     </div>
   );
 }
-
-    
