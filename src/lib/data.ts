@@ -14,7 +14,6 @@ export const storyData = {
     { id: "trending-3", title: "Black Leopard", author: "Marlon James", tier: "Pro" },
     { id: "trending-4", title: "Red Wolf", author: "Amara Okafor", tier: "Draft" },
     { id: "trending-5", title: "Binti", author: "Nnedi Okorafor", tier: "Pro" },
-    { id: "trending-1", title: "Born on a Tuesday", author: "Elnathan John", tier: "Pro" },
   ],
   newReleases: [
     { id: "new-release-1", title: "Solar Flare", author: "Author Name", tier: "Pro", genre: "Sci-Fi" },
