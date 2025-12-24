@@ -56,6 +56,7 @@ export default {
         'surface-light': '#3a2e1b',
         'background-surface': '#27272a',
         'surface-highlight': '#493c22',
+        'shop-surface-dark': '#493c22',
         'text-secondary': '#cbb790',
         'border-color': '#493c22',
       },
