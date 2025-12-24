@@ -10,10 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Inter', 'sans-serif'],
+        display: ['Spline Sans', 'Inter', 'sans-serif'],
         body: ['Noto Sans', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
+        news: ['Newsreader', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
