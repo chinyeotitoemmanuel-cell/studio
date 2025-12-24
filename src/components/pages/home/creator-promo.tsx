@@ -13,7 +13,7 @@ export function CreatorPromo() {
         </p>
       </div>
       <div className="relative z-10 shrink-0">
-        <Button size="lg" variant="secondary" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg">
+        <Button size="lg" className="bg-primary-foreground text-primary-foreground hover:bg-primary-foreground/90 shadow-lg text-white">
           Start Creating
         </Button>
       </div>

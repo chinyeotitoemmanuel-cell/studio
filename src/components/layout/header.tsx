@@ -26,8 +26,11 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-bold text-primary border-b-2 border-primary pb-0.5">
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Home
+            </Link>
+            <Link href="/trending" className="text-sm font-bold text-primary border-b-2 border-primary pb-0.5">
+              Trending
             </Link>
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               AfriStory Pro
