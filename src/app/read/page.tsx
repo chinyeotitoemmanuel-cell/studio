@@ -231,4 +231,9 @@ export default function ReadPage() {
         </div>
         <Button size="sm" className="font-medium">
           Next
-          <ArrowForward className="ml-1 h-4 w-4
+          <ArrowForward className="ml-1 h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}

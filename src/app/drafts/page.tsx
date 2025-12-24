@@ -385,3 +385,11 @@ export default function DraftsPage() {
                   Voir plus de projets
                   <ChevronDown className="group-hover:translate-y-0.5 transition-transform" />
                 </Button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
