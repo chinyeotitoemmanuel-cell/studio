@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "user-avatar",
+      "description": "User profile picture of a woman",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjUyNTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "hero-image",
+      "description": "Abstract afro-futurist landscape with golden dunes and futuristic structures",
+      "imageUrl": "https://images.unsplash.com/photo-1676474937597-4043441b66f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhZnJvLWZ1dHVyaXN0JTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2NjU2OTU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "afro-futurist landscape"
+    },
+    {
+      "id": "trending-1",
+      "description": "Cover art for Born on a Tuesday, abstract portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1527630941-4a229fd674ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjQ4NTM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract portrait"
+    },
+    {
+      "id": "trending-2",
+      "description": "Cover art for Lagoon, dark water ripples with glowing eyes",
+      "imageUrl": "https://images.unsplash.com/photo-1509094632847-e97545d7d043?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXJrJTIwd2F0ZXJ8ZW58MHx8fHwxNzY2NTY5NTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark water"
+    },
+    {
+      "id": "trending-3",
+      "description": "Cover art for Black Leopard, stylized predator in the dark",
+      "imageUrl": "https://images.unsplash.com/photo-1597333119270-c66eb18a6ea0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdHlsaXplZCUyMHByZWRhdG9yfGVufDB8fHx8MTc2NjU2OTU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stylized predator"
+    },
+    {
+      "id": "trending-4",
+      "description": "Cover art for Red Wolf, space nebula pattern",
+      "imageUrl": "https://images.unsplash.com/photo-1681673211051-dc2534444d0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NjY0Nzg0MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "space nebula"
+    },
+    {
+      "id": "trending-5",
+      "description": "Cover art for Binti, mathematical patterns in sand",
+      "imageUrl": "https://images.unsplash.com/photo-1743630459079-ff40cb544dc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzYW5kJTIwcGF0dGVybnN8ZW58MHx8fHwxNzY2NTY5NTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sand patterns"
+    },
+    {
+      "id": "draft-1",
+      "description": "Draft sketch of a cyberpunk mask",
+      "imageUrl": "https://images.unsplash.com/photo-1613371004944-afa0b6f617ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlcnB1bmslMjBtYXNrfGVufDB8fHx8MTc2NjU2OTU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyberpunk mask"
+    },
+    {
+      "id": "draft-2",
+      "description": "Watercolor sketch of village life",
+      "imageUrl": "https://images.unsplash.com/photo-1734623044412-b464d0e8243c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2F0ZXJjb2xvciUyMHZpbGxhZ2V8ZW58MHx8fHwxNzY2NTY5NTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "watercolor village"
+    },
+    {
+      "id": "draft-3",
+      "description": "Ink drawing of a warrior",
+      "imageUrl": "https://images.unsplash.com/photo-1661274044982-8fa0411085e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmslMjB3YXJyaW9yfGVufDB8fHx8MTc2NjU2OTU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ink warrior"
+    },
+    {
+      "id": "new-release-1",
+      "description": "Abstract colorful pattern representing new release",
+      "imageUrl": "https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBwYXR0ZXJufGVufDB8fHx8MTc2NjU2NzU3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract pattern"
+    },
+    {
+      "id": "new-release-2",
+      "description": "Dark moody room interior",
+      "imageUrl": "https://images.unsplash.com/photo-1601802461385-4f4bf96fe018?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb29keSUyMHJvb218ZW58MHx8fHwxNzY2NTY5NTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "moody room"
+    },
+    {
+      "id": "new-release-3",
+      "description": "Texture of woven fabric in warm colors",
+      "imageUrl": "https://images.unsplash.com/photo-1759395162954-f2191918e647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b3ZlbiUyMGZhYnJpY3xlbnwwfHx8fDE3NjY1MTcwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woven fabric"
+    },
+    {
+      "id": "new-release-4",
+      "description": "Close up of a cat eye",
+      "imageUrl": "https://images.unsplash.com/photo-1604934797110-7c506bea3b3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXQlMjBleWV8ZW58MHx8fHwxNzY2NTAwMTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cat eye"
+    },
+    {
+      "id": "new-release-5",
+      "description": "City street view from low angle",
+      "imageUrl": "https://images.unsplash.com/photo-1466500419182-8602dc906b51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5JTIwc3RyZWV0fGVufDB8fHx8MTc2NjU1MTk0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city street"
+    }
+  ]
 }
