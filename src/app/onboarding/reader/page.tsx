@@ -6,11 +6,11 @@ import {
   Search,
   ChevronLeft,
   ChevronRight,
-  ArrowForward,
+  ArrowRight,
   Check,
-  Category,
-  Interests,
-  Translate,
+  LayoutGrid,
+  Heart,
+  Languages,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export default function ReaderOnboardingPage() {
             
             <div className="mb-8">
                 <h3 className="text-white text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-4 flex items-center gap-2">
-                    <Category className="text-primary" />
+                    <LayoutGrid className="text-primary" />
                     Choisissez vos genres favoris (min. 3)
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
@@ -114,7 +114,7 @@ export default function ReaderOnboardingPage() {
 
             <div className="mb-8 px-4">
                 <h3 className="text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 pt-2 flex items-center gap-2">
-                    <Interests className="text-primary" />
+                    <Heart className="text-primary" />
                     Vos centres d'intérêt
                 </h3>
                 <div className="flex flex-wrap gap-3">
@@ -129,7 +129,7 @@ export default function ReaderOnboardingPage() {
 
             <div className="mb-12 px-4">
                 <h3 className="text-white text-xl font-bold leading-tight tracking-[-0.015em] pb-4 pt-2 flex items-center gap-2">
-                    <Translate className="text-primary" />
+                    <Languages className="text-primary" />
                     Langues de lecture
                 </h3>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -147,7 +147,7 @@ export default function ReaderOnboardingPage() {
                     <Link href="#" className="text-text-muted hover:text-white text-sm font-medium transition-colors order-2 md:order-1">Passer pour l'instant</Link>
                     <Button size="lg" className="w-full md:w-auto order-1 md:order-2">
                         Enregistrer et Explorer
-                        <ArrowForward className="ml-2" />
+                        <ArrowRight className="ml-2" />
                     </Button>
                 </div>
                  <p className="text-xs text-text-muted/60 mt-4 text-center md:text-right">

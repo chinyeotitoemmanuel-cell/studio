@@ -1,4 +1,4 @@
-import { BookOpen, HelpCircle, LockReset, Mail, ArrowRight, ArrowLeft } from 'lucide-react';
+import { BookOpen, HelpCircle, LockKeyhole, Mail, ArrowRight, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,7 +34,7 @@ export default function ForgotPasswordPage() {
         <div className="relative z-10 flex w-full max-w-md flex-col items-center">
           <div className="mb-8 text-center">
             <div className="mx-auto mb-6 flex size-20 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary shadow-[0_0_15px_rgba(242,166,13,0.1)]">
-              <LockReset className="h-10 w-10" />
+              <LockKeyhole className="h-10 w-10" />
             </div>
             <h1 className="mb-3 text-3xl font-black tracking-tight text-foreground">
               Mot de passe oublié ?

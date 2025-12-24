@@ -1,4 +1,4 @@
-import { ArrowForward, Search, ShoppingCart, Star, VolunteerActivism, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Search, ShoppingCart, Star, HeartHandshake, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -92,7 +92,7 @@ export default function ShopPage() {
           <div className="flex items-center justify-between pb-4 pt-2">
             <h2 className="text-2xl font-bold leading-tight text-white md:text-3xl">Trending Now</h2>
             <Link href="#" className="flex items-center gap-1 text-sm font-bold text-primary hover:underline">
-              View All <ArrowForward className="h-4 w-4" />
+              View All <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="mb-16 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-6">
@@ -113,7 +113,7 @@ export default function ShopPage() {
                     <p className="font-bold text-white">{product.price}</p>
                   </div>
                   <p className="mt-1 flex items-center gap-1 text-xs text-text-secondary">
-                    <VolunteerActivism className="h-3.5 w-3.5" />
+                    <HeartHandshake className="h-3.5 w-3.5" />
                     Supports Artist
                   </p>
                 </div>

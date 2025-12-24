@@ -1,4 +1,4 @@
-import { Diamond, EditSquare, Forum, Handshake, Help, Palette, Public, PushPin, Search, TrendingUp } from "lucide-react";
+import { Diamond, FilePenSquare, MessagesSquare, Handshake, HelpCircle, Palette, Globe, Pin, Search, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ export default function ForumPage() {
 
                 <div className="flex border-b border-border-color gap-6 overflow-x-auto scrollbar-hide">
                   <Link className="flex items-center gap-2 border-b-[3px] border-b-primary text-white pb-3 px-2 min-w-max" href="#">
-                    <Public className="text-primary" size={20} />
+                    <Globe className="text-primary" size={20} />
                     <p className="text-sm font-bold tracking-[0.015em]">Espace Public (Draft)</p>
                   </Link>
                   <Link className="flex items-center gap-2 border-b-[3px] border-b-transparent text-text-secondary hover:text-white pb-3 px-2 min-w-max transition-colors" href="#">
@@ -61,7 +61,7 @@ export default function ForumPage() {
                 <div className="bg-surface-dark p-5 rounded-xl border border-border-color hover:border-primary/50 transition-colors cursor-pointer group">
                   <div className="flex items-start justify-between mb-3">
                     <div className="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
-                      <Forum />
+                      <MessagesSquare />
                     </div>
                     <span className="text-xs font-medium text-text-secondary bg-surface-light px-2 py-1 rounded-full">124 Sujets</span>
                   </div>
@@ -91,7 +91,7 @@ export default function ForumPage() {
                 <div className="bg-surface-dark p-5 rounded-xl border border-border-color hover:border-primary/50 transition-colors cursor-pointer group">
                   <div className="flex items-start justify-between mb-3">
                     <div className="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
-                      <Help />
+                      <HelpCircle />
                     </div>
                     <span className="text-xs font-medium text-text-secondary bg-surface-light px-2 py-1 rounded-full">210 Sujets</span>
                   </div>
@@ -113,7 +113,7 @@ export default function ForumPage() {
                 <div className="group flex flex-col sm:flex-row gap-4 p-4 border-b border-border-color hover:bg-surface-light/30 transition-colors bg-surface-light/10">
                   <div className="flex-shrink-0 pt-1">
                     <div className="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-lg shadow-primary/20">
-                      <PushPin size={20} />
+                      <Pin size={20} />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
@@ -137,7 +137,7 @@ export default function ForumPage() {
 
             <aside className="lg:col-span-4 flex flex-col gap-6">
               <Button className="w-full h-auto py-4 px-6 rounded-xl shadow-lg shadow-primary/10 transition-all transform hover:scale-[1.02]">
-                <EditSquare />
+                <FilePenSquare />
                 Commencer une discussion
               </Button>
               <div className="rounded-xl p-1 bg-gradient-to-br from-[#cbb790] to-[#685631]">

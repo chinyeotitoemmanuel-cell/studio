@@ -36,6 +36,7 @@ export default function WorkshopsPage() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzpwaw6JhNxtvojilc_BP3xYtCOrBwPc-nEjpwusJK79ZHtUqgeAMOi1rRQdbGVhT6LRYXBXaabECIl3IpyLKiA5CzjmOFRLG2heOjKUqaYoVnXMi8Knk8c1jwjiPCIEedVsQwQC0Ibmw9jDm-hTxLbZEYCbURvKugW2ifWbNU2imEktxm47-WHXI2G0mM9Q8q_Y3sniXPgxv45kA4mKXtdePKp6BpWrvA7ijhyaas0Mgpe5vswAWb33dqOWirXrEPJ2t6LlhzLd8y"
               alt="Artistic workshop in a futuristic African setting, students learning from a mentor"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/70 to-transparent" />
@@ -134,6 +135,7 @@ export default function WorkshopsPage() {
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqpuUcoKDHW-XRjdG9F7DCSsryToQtQvtZQDFkXM992uVdaxWA1gKhtxM5vxlF6VvIx6D6uTFyh_eYjho-OposvXGqRhNIWnn17RGilR-E8HVP4A6rcZWvmFM6kGcc_1ztGSrwUN4icq7k8jU_x80JOUCrTTd7Tv8aoOb95QmxyzFKXKuYKXK-FL0rcj25BAhVd1xGE1BkWtjVKNqjP2inwygB-Any8x4_DsdpY34IcWhR1dNRgZ3wK9WVJOs3aNz9HrKx7aGOpPG"
                     alt="Digital art workshop focusing on character design"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 bg-background-dark/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-surface-border">
@@ -192,6 +194,7 @@ export default function WorkshopsPage() {
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5vwEGVxMzShq0Ln-9YTiWEYe9YjF-tjOqnqKYgUSNwaDbE2BbV6ef5ruBgSXcB7pvDeITukT3bZbNsgF5tYh5ZqBW8tROTnSZFszmvhBbp9Mko-x17uq_KX6-vxxoeOSn7_bGXOROsELKtXGBbtOHoN_PhHRSGMCkn2Vn05MDDjpUFuqoJwPWRQmI5S4k6zYbZEvzoJY64BJD5klyfu-L2057YE27Eas-0FRRVQP3WwHAEEPjeoMv27enrZW-PqgbOEHmC8EP8yVT"
                     alt="Environment design workshop illustration"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute top-4 left-4 bg-background-dark/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-surface-border">
@@ -267,11 +270,11 @@ export default function WorkshopsPage() {
                         Spécialité: Comics & Webtoons
                       </p>
                       <div className="flex text-primary text-xs mt-1">
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5 opacity-50" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary/50" />
                       </div>
                     </div>
                   </div>
@@ -291,11 +294,11 @@ export default function WorkshopsPage() {
                         Spécialité: 3D Modeling
                       </p>
                       <div className="flex text-primary text-xs mt-1">
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
                       </div>
                     </div>
                   </div>
@@ -315,11 +318,11 @@ export default function WorkshopsPage() {
                         Spécialité: Animation 2D
                       </p>
                       <div className="flex text-primary text-xs mt-1">
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5" />
-                        <Star className="w-3.5 h-3.5 opacity-50" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary" />
+                        <Star className="w-3.5 h-3.5 fill-primary/50" />
                       </div>
                     </div>
                   </div>
@@ -370,6 +373,7 @@ export default function WorkshopsPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDogX7hfPE9rvZGPDNlTicXbWIxOzgoKTrWBxCyNYLh__yNrqZ1hqumM1n24P7CTQTuaPUY81A4JmXVCUTHCrdnRh28bHjVpUcCM8J_OSYrgKhNU8-3hpboUkBtxRAnG0711bNsk8FKBXFB6uLqA8CKtb_CMFHPETsvzjkH920ULBqJ89EJxjD8S3YI36Av2nPL31rVmSsf2_JMst1rjro0wEMYdLChbQk5jPZutA7r7I_T7qqlsiTbdlVkpF7b9-a-V-9Sp-qlMD2i"
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -404,6 +408,7 @@ export default function WorkshopsPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC_4TsDwu4JFrM9Q6U3S1AECj7TQdsV4zipaWzfgM8S2xl3Bq1ek8rjCO4Y8jV22hs0XAIMSh8iqDcu4tLi7UPB3HEWLgTQWHzKjE9ZHVv-QZhQGMRytCbSofOZaHKpNl9OB6Ctio5b7mpknIPvDhpZ5oqtqv2AAscgu_i2Oe1dwHmvDBZ22mBTfqcPUKNgw6BieYYeqa4wVRzz2di6ymQDFs6GcG-pIZc09Ea9X3y63Pl2Gya3k9WVbTG1Rnv3ZWIDownCVQ3dhc_"
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -436,6 +441,7 @@ export default function WorkshopsPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2HSo2HVD9hde9b4cgMMosxyOqi1mMI-opq0hv74FTI5yJ5hFxe1TNroShxtN5etMker6rNfj4vhgx85TkVdyL_VC05mGaxecCfWhoBFbLgMEsVM-RQBX-U3ZBCJG2YwSOHLQ_cs930jIqnMMKo7XfXuSjMU5l7UMLO2UNFxdZzJVc1u4D9G4dCupfc-SA083ATPPS6a065SBZT7_5K0o2LmnlGhxgssiQ-GmeR73AcGxJPQWsYVTonWbza703-h-zQO62CM0pbzHM"
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -470,6 +476,7 @@ export default function WorkshopsPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM4wysVdXvZmnyX9LZg1pK_GckgM4Z0Jk2QnW-BamD1n3MEF9ge0idw5Y9wGBg3MnMJNFAjHF9jATaOb18C5db-WMgLzfEZ8ifz6ZtcX_I2r62ZtQcidWvqzOXARQsTZTAq9NyYfH-X1kNoUuwDrTK1fiyKC9YUwrXj62IADbSeLbRFgyD_Cxr_XNilzMKRd8fzqqf6Nlc80Y4UmcdddWciNOlF9aDUATX3GVkX8j4pJJBbxbj3ycIn4Y5oY_y7_-DF6cQxqbEyR-9"
                   alt=""
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -506,88 +513,7 @@ export default function WorkshopsPage() {
             </Button>
           </div>
         </div>
-      </main>
-      <footer className="border-t border-surface-border bg-surface-dark mt-auto">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-10 py-12">
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            <div className="flex flex-col gap-4 max-w-sm">
-              <div className="flex items-center gap-2 text-white">
-                <BookOpen className="text-primary" />
-                <span className="text-lg font-bold font-display">
-                  AfriStory
-                </span>
-              </div>
-              <p className="text-text-muted text-sm">
-                Empowering the next generation of African visual storytellers.
-                Join the movement.
-              </p>
-            </div>
-            <div className="flex gap-8 md:gap-16">
-              <div className="flex flex-col gap-3">
-                <h4 className="text-white font-bold text-sm">Communauté</h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Règles
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Classements
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Ateliers
-                </a>
-              </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="text-white font-bold text-sm">Plateforme</h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  AfriStory Pro
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  À Propos
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Carrières
-                </a>
-              </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="text-white font-bold text-sm">Légal</h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Confidentialité
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary"
-                  href="#"
-                >
-                  Conditions
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-surface-border text-center text-text-muted text-sm">
-            © 2023 AfriStory. Tous droits réservés.
-          </div>
-        </div>
       </footer>
     </>
   );
 }
-

@@ -6,8 +6,7 @@ import {
   Heart,
   ChevronLeft,
   ChevronRight,
-  ArrowForward,
-  SkipPrevious,
+  SkipBack,
   MoreVertical,
   Share2,
   Bookmark,
@@ -218,7 +217,7 @@ export default function ReadPage() {
       {/* Mobile Bottom Nav */}
       <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between border-t border-gray-200 bg-white p-2 dark:border-white/10 dark:bg-background-surface md:hidden">
         <Button variant="ghost" size="icon">
-          <SkipPrevious />
+          <SkipBack />
         </Button>
         <div className="flex-1 px-4 text-center">
           <div className="text-xs text-slate-500">Page 12/28</div>
@@ -231,7 +230,7 @@ export default function ReadPage() {
         </div>
         <Button size="sm" className="font-medium">
           Next
-          <ArrowForward className="ml-1 h-4 w-4" />
+          <ArrowRight className="ml-1 h-4 w-4" />
         </Button>
       </div>
     </div>

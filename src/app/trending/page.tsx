@@ -12,7 +12,7 @@ import {
   Settings,
   Menu,
   Bolt,
-  MenuBook,
+  Book,
   Heart,
   Star,
   PlusCircle,

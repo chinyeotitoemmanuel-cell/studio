@@ -6,15 +6,14 @@ import {
   Info,
   Languages,
   Mail,
-  MenuBook,
-  PersonAdd,
+  UserPlus,
   Search,
-  Share,
+  Share2,
   ShoppingBag,
   Verified,
-  Visibility,
+  Eye,
   Heart,
-  ExpandMore,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -120,7 +119,7 @@ export default function ProfilePage() {
                   </div>
                   <div className="flex flex-wrap gap-3 w-full md:w-auto">
                     <Button className="flex-1 md:flex-none">
-                      <PersonAdd className="h-5 w-5" />
+                      <UserPlus className="h-5 w-5" />
                       <span>Suivre</span>
                     </Button>
                     <Button
@@ -169,7 +168,7 @@ export default function ProfilePage() {
                           className="text-gray-400 hover:text-primary transition-colors"
                           href="#"
                         >
-                          <Share />
+                          <Share2 />
                         </a>
                       </div>
                     </div>
@@ -216,7 +215,7 @@ export default function ProfilePage() {
                 className="border-primary text-primary whitespace-nowrap border-b-2 py-4 px-1 text-sm font-bold flex items-center gap-2"
                 href="#"
               >
-                <MenuBook className="h-[18px] w-[18px]" />
+                <Book className="h-[18px] w-[18px]" />
                 Published Works
                 <span className="bg-primary/10 text-primary text-xs py-0.5 px-2 rounded-full ml-1">
                   Pro
@@ -259,7 +258,7 @@ export default function ProfilePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                     <Button>
-                      <Visibility className="h-[18px] w-[18px]" />
+                      <Eye className="h-[18px] w-[18px]" />
                       Read Now
                     </Button>
                   </div>
@@ -276,7 +275,7 @@ export default function ProfilePage() {
                       <Heart className="h-[14px] w-[14px]" /> {work.likes}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Visibility className="h-[14px] w-[14px]" /> {work.views}
+                      <Eye className="h-[14px] w-[14px]" /> {work.views}
                     </span>
                   </div>
                 </div>
@@ -289,7 +288,7 @@ export default function ProfilePage() {
               className="border-gray-300 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5"
             >
               Load More Works
-              <ExpandMore className="h-[18px] w-[18px]" />
+              <ChevronDown className="h-[18px] w-[18px]" />
             </Button>
           </div>
         </div>
