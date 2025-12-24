@@ -1,3 +1,4 @@
+
 'use client';
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -10,15 +11,15 @@ import {
   Edit,
   Settings,
   Menu,
-  Public,
   Bolt,
   MenuBook,
-  EmojiEvents,
-  WorkspacePremium,
-  Visibility,
-  Favorite,
-  ArrowForward,
+  Heart,
+  Star,
+  PlusCircle,
+  Eye,
+  ChevronDown,
 } from "lucide-react";
+import { Header } from "@/components/layout/header";
 
 
 export default function TrendingPage() {
@@ -99,231 +100,149 @@ export default function TrendingPage() {
 
   return (
     <div className="flex h-screen w-full bg-background-light dark:bg-background-dark">
-      {/* Side Navigation */}
-      <aside className="hidden md:flex flex-col w-64 h-full bg-[#231d10] border-r border-border shrink-0">
-        <div className="p-6 pb-8">
-          <div className="flex flex-col">
-            <h1 className="text-white text-xl font-black leading-normal tracking-tight">AfriStory</h1>
-            <p className="text-text-secondary text-xs font-normal">Pan-African Reading Platform</p>
-          </div>
-        </div>
-        <nav className="flex-1 flex flex-col gap-2 px-4 overflow-y-auto">
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg text-text-secondary hover:bg-surface-highlight hover:text-white transition-colors group" href="/">
-            <Home className="group-hover:text-primary transition-colors" />
-            <span className="text-sm font-medium">Home</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg text-text-secondary hover:bg-surface-highlight hover:text-white transition-colors group" href="#">
-            <Library className="group-hover:text-primary transition-colors" />
-            <span className="text-sm font-medium">Library</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg bg-surface-highlight text-white transition-colors" href="/trending">
-            <TrendingUp className="text-primary" />
-            <span className="text-sm font-medium">Trending</span>
-          </Link>
-          <div className="h-px bg-border my-2 mx-3"></div>
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg text-text-secondary hover:bg-surface-highlight hover:text-white transition-colors group" href="#">
-            <Verified className="text-purple-400 group-hover:text-purple-300 transition-colors" />
-            <span className="text-sm font-medium">AfriStory Pro</span>
-          </Link>
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg text-text-secondary hover:bg-surface-highlight hover:text-white transition-colors group" href="#">
-            <Edit className="text-blue-400 group-hover:text-blue-300 transition-colors" />
-            <span className="text-sm font-medium">AfriStory Draft</span>
-          </Link>
-        </nav>
-        <div className="p-4 mt-auto">
-          <Link className="flex items-center gap-3 px-3 py-3 rounded-lg text-text-secondary hover:bg-surface-highlight hover:text-white transition-colors group" href="#">
-            <Settings className="group-hover:text-primary transition-colors" />
-            <span className="text-sm font-medium">Settings</span>
-          </Link>
-          <div className="mt-4 flex items-center gap-3 px-3">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-orange-600 border border-white/20"></div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium text-white">Kwame D.</p>
-              <p className="text-xs text-text-secondary">Free Plan</p>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      {/* Main Content */}
       <main className="flex-1 h-full overflow-y-auto">
+      <Header />
         <div className="w-full max-w-[1200px] mx-auto p-4 md:p-8 flex flex-col gap-8">
-          {/* Mobile Header */}
-          <div className="md:hidden flex justify-between items-center mb-2">
-            <h1 className="text-white text-lg font-black">AfriStory</h1>
-            <Button variant="ghost" size="icon" className="text-white">
-              <Menu />
-            </Button>
-          </div>
-
-          {/* Page Header & Filters */}
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <div className="flex flex-col gap-1">
-                <h2 className="text-white text-3xl md:text-4xl font-black leading-tight tracking-tight">Classements &amp; Tendances</h2>
-                <p className="text-text-secondary text-base">Based on global reader activity and engagement.</p>
-              </div>
-              <div className="flex bg-surface-dark/50 p-1 rounded-lg self-start md:self-auto">
-                <Button variant="default" className="px-4 py-1.5 rounded-md text-sm font-bold shadow-sm bg-primary text-background-dark">This Week</Button>
-                <Button variant="ghost" className="px-4 py-1.5 rounded-md text-text-secondary hover:text-white text-sm font-medium">Month</Button>
-                <Button variant="ghost" className="px-4 py-1.5 rounded-md text-text-secondary hover:text-white text-sm font-medium">All Time</Button>
-              </div>
+         <div className="relative w-full min-h-[400px] md:min-h-[500px] rounded-2xl overflow-hidden flex flex-col justify-end p-6 md:p-12 group">
+            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: 'linear-gradient(to top, rgba(35, 29, 16, 1) 0%, rgba(35, 29, 16, 0.7) 50%, rgba(35, 29, 16, 0.3) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzpwaw6JhNxtvojilc_BP3xYtCOrBwPc-nEjpwusJK79ZHtUqgeAMOi1rRQdbGVhT6LRYXBXaabECIl3IpyLKiA5CzjmOFRLG2heOjKUqaYoVnXMi8Knk8c1jwjiPCIEedVsQwQC0Ibmw9jDm-hTxLbZEYCbURvKugW2ifWbNU2imEktxm47-WHXI2G0mM9Q8q_Y3sniXPgxv45kA4mKXtdePKp6BpWrvA7ijhyaas0Mgpe5vswAWb33dqOWirXrEPJ2t6LlhzLd8y")'}}>
             </div>
-            {/* Category Tabs */}
-            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 border-b border-border">
-              <Button variant="link" className="flex items-center gap-2 px-4 py-2 border-b-2 border-primary text-white font-bold whitespace-nowrap h-auto">
-                <Public className="text-primary" size={20} /> Global
-              </Button>
-              <Button variant="link" className="flex items-center gap-2 px-4 py-2 border-b-2 border-transparent text-text-secondary hover:text-white font-medium transition-colors whitespace-nowrap h-auto">
-                <Verified size={20} /> AfriStory Pro
-              </Button>
-              <Button variant="link" className="flex items-center gap-2 px-4 py-2 border-b-2 border-transparent text-text-secondary hover:text-white font-medium transition-colors whitespace-nowrap h-auto">
-                <Edit size={20} /> AfriStory Draft
-              </Button>
-            </div>
-          </div>
-
-          {/* Top 3 Podium Section */}
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end mt-4">
-            {/* Rank 2 */}
-            <div className="order-2 md:order-1 bg-surface-dark rounded-xl p-4 flex flex-col gap-4 border border-border hover:border-white/20 transition-all group relative overflow-hidden">
-                <div className="absolute top-0 left-0 bg-white/10 text-white font-black text-4xl p-4 leading-none opacity-10">02</div>
-                <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-lg">
-                    <Image width={400} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Futuristic African city artwork cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8bsUL8VHP5wRn1A2nqbZVgbBBof6BPeqD1phQRwexrrGKa2_npkR4Ha2LkK1xl8s2dju5OzVYzyT5HAplXxyhxtmpoHxVw3d3pF91iTjJ5ONZlwKhdjl3uXDtNx3FpS5CujMtugaGVuayIQBU7TC_RpZXRVWz8zqycLMtZb5obT5s9MxHHlifHmDeLpT0y92D-XSN33-FiRs315utOajMtbTTbNFiRCGE7KFa6owpdwsh2mAEtg08ZltjY-OvlgHF6lndSrIi52xz"/>
-                    <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                        <WorkspacePremium className="text-gray-400" size={14} /> #2
-                    </div>
+            <div className="relative z-10 max-w-3xl flex flex-col gap-6">
+                <div className="flex items-center gap-3">
+                    <span className="px-3 py-1 bg-primary text-background-dark text-xs font-bold uppercase tracking-wider rounded-full">Non Compétitif</span>
+                    <span className="text-white/80 text-sm font-medium">Octobre 2023</span>
                 </div>
-                <div className="flex flex-col gap-1">
-                    <h3 className="text-white font-bold text-lg leading-snug truncate">Cyber-Lagos 2077</h3>
-                    <p className="text-text-secondary text-sm">Chidi O.</p>
-                    <div className="flex items-center gap-3 mt-2 text-xs text-text-secondary">
-                        <span className="flex items-center gap-1"><Visibility size={14} /> 8.5k</span>
-                        <span className="flex items-center gap-1"><Favorite size={14} /> 3.2k</span>
-                    </div>
-                </div>
-            </div>
-            {/* Rank 1 */}
-            <div className="order-1 md:order-2 bg-gradient-to-b from-surface-dark to-[#231d10] rounded-xl p-5 flex flex-col gap-5 border-2 border-primary/50 shadow-[0_0_30px_rgba(242,166,13,0.1)] relative overflow-hidden transform md:-translate-y-4 md:scale-105 z-10">
-                <div className="absolute top-0 right-0 p-4">
-                    <EmojiEvents className="text-primary" size={36} />
-                </div>
-                <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
-                    <Image width={400} height={600} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Golden stool glowing artifact artwork cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBik_NlwbY0Yfp2amx5XZDcd1XGWwxw4EuxkqUlg2CHD_5mTvDMw4Nm7yHc0mx8jSXA-YyuNlHlO20PVQw1nVaxS3psdwz8via7AXDFJgNBheL6c0axBBHiU0HCnOj94Q3M-hbkd3X5PjKccay6BObag_rWGR9Oe0gwXD8RWmDDPutAx4iG1CQBlUpUI7jbzEoh0dX7KQyEQyheww3fh3kpooUMzUAirn8XkXnFJhQ8SNjMC9SmxfZuKQ-EhafgJkzCsooD_ZSSPeiB"/>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-                    <div className="absolute bottom-0 left-0 w-full p-4">
-                        <span className="inline-block px-3 py-1 rounded-full bg-primary text-background-dark text-xs font-bold mb-2">Top Trending</span>
-                    </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                    <h3 className="text-white font-black text-2xl leading-tight">The Golden Stool</h3>
-                    <div className="flex justify-between items-center">
-                        <p className="text-primary font-medium text-sm">Kwame Doe</p>
-                        <span className="text-xs px-2 py-0.5 rounded border border-white/20 text-white/60">Pro</span>
-                    </div>
-                    <div className="flex items-center gap-4 mt-2 text-sm text-text-secondary">
-                        <span className="flex items-center gap-1.5"><Visibility className="text-white" size={16} /> 15k</span>
-                        <span className="flex items-center gap-1.5"><Favorite className="text-primary" size={16} /> 8k</span>
-                    </div>
-                    <Button className="mt-2 w-full py-3 bg-primary hover:bg-primary/90 text-background-dark font-bold rounded-lg transition-colors flex items-center justify-center gap-2 h-auto">
-                        <span>Read Now</span>
-                        <ArrowForward size={18} />
+                <h1 className="text-4xl md:text-6xl font-black text-white leading-tight font-display tracking-tight">
+                    Classements <br/>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Communautaires</span>
+                </h1>
+                <p className="text-lg md:text-xl text-white/90 font-light max-w-xl leading-relaxed">
+                    Un espace pour célébrer l'art, l'apprentissage et l'entraide. Ici, pas de rivalité, juste de l'inspiration et la reconnaissance de votre évolution.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-4">
+                    <Button size="lg" className="shadow-[0_0_20px_rgba(242,166,13,0.3)]">
+                        <Star className="mr-2 h-4 w-4" />
+                        Voir les Coups de Cœur
+                    </Button>
+                    <Button size="lg" variant="secondary">
+                        <PlusCircle className="mr-2 h-4 w-4" />
+                        Suggérer un Talent
                     </Button>
                 </div>
             </div>
-            {/* Rank 3 */}
-            <div className="order-3 md:order-3 bg-surface-dark rounded-xl p-4 flex flex-col gap-4 border border-border hover:border-white/20 transition-all group relative overflow-hidden">
-                <div className="absolute top-0 left-0 bg-white/10 text-white font-black text-4xl p-4 leading-none opacity-10">03</div>
-                <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-lg">
-                    <Image width={400} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Abstract ancestral spirits artwork cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUUlpRc4497wMsGcWqhxpno9p2JZKFAfpor3tHbtpR2JfJsM3F1rZjPJ62XJmAY1QJjIvv-ng8AUKlDbNIf9v5hy7FEliWNZiof5OcgBGbLKtEons1fQVcRV5NiO_ZKcKXz_0tw_Cqj2bITzuna0ETC0ERPFadpAAyQX6aki_WUqiL5NjS8jGCX26Rqc_WBqMEsSH1ZkiZcruBnIRCYo0QWUkZsK_YZJLEZK3Ue5_4JqZekVD0uuR8VoRZfxGAmfrrREWncacdY4mk"/>
-                    <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-white flex items-center gap-1">
-                        <WorkspacePremium className="text-orange-700" size={14} /> #3
-                    </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface-dark border border-surface-border rounded-xl p-6 flex items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                    <Heart className="h-8 w-8" />
                 </div>
-                <div className="flex flex-col gap-1">
-                    <h3 className="text-white font-bold text-lg leading-snug truncate">Ancestral Echoes</h3>
-                    <p className="text-text-secondary text-sm">Nia S.</p>
-                    <div className="flex items-center gap-3 mt-2 text-xs text-text-secondary">
-                        <span className="flex items-center gap-1"><Visibility size={14} /> 7.1k</span>
-                        <span className="flex items-center gap-1"><Favorite size={14} /> 2.5k</span>
-                    </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-white font-display">2,450</h3>
+                    <p className="text-text-muted text-sm">Encouragements donnés</p>
                 </div>
             </div>
-          </section>
+            <div className="bg-surface-dark border border-surface-border rounded-xl p-6 flex items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                    <TrendingUp className="h-8 w-8" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-white font-display">185</h3>
+                    <p className="text-text-muted text-sm">Artistes en progression</p>
+                </div>
+            </div>
+            <div className="bg-surface-dark border border-surface-border rounded-xl p-6 flex items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                    <Verified className="h-8 w-8" />
+                </div>
+                <div>
+                    <h3 className="text-2xl font-bold text-white font-display">12</h3>
+                    <p className="text-text-muted text-sm">Mentors actifs ce mois</p>
+                </div>
+            </div>
+        </div>
 
-          {/* Rising Stars */}
-          <section className="flex flex-col gap-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Bolt className="text-primary" />
-                <h3 className="text-white text-xl font-bold">Rising Stars</h3>
-              </div>
-              <Button variant="link" className="text-sm text-primary hover:text-white">View All</Button>
+        <div className="py-10">
+            <div className="flex flex-col gap-2 mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-white flex items-center gap-3">
+                    <span className="text-primary">🔥</span>
+                    Coup de Cœur du Mois
+                </h2>
+                <p className="text-text-muted leading-relaxed max-w-2xl">
+                    Une sélection des œuvres qui ont le plus touché la communauté par leur originalité, leur émotion ou leur audace technique.
+                </p>
             </div>
-            <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x">
-              {risingStarsData.map((star, index) => (
-                <div key={index} className="snap-start shrink-0 w-[200px] flex flex-col gap-3 group cursor-pointer">
-                  <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-surface-highlight relative">
-                    <Image width={200} height={267} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={star.title} src={star.imageUrl} />
-                    <div className={`absolute top-2 right-2 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase tracking-wider ${star.type === 'Pro' ? 'bg-purple-500/80' : 'bg-blue-500/80'}`}>{star.type}</div>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-base truncate group-hover:text-primary transition-colors">{star.title}</h4>
-                    <p className="text-text-secondary text-xs mt-1">By {star.author}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-          
-          {/* Leaderboard */}
-          <section className="flex flex-col gap-4 pb-12">
-            <h3 className="text-white text-xl font-bold">Top 10 Leaderboard</h3>
-            <div className="flex flex-col gap-2">
-              <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-2 text-xs font-medium text-text-secondary uppercase tracking-wider border-b border-border mb-2">
-                <div className="col-span-1 text-center">Rank</div>
-                <div className="col-span-6">Story</div>
-                <div className="col-span-2 text-right">Views</div>
-                <div className="col-span-2 text-right">Likes</div>
-                <div className="col-span-1"></div>
-              </div>
-              {leaderboardData.map((item) => (
-                <div key={item.rank} className="group bg-surface-dark/50 hover:bg-surface-highlight rounded-lg p-3 md:px-4 md:py-3 transition-colors">
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
-                    <div className="flex items-center gap-4 md:gap-0 col-span-1 justify-between md:justify-center">
-                      <span className="text-lg font-bold text-text-secondary w-8 text-center">{item.rank}</span>
-                      <div className="md:hidden text-xs text-text-secondary flex gap-3">
-                        <span className="flex items-center gap-1"><Visibility size={12}/> {item.views}</span>
-                        <span className="flex items-center gap-1"><Favorite size={12}/> {item.likes}</span>
-                      </div>
-                    </div>
-                    <div className="col-span-12 md:col-span-6 flex items-center gap-4">
-                      <Image width={48} height={64} className="w-12 h-16 object-cover rounded shadow-md" alt="Book cover thumbnail" src={item.imageUrl}/>
-                      <div className="flex flex-col">
-                        <h4 className="text-white font-bold text-base group-hover:text-primary transition-colors">{item.title}</h4>
-                        <div className="flex items-center gap-2">
-                          <p className="text-text-secondary text-sm">{item.author}</p>
-                          <span className={`text-[10px] px-1.5 py-0.5 rounded border ${item.isPro ? 'border-primary/30 text-primary' : 'border-white/10 text-white/50'}`}>{item.category}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div className="lg:col-span-7 group relative">
+                    <div className="w-full h-[500px] rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group-hover:border-primary transition-colors shadow-lg">
+                        <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqqpuUcoKDHW-XRjdG9F7DCSsryToQtQvtZQDFkXM992uVdaxWA1gKhtxM5vxlF6VvIx6D6uTFyh_eYjho-OposvXGqRhNIWnn17RGilR-E8HVP4A6rcZWvmFM6kGcc_1ztGSrwUN4icq7k8jU_x80JOUCrTTd7Tv8aoOb95QmxyzFKXKuYKXK-FL0rcj25BAhVd1xGE1BkWtjVKNqjP2inwygB-Any8x4_DsdpY34IcWhR1dNRgZ3wK9WVJOs3aNz9HrKx7aGOpPG" alt="Digital art of a neon-lit cybernetic mask detailed" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="px-3 py-1 bg-primary text-background-dark text-xs font-bold uppercase rounded-full">Top Sélection</span>
+                                <span className="text-white/80 text-sm"><Heart className="inline h-4 w-4 mr-1"/> 432 Likes</span>
+                            </div>
+                            <h3 className="text-3xl font-bold text-white font-display mb-2">Neon Masks of Lagos</h3>
+                            <p className="text-text-muted text-base line-clamp-2 mb-6">Une réinterprétation vibrante des traditions masquées fusionnées avec l'esthétique cyberpunk. L'utilisation de la lumière est tout simplement magistrale.</p>
+                            <div className="flex items-center gap-3">
+                                <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyHys3IVwHiGaRbW3tLytK6tuACb4CBA-HXbthdopm8BddXrWN45kodeTUmjQJZSla4VdsTZvxazEHAPawxBHrjqqXOxt0RsG84tRKtar_e6lYqZX3pisWoqOOpb7irD5zGyoAnIVNbE76UbRSuOO6HNBEyIu8IVaq0JHhUuuUdVmigwVeb0jPLk2RoPF0MymVIByl46WHtkgv1JyL40IdcNhzUtq6tvLsYOCAcDF8O0_o9mnEPGIEDgyD5sU4I3bjRJ_XcJXKv2FR" alt="User avatar" width={40} height={40} className="rounded-full border border-surface-border"/>
+                                <div className="flex flex-col">
+                                    <span className="text-white font-bold text-sm">@art_vandal</span>
+                                    <span className="text-primary text-xs">Artiste Visionnaire</span>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <div className="hidden md:block col-span-2 text-right text-sm text-text-secondary">{item.views}</div>
-                    <div className="hidden md:block col-span-2 text-right text-sm text-text-secondary">{item.likes}</div>
-                    <div className="col-span-12 md:col-span-1 flex justify-end">
-                      <Button variant="ghost" size="icon" className="p-2 rounded-full hover:bg-primary hover:text-background-dark text-text-secondary transition-colors" title="Read">
-                        <MenuBook />
-                      </Button>
-                    </div>
-                  </div>
                 </div>
-              ))}
+                <div className="lg:col-span-5 flex flex-col gap-6">
+                    <div className="flex-1 rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group hover:border-primary transition-colors flex">
+                         <div className="w-1/3 relative">
+                           <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5vwEGVxMzShq0Ln-9YTiWEYe9YjF-tjOqnqKYgUSNwaDbE2BbV6ef5ruBgSXcB7pvDeITukT3bZbNsgF5tYh5ZqBW8tROTnSZFszmvhBbp9Mko-x17uq_KX6-vxxoeOSn7_bGXOROsELKtXGBbtOHoN_PhHRSGMCkn2Vn05MDDjpUFuqoJwPWRQmI5S4k6zYbZEvzoJY64BJD5klyfu-L2057YE27Eas-0FRRVQP3WwHAEEPjeoMv27enrZW-PqgbOEHmC8EP8yVT" alt="Illustration of a flying taxi" fill className="object-cover"/>
+                        </div>
+                        <div className="w-2/3 p-5 flex flex-col justify-center">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="px-2 py-0.5 bg-surface-border text-text-muted text-[10px] font-bold uppercase rounded-full">Narratif</span>
+                            </div>
+                            <h4 className="text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">Taxi 2077</h4>
+                            <p className="text-text-muted text-sm line-clamp-2 mb-4">Un storytelling visuel captivant qui nous plonge dans le quotidien futuriste.</p>
+                            <div className="flex items-center gap-2">
+                                <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmo4YRqd3ouZKU9oj2oiMDNN5jOFVBG9qxVQjkQE7ysA-cFKbDkKcmQxj0mLhNnhbMtEI17UlUERpx9dZQnv_8PtYdxyZ9FlG49YeeG1Aqb0v_nLV0wkVr4W5k7FOqrvEomM2y5PVwtRxkBFxEiglaZueVwSvyiCOL8J4znvw_Q-QMiyrkV7-6zzWL97h_Q4VpvRUUEnK7HK-1rmgfpvclltGlxKuDi9Z-82lSn2JCAs5tJE9FKJBMeEl7mPSI65IcMIWeAgUAYs3p" alt="" width={24} height={24} className="rounded-full"/>
+                                <span className="text-white text-xs font-medium">@flyboy_zm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex-1 rounded-xl bg-surface-dark overflow-hidden relative border border-surface-border group hover:border-primary transition-colors flex">
+                        <div className="w-1/3 relative">
+                          <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuYDvDm91UEfAnVissfxiNRACGaW8xSJAflKnMVoMyIEJsvZyR7qPCQyqhZH9jy1RtYyYXhNhBQCes6QW5HmBNwsiMUwADxdrhaMJCNx6rq83_zgbRP40Tet4OurD-4g9wuN1bCdYEgBu_JOQz_IJmL-FJuuTQEFDUbsI4Rj4BECpSATiiSk5mBHnhNGZV5qWb7UrshWikihu3LQ9hxs90LbIH4gYf2MvDZl0TcEKimVdGHm9x2K2SAUsh_v4DWviwhQVv5GmwwYf" alt="Cyberpunk character design" fill className="object-cover"/>
+                        </div>
+                        <div className="w-2/3 p-5 flex flex-col justify-center">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="px-2 py-0.5 bg-surface-border text-text-muted text-[10px] font-bold uppercase rounded-full">Technique</span>
+                            </div>
+                            <h4 className="text-white font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors">Cyber-Griot</h4>
+                            <p className="text-text-muted text-sm line-clamp-2 mb-4">Une maîtrise impressionnante des textures et des motifs traditionnels.</p>
+                            <div className="flex items-center gap-2">
+                                <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmAqB-R2ecPbzR3kUkEAenbPYNlq3pAbIFIvF19dYM4fKUFabMYIAgZDI9Ek3e-aSCouPKEIo0UIAC7ul2j4jWCMY2aOTakmRQKsCMSSb7pdV1jK2ZO4Bs9hO6WhZ1YKmoos1oVLW3xCvInACp98Pc2LFHmV4lgyVouQ9uo0eQ7M4D0l4RRhoIH23F9OPg3HFHJXWh0FGIL6LWK8X4POtAHvCCMhmPyhL_yQVSL3xgj91HOwPPuzaHksUdooxlmLdTIpdWDrhOHETh" alt="" width={24} height={24} className="rounded-full"/>
+                                <span className="text-white text-xs font-medium">@storyteller_x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <Button variant="outline" className="w-full py-3 mt-4 rounded-lg border-border text-text-secondary hover:text-white hover:bg-surface-highlight transition-colors text-sm font-medium h-auto">
-              Show More Ranks
-            </Button>
-          </section>
+        </div>
+        <div className="px-4 md:px-10 py-10 bg-surface-dark/30 border-y border-surface-border">
+            <div className="flex items-center justify-between mb-8">
+                <div>
+                    <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">Progression du Mois</h2>
+                    <p className="text-text-muted text-sm">Ces artistes ont démontré une amélioration remarquable et un engagement constant.</p>
+                </div>
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-background-dark">
+                    Voir tout
+                </Button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                 {/* Rising artist cards */}
+            </div>
+        </div>
+          
         </div>
       </main>
-    </div>
-  );
-}
+    </body>
+    </html>
