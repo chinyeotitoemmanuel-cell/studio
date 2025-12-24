@@ -504,16 +504,105 @@ export default function WorkshopsPage() {
             </div>
           </div>
           <div className="mt-8 flex justify-center">
-            <Button
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-background-dark"
-            >
-              <Library />
+            <button class="px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-background-dark transition-colors text-sm font-bold rounded-lg flex items-center gap-2">
+              <span class="material-symbols-outlined">collections_bookmark</span>
               Accéder à la bibliothèque complète
-            </Button>
+            </button>
           </div>
         </div>
-      </footer>
+      </main>
     </>
   );
 }
+
+</footer>
+</div>
+<div class="px-4 md:px-10 py-10 mt-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold font-display text-white">Parcours d'Apprentissage</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">Voir tous les parcours</a>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 scrollbar-hide snap-x">
+<div class="min-w-[280px] snap-start bg-surface-dark rounded-xl overflow-hidden border border-surface-border hover:border-text-muted transition-colors cursor-pointer group flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Abstract art representing comic book creation" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBghqRSpPWSnwgmRXsfOUQNdWN4Q95nQdi-LRqRJxKCG8PqegVv67BsPdH6hW9LEkQPknOYhxWO2_54FS0XV7dJY5AHiwJCUwEHDkybIEjsa7UMMRR7jF1wGT7IFgBnzUYEmTJccI0F_AeD3khDeNYmu2V8NRjjGI_uUryNcv5dxc74Ur0Ocv3tkIobyS8K2iJV5Y_66rOi9IR0biI9oNNEHvQNFpdEm_zIyeiD6vA9zegyTuA2YCuTEpXD2XZXxkYRRsVRjc_lGgKz");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+<div class="absolute bottom-2 left-4">
+<span class="px-2 py-1 bg-primary text-background-dark text-[10px] font-bold rounded uppercase">Populaire</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="text-white font-bold text-lg leading-tight mb-2">Devenir Auteur de Comics</h3>
+<p class="text-text-muted text-xs mb-4 line-clamp-3">Un cursus complet de 12 semaines pour créer votre première bande dessinée.</p>
+<div class="mt-auto pt-4 border-t border-surface-border/50 flex items-center justify-between">
+<span class="text-white text-xs font-bold">12 Modules</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] snap-start bg-surface-dark rounded-xl overflow-hidden border border-surface-border hover:border-text-muted transition-colors cursor-pointer group flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Abstract art representing digital painting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXkFtLhjAmdhNAWaUVQY8eUReAr6lhFza-r5iniKS_tdq1hVSeQYO82Di6uXu8PuN_kkuvy3J1XJGbu5S_msUmYQdsTcWCcRue2IyCtihc6f4SI0T-rjdWspmE_6I9oL0di8ETwgi1af7MMaXyllCfQ5UY5E6iy7WfO5lt8KlsUqIzoOARdE18KxuSA1VBanPe6cyi9lYOKxZP29eRdjok6wUiF0zWrztraXCpOO8UTICtN3SP-_cYOA3D3e_X6-txP02xUUHhYdmw");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="text-white font-bold text-lg leading-tight mb-2">Digital Painting Mastery</h3>
+<p class="text-text-muted text-xs mb-4 line-clamp-3">Maîtrisez Photoshop et Procreate pour des illustrations professionnelles.</p>
+<div class="mt-auto pt-4 border-t border-surface-border/50 flex items-center justify-between">
+<span class="text-white text-xs font-bold">8 Modules</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] snap-start bg-surface-dark rounded-xl overflow-hidden border border-surface-border hover:border-text-muted transition-colors cursor-pointer group flex flex-col">
+<div class="h-32 bg-cover bg-center relative" data-alt="Abstract art representing 3D animation" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA87y2E0Oa5ooUNbJ_ZRWH9d1wFAS1FjLz6vfJpasvyOe7P119Lo50qHMW_DpEKufAklAc8m-SFa6rwrfIyrkavVB-3nsri6Twre0jQKOL2SMuP6xW8jdzVJuhnEKPkpOwM6Z4q4Kht815tEPONWASAls-v5h8bdQY1ko5lxExC4Ki4Ezjw4Da_sZpHmmI29CM5Uc0XJDT7NIZVNn5Wtay5I_TEQgTG180_ac5mWezpl41Ss1bRn-17mJ2waoQmAFD15RCiBfVFKdOV");'>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent"></div>
+<div class="absolute bottom-2 left-4">
+<span class="px-2 py-1 bg-secondary text-white text-[10px] font-bold rounded uppercase">Nouveau</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col">
+<h3 class="text-white font-bold text-lg leading-tight mb-2">Initiation à l'Animation 3D</h3>
+<p class="text-text-muted text-xs mb-4 line-clamp-3">Découvrez les fondamentaux du mouvement et du rigging.</p>
+<div class="mt-auto pt-4 border-t border-surface-border/50 flex items-center justify-between">
+<span class="text-white text-xs font-bold">10 Modules</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="border-t border-surface-border bg-surface-dark mt-auto">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10 py-12">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<span class="text-lg font-bold font-display">AfriStory</span>
+</div>
+<p class="text-text-muted text-sm">Empowering the next generation of African visual storytellers. Join the movement.</p>
+</div>
+<div class="flex gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm">Communauté</h4>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Règles</a>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Classements</a>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Ateliers</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm">Plateforme</h4>
+<a class="text-text-muted text-sm hover:text-primary" href="#">AfriStory Pro</a>
+<a class="text-text-muted text-sm hover:text-primary" href="#">À Propos</a>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Carrières</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm">Légal</h4>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Confidentialité</a>
+<a class="text-text-muted text-sm hover:text-primary" href="#">Conditions</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-surface-border text-center text-text-muted text-sm">
+                © 2023 AfriStory. Tous droits réservés.
+            </div>
+</div>
+</footer>
+</body></html>
