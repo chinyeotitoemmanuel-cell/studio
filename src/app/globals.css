@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 38 13% 96%;
-    --foreground: 40 36% 10%;
+    --background: 40 10% 98%; /* warm off-white */
+    --foreground: 38 41% 13%; /* dark brown/black */
     --card: 0 0% 100%;
-    --card-foreground: 40 36% 10%;
+    --card-foreground: 38 41% 13%;
     --popover: 0 0% 100%;
-    --popover-foreground: 40 36% 10%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 40 36% 10%;
-    --secondary: 38 11% 90%;
-    --secondary-foreground: 40 36% 10%;
-    --muted: 38 11% 90%;
-    --muted-foreground: 40 20% 30%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 19 90% 40%;
+    --popover-foreground: 38 41% 13%;
+    --primary: 41 96% 44%; /* darker gold */
+    --primary-foreground: 38 41% 13%;
+    --secondary: 278 81% 56%; /* darker purple */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 42 27% 34%; /* medium brown */
+    --muted-foreground: 42 27% 34%;
+    --accent: 39 48% 96%; /* light beige for surfaces */
+    --accent-foreground: 38 41% 13%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 38 9% 88%;
-    --input: 38 9% 88%;
-    --ring: 38 92% 50%;
+    --border: 39 29% 87%; /* light border */
+    --input: 39 29% 87%;
+    --ring: 41 96% 44%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -40,7 +40,7 @@
     --popover-foreground: 0 0% 98%;
     --primary: 38 92% 50%;
     --primary-foreground: 40 36% 10%;
-    --secondary: 40 28% 14%;
+    --secondary: 278 81% 56%;
     --secondary-foreground: 38 92% 50%;
     --muted: 40 10% 11%;
     --muted-foreground: 38 15% 61%;
@@ -95,4 +95,8 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+p {
+  font-variant-numeric: oldstyle
 }

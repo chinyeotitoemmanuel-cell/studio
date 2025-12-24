@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Outfit', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+        body: ['Merriweather', 'serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         news: ['Newsreader', 'serif'],
@@ -94,7 +94,18 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      typography: (theme: (arg0: string) => any) => ({
+        DEFAULT: {
+            css: {
+                color: theme('colors.gray.300'),
+                fontFamily: theme('fontFamily.body'),
+                h1: { fontFamily: theme('fontFamily.display') },
+                h2: { fontFamily: theme('fontFamily.display') },
+                h3: { fontFamily: theme('fontFamily.display') },
+            },
+        },
+      }),
     },
   },
-  plugins: [require('tailwindcss-animate'), require('react-icons')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 } satisfies Config;
