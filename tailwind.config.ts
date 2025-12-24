@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'Spline Sans', 'Inter', 'sans-serif'],
-        body: ['Noto Sans', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         news: ['Newsreader', 'serif'],
@@ -54,9 +54,10 @@ export default {
         // Custom colors from HTML
         'background-light': '#f8f7f5',
         'background-dark': '#221c10',
-        'surface-dark': '#2d2415',
+        'surface-dark': '#342b18',
         'surface-highlight': '#493c22',
         'text-secondary': '#cbb790',
+        'text-muted': '#cbb790',
         'border-color': '#493c22',
         'surface-border': '#493c22',
         'background-surface': '#27272a',
@@ -97,5 +98,3 @@ export default {
   },
   plugins: [require('tailwindcss-animate'), require('react-icons')],
 } satisfies Config;
-
-    
