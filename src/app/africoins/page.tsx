@@ -15,13 +15,7 @@ import {
   Info,
   History,
   CheckCircle,
-  ArrowRight,
-  ShoppingCart,
-  Diamond,
-  Star,
-  Coins,
-  Gem,
-  Building,
+  Lock,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,397 +24,465 @@ import { Header } from '@/components/layout/header';
 
 export default function AfriCoinsPage() {
   return (
-    <div className="bg-background-light text-text-main min-h-screen flex flex-col overflow-x-hidden selection:bg-primary/30">
-      <Header />
-      <main className="flex-1 w-full flex flex-col items-center bg-background-light relative">
-        <div className="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-surface-light to-transparent -z-10"></div>
-        <div className="absolute top-20 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute top-40 left-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
-        <div className="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-16">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-light border border-surface-border rounded-full mb-6">
-              <span className="size-2 bg-primary rounded-full animate-pulse"></span>
-              <span className="text-primary text-[10px] uppercase font-bold tracking-widest font-body">
-                Monnaie Virtuelle
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-black text-text-main mb-6 leading-tight font-display tracking-tight">
-              Rechargez vos AfriCoins
-            </h1>
-            <p className="text-text-muted text-lg font-body leading-relaxed">
-              Les AfriCoins vous permettent de débloquer des chapitres
-              exclusifs, de participer aux événements premium et de soutenir
-              directement vos artistes préférés sur AfriStory Pro.
-            </p>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
-            <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-              <label className="group cursor-pointer block relative">
-                <input
-                  className="peer sr-only"
-                  name="package"
-                  type="radio"
-                  value="starter"
-                />
-                <div className="h-full bg-white border border-surface-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden flex flex-col peer-checked:border-primary peer-checked:bg-yellow-50">
-                  <div className="flex justify-between items-start mb-4 relative z-10">
-                    <span className="text-text-muted text-xs font-bold tracking-widest uppercase font-body">
-                      Découverte
-                    </span>
-                    <div className="size-6 rounded-full border border-surface-border flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
-                      <div className="size-2.5 bg-white rounded-full hidden peer-checked:block"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-2 relative z-10">
-                    <div className="size-12 rounded-full bg-surface-light flex items-center justify-center text-primary border border-surface-border">
-                      <Coins className="text-3xl" />
-                    </div>
-                    <div>
-                      <span className="text-3xl font-bold font-display text-text-main block leading-none">
-                        100
-                      </span>
-                      <span className="text-xs text-text-muted uppercase font-bold">
-                        AfriCoins
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mt-auto pt-6 border-t border-surface-border flex justify-between items-center relative z-10">
-                    <span className="text-lg font-bold text-text-main font-body">
-                      1.000 FCFA
-                    </span>
-                  </div>
+    <>
+      {/* Top Navigation */}
+      <div className="relative flex w-full flex-col border-b border-border-dark bg-background-dark">
+        <div className="flex justify-center">
+          <div className="flex flex-col w-full max-w-[960px]">
+            <header className="flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-10">
+              <div className="flex items-center gap-4 text-white">
+                <div className="size-8 flex items-center justify-center text-primary">
+                  <BookOpen className="h-8 w-8" />
                 </div>
-              </label>
-              <label className="group cursor-pointer block relative">
-                <input
-                  defaultChecked
-                  className="peer sr-only"
-                  name="package"
-                  type="radio"
-                  value="standard"
-                />
-                <div className="h-full bg-white border border-surface-border rounded-xl p-6 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 relative overflow-hidden flex flex-col ring-1 ring-primary/20 peer-checked:border-primary peer-checked:bg-yellow-50">
-                  <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg z-20 font-body tracking-wider uppercase">
-                    Populaire
-                  </div>
-                  <div className="flex justify-between items-start mb-4 relative z-10">
-                    <span className="text-text-muted text-xs font-bold tracking-widest uppercase font-body">
-                      Passionné
-                    </span>
-                    <div className="size-6 rounded-full border border-surface-border flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
-                      <div className="size-2.5 bg-white rounded-full hidden peer-checked:block"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-2 relative z-10">
-                    <div className="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
-                      <Gem className="text-4xl" />
-                    </div>
-                    <div>
-                      <span className="text-4xl font-bold font-display text-text-main block leading-none">
-                        550
-                      </span>
-                      <span className="text-xs text-text-muted uppercase font-bold">
-                        AfriCoins
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mb-6 relative z-10">
-                    <span className="inline-flex items-center gap-1 text-secondary text-xs font-bold bg-secondary/10 px-2 py-1 rounded-md">
-                      <PlusCircle className="text-xs" /> +50 Bonus inclus
-                    </span>
-                  </div>
-                  <div className="mt-auto pt-6 border-t border-surface-border flex justify-between items-center relative z-10">
-                    <span className="text-xl font-bold text-text-main font-body">
-                      5.000 FCFA
-                    </span>
-                    <span className="text-xs text-green-600 font-bold bg-green-50 px-2 py-1 rounded">
-                      Économie 10%
-                    </span>
-                  </div>
+                <h2 className="text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                  AfriStory
+                </h2>
+              </div>
+              <div className="flex flex-1 justify-end gap-4 md:gap-8">
+                <div className="hidden md:flex items-center gap-9">
+                  <a
+                    className="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                    href="#"
+                  >
+                    Home
+                  </a>
+                  <a
+                    className="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                    href="#"
+                  >
+                    Library
+                  </a>
+                  <a
+                    className="text-primary text-sm font-medium leading-normal"
+                    href="#"
+                  >
+                    AfriCoins
+                  </a>
+                  <a
+                    className="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                    href="#"
+                  >
+                    Drafts
+                  </a>
                 </div>
-              </label>
-              <label className="group cursor-pointer block relative">
-                <input
-                  className="peer sr-only"
-                  name="package"
-                  type="radio"
-                  value="premium"
-                />
-                <div className="h-full bg-white border border-surface-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden flex flex-col peer-checked:border-primary peer-checked:bg-yellow-50">
-                  <div className="flex justify-between items-start mb-4 relative z-10">
-                    <span className="text-text-muted text-xs font-bold tracking-widest uppercase font-body">
-                      Collectionneur
-                    </span>
-                    <div className="size-6 rounded-full border border-surface-border flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-colors">
-                      <div className="size-2.5 bg-white rounded-full hidden peer-checked:block"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-2 relative z-10">
-                    <div className="size-12 rounded-full bg-surface-light flex items-center justify-center text-primary border border-surface-border">
-                      <Wallet className="text-3xl" />
-                    </div>
-                    <div>
-                      <span className="text-3xl font-bold font-display text-text-main block leading-none">
-                        1200
-                      </span>
-                      <span className="text-xs text-text-muted uppercase font-bold">
-                        AfriCoins
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mb-6 relative z-10">
-                    <span className="inline-flex items-center gap-1 text-secondary text-xs font-bold bg-secondary/10 px-2 py-1 rounded-md">
-                      <PlusCircle className="text-xs" /> +200 Bonus inclus
-                    </span>
-                  </div>
-                  <div className="mt-auto pt-6 border-t border-surface-border flex justify-between items-center relative z-10">
-                    <span className="text-lg font-bold text-text-main font-body">
-                      10.000 FCFA
-                    </span>
-                     <span className="text-xs text-green-600 font-bold bg-green-50 px-2 py-1 rounded">
-                      Économie 15%
-                    </span>
-                  </div>
-                </div>
-              </label>
-              <label className="group cursor-pointer block relative">
-                <input
-                  className="peer sr-only"
-                  name="package"
-                  type="radio"
-                  value="ultimate"
-                />
-                <div className="h-full bg-gradient-to-br from-text-main to-neutral-800 text-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col border border-neutral-700 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-text-main">
-                  <div className="absolute top-0 right-0 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg z-20 font-body tracking-wider uppercase">
-                    Best Value
-                  </div>
-                  <div className="flex justify-between items-start mb-4 relative z-10">
-                    <span className="text-white/70 text-xs font-bold tracking-widest uppercase font-body">
-                      Mécène
-                    </span>
-                    <div className="size-6 rounded-full border border-white/30 flex items-center justify-center peer-checked:bg-white peer-checked:border-white transition-colors">
-                      <div className="size-2.5 bg-neutral-800 rounded-full hidden peer-checked:block"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-2 relative z-10">
-                    <div className="size-12 rounded-full bg-white/10 flex items-center justify-center text-primary border border-white/20 backdrop-blur-sm">
-                      <Diamond className="text-3xl text-yellow-400" />
-                    </div>
-                    <div>
-                      <span className="text-3xl font-bold font-display text-white block leading-none">
-                        3000
-                      </span>
-                      <span className="text-xs text-white/60 uppercase font-bold">
-                        AfriCoins
-                      </span>
-                    </div>
-                  </div>
-                  <div className="mb-6 relative z-10">
-                    <span className="inline-flex items-center gap-1 text-yellow-300 text-xs font-bold bg-yellow-400/20 px-2 py-1 rounded-md border border-yellow-400/30">
-                      <Star className="text-xs" /> +600 Bonus Massif
-                    </span>
-                  </div>
-                  <div className="mt-auto pt-6 border-t border-white/20 flex justify-between items-center relative z-10">
-                    <span className="text-lg font-bold text-white font-body">
-                      25.000 FCFA
-                    </span>
-                     <span className="text-xs text-white font-bold bg-white/20 px-2 py-1 rounded">
-                      Économie 25%
-                    </span>
-                  </div>
-                  <div className="absolute -bottom-10 -right-10 opacity-10">
-                    <Diamond className="text-[180px]" />
-                  </div>
-                </div>
-              </label>
-            </div>
-            <div className="w-full lg:w-[400px] shrink-0">
-              <div className="sticky top-24 bg-white border border-surface-border rounded-xl shadow-xl shadow-stone-200/50 overflow-hidden">
-                <div className="p-6 bg-surface-light border-b border-surface-border">
-                  <h3 className="font-display font-bold text-xl text-text-main flex items-center gap-2">
-                    <ShoppingCart className="text-primary" />
-                    Récapitulatif
-                  </h3>
-                </div>
-                <div className="p-6 space-y-6">
-                  <div className="space-y-3 text-sm font-body">
-                    <div className="flex justify-between items-center">
-                      <span className="text-text-muted">
-                        Package sélectionné
-                      </span>
-                      <span className="font-bold text-text-main">
-                        Passionné
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-text-muted">AfriCoins de base</span>
-                      <span className="font-bold text-text-main">500 AC</span>
-                    </div>
-                    <div className="flex justify-between items-center text-secondary">
-                      <span className="flex items-center gap-1">
-                        <Gift className="text-sm" /> Bonus
-                      </span>
-                      <span className="font-bold">+50 AC</span>
-                    </div>
-                    <div className="pt-3 border-t border-dashed border-surface-border flex justify-between items-center">
-                      <span className="text-text-main font-bold">
-                        Total à recevoir
-                      </span>
-                      <div className="flex items-center gap-1 font-bold text-lg text-primary">
-                        550 AC
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider block">
-                      Moyen de paiement
-                    </label>
-                    <div className="grid grid-cols-3 gap-2">
-                      <button className="flex flex-col items-center justify-center p-2 border-2 border-primary bg-primary/5 rounded-lg transition-all">
-                        <CreditCard className="text-primary mb-1" />
-                        <span className="text-[10px] font-bold text-text-main">
-                          Carte
-                        </span>
-                      </button>
-                      <button className="flex flex-col items-center justify-center p-2 border border-surface-border hover:border-text-muted rounded-lg text-text-muted hover:text-text-main transition-all">
-                        <Landmark className="mb-1" />
-                        <span className="text-[10px] font-bold">
-                          Virement
-                        </span>
-                      </button>
-                      <button className="flex flex-col items-center justify-center p-2 border border-surface-border hover:border-text-muted rounded-lg text-text-muted hover:text-text-main transition-all">
-                        <Smartphone className="mb-1" />
-                        <span className="text-[10px] font-bold">Mobile</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div className="pt-2">
-                    <div className="flex justify-between items-end mb-4">
-                      <span className="text-sm text-text-muted">
-                        Total à payer
-                      </span>
-                      <span className="text-2xl font-black font-display text-text-main">
-                        5.000{' '}
-                        <span className="text-sm font-normal text-text-muted font-body">
-                          FCFA
-                        </span>
-                      </span>
-                    </div>
-                    <Button asChild className="w-full py-4 bg-primary hover:bg-text-main text-white font-bold rounded-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 group transform hover:-translate-y-0.5">
-                      <Link href="/africoins/payment">
-                        <span>Confirmer et Payer</span>
-                        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                    <p className="text-[10px] text-center text-text-muted mt-3 leading-tight">
-                      En validant, vous acceptez les{' '}
-                      <a
-                        className="underline hover:text-primary"
-                        href="#"
-                      >
-                        Conditions Générales de Vente
-                      </a>{' '}
-                      d'AfriStory.
-                    </p>
-                  </div>
-                </div>
-                <div className="px-6 py-3 bg-surface-light border-t border-surface-border flex items-center justify-center gap-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                  <div className="h-4 w-8 bg-stone-400 rounded"></div>
-                  <div className="h-4 w-8 bg-stone-400 rounded"></div>
-                  <div className="h-4 w-8 bg-stone-400 rounded"></div>
-                  <div className="h-4 w-8 bg-stone-400 rounded"></div>
+                <div className="flex items-center gap-4">
+                  <button className="flex items-center justify-center overflow-hidden rounded-full h-10 w-10 hover:bg-white/10 text-white transition-colors">
+                    <Bell />
+                  </button>
+                  <div
+                    className="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-border-dark"
+                    data-alt="User profile avatar with colorful abstract pattern"
+                    style={{
+                      backgroundImage:
+                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjXTErcKgStf0O2IiKiHff4ZD5wyScuNvEqBcdHtD5iKRrXIDES2ztvZyId3bSyPR20cbdN_b0_fIrubv3jgl8fTih4T-RF9vis2iP1cJy9Xz9h2KHDmOt1vhVR_q5jWsNOH0g5LtmjGLFBGQT2Jw6QgVPgPbEh0i5zBYXzrkTeLzE676V7BmfU2hxyPpIgrhHSn6N3WV08vcQjadFWf9NWiDx_qcCN3aRz1GiQyyCOBKq3ufCPPltVLSjCMTJ-jSEscJagccs1iEG")',
+                    }}
+                  ></div>
                 </div>
               </div>
-            </div>
+            </header>
           </div>
         </div>
-      </main>
-      <footer className="border-t border-surface-border bg-white mt-auto">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-10 py-12">
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            <div className="flex flex-col gap-4 max-w-sm">
-              <div className="flex items-center gap-2 text-text-main">
-                <BookOpen className="text-primary" />
-                <span className="text-lg font-bold font-display">
-                  AfriStory
-                </span>
-              </div>
-              <p className="text-text-muted text-sm font-body">
-                Empowering the next generation of African visual storytellers.
-                Join the movement.
+      </div>
+      {/* Main Content */}
+      <div className="flex flex-1 justify-center py-8">
+        <div className="flex flex-col w-full max-w-[960px] px-4 md:px-10 gap-8">
+          {/* Page Heading */}
+          <div className="flex flex-wrap justify-between gap-3 items-end">
+            <div className="flex flex-col gap-2">
+              <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight tracking-[-0.033em]">
+                AfriCoins Wallet
+              </h1>
+              <p className="text-[#cbb790] text-base font-body font-normal leading-normal max-w-lg">
+                Support African creators directly. Secure, fast, and empowering.
+                Use AfriCoins to unlock premium chapters and donate to
+                artists.
               </p>
             </div>
-            <div className="flex gap-8 md:gap-16">
-              <div className="flex flex-col gap-3">
-                <h4 className="text-text-main font-bold text-sm font-display">
-                  Communauté
-                </h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Règles
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Classements
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Ateliers
-                </a>
+            <div className="hidden md:flex items-center gap-2 text-[#cbb790] text-sm">
+              <Lock className="h-4 w-4" />
+              <span>Secure Payment 256-bit SSL</span>
+            </div>
+          </div>
+          {/* Stats & Balance Widget */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Current Balance Card */}
+            <div className="flex flex-col gap-2 rounded-xl p-6 bg-gradient-to-br from-surface-dark to-background-dark border border-border-dark relative overflow-hidden group">
+              <div className="absolute -right-4 -top-4 opacity-10 rotate-12 transition-transform group-hover:rotate-45 duration-700">
+                <Bitcoin className="text-[120px] text-primary" />
               </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="text-text-main font-bold text-sm font-display">
-                  Plateforme
-                </h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  AfriStory Pro
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  À Propos
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Carrières
-                </a>
+              <p className="text-[#cbb790] text-sm font-medium leading-normal flex items-center gap-2">
+                <Wallet className="h-5 w-5" /> Current Balance
+              </p>
+              <div className="flex items-baseline gap-2">
+                <p className="text-white tracking-tight text-4xl font-bold leading-tight">
+                  450 <span className="text-primary">AC</span>
+                </p>
+                <span className="text-white/40 text-sm">≈ $4.50 USD</span>
               </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="text-text-main font-bold text-sm font-display">
-                  Légal
-                </h4>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Confidentialité
-                </a>
-                <a
-                  className="text-text-muted text-sm hover:text-primary font-body"
-                  href="#"
-                >
-                  Conditions
-                </a>
+              <div className="mt-4 pt-4 border-t border-white/5 flex gap-4 text-sm font-medium text-white/80">
+                <div className="flex flex-col">
+                  <span className="text-xs text-white/40">Last Top-up</span>
+                  <span>Oct 24, 2023</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs text-white/40">Spent this month</span>
+                  <span>120 AC</span>
+                </div>
+              </div>
+            </div>
+            {/* What you can do */}
+            <div className="md:col-span-2 flex flex-col gap-2 rounded-xl p-6 bg-surface-dark/50 border border-border-dark">
+              <p className="text-[#cbb790] text-sm font-medium leading-normal mb-2">
+                What you can do with AfriCoins
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-background-dark/50 hover:bg-background-dark transition-colors cursor-default">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <BookOpen />
+                  </div>
+                  <span className="text-xs text-white font-medium">
+                    Unlock Chapters
+                  </span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-background-dark/50 hover:bg-background-dark transition-colors cursor-default">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Heart />
+                  </div>
+                  <span className="text-xs text-white font-medium">
+                    Tip Artists
+                  </span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-background-dark/50 hover:bg-background-dark transition-colors cursor-default">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Award />
+                  </div>
+                  <span className="text-xs text-white font-medium">
+                    Get Pro Badges
+                  </span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-background-dark/50 hover:bg-background-dark transition-colors cursor-default">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Gift />
+                  </div>
+                  <span className="text-xs text-white font-medium">
+                    Gift Friends
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-surface-border text-center text-text-muted text-sm font-body">
-            © 2023 AfriStory. Tous droits réservés.
+          {/* Pricing Packages */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-white text-2xl font-bold leading-tight flex items-center gap-2">
+              <PlusCircle className="text-primary" />
+              Top Up Account
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Starter */}
+              <div className="flex flex-1 flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 hover:border-primary/50 transition-colors">
+                <div className="flex flex-col gap-1">
+                  <h1 className="text-[#cbb790] text-sm font-bold uppercase tracking-wider">
+                    Starter Pack
+                  </h1>
+                  <p className="flex items-baseline gap-1 text-white mt-1">
+                    <span className="text-white text-4xl font-bold leading-tight tracking-tight">
+                      $1.00
+                    </span>
+                    <span className="text-white/60 text-sm font-medium leading-tight">
+                      for 100 AC
+                    </span>
+                  </p>
+                </div>
+                <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-white/5 hover:bg-white/10 text-white text-sm font-bold tracking-wide transition-colors border border-white/10">
+                  Buy Starter
+                </button>
+                <div className="flex flex-col gap-3 mt-2">
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    100 AfriCoins
+                  </div>
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    Good for 5-10 chapters
+                  </div>
+                </div>
+              </div>
+              {/* Best Value */}
+              <div className="flex flex-1 flex-col gap-4 rounded-xl border-2 border-primary bg-surface-dark p-6 relative transform md:-translate-y-2 shadow-2xl shadow-primary/10">
+                <div className="absolute top-0 right-0 bg-primary text-background-dark text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                  BEST VALUE
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h1 className="text-primary text-sm font-bold uppercase tracking-wider">
+                    Reader's Choice
+                  </h1>
+                  <p className="flex items-baseline gap-1 text-white mt-1">
+                    <span className="text-white text-4xl font-bold leading-tight tracking-tight">
+                      $5.00
+                    </span>
+                    <span className="text-white/60 text-sm font-medium leading-tight">
+                      for 550 AC
+                    </span>
+                  </p>
+                  <span className="text-green-400 text-xs font-bold">
+                    Save 10% + Bonus 50 AC
+                  </span>
+                </div>
+                <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold tracking-wide transition-colors shadow-lg shadow-primary/20">
+                  Buy Bundle
+                </button>
+                <div className="flex flex-col gap-3 mt-2">
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    550 AfriCoins
+                  </div>
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    <span className="font-bold text-white">Bonus: 50 Free AC</span>
+                  </div>
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    Unlock ~50 chapters
+                  </div>
+                </div>
+              </div>
+              {/* Patron */}
+              <div className="flex flex-1 flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 hover:border-primary/50 transition-colors">
+                <div className="flex flex-col gap-1">
+                  <h1 className="text-[#cbb790] text-sm font-bold uppercase tracking-wider">
+                    Patron Bundle
+                  </h1>
+                  <p className="flex items-baseline gap-1 text-white mt-1">
+                    <span className="text-white text-4xl font-bold leading-tight tracking-tight">
+                      $10.00
+                    </span>
+                    <span className="text-white/60 text-sm font-medium leading-tight">
+                      for 1200 AC
+                    </span>
+                  </p>
+                </div>
+                <button className="w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-white/5 hover:bg-white/10 text-white text-sm font-bold tracking-wide transition-colors border border-white/10">
+                  Buy Patron
+                </button>
+                <div className="flex flex-col gap-3 mt-2">
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    1200 AfriCoins
+                  </div>
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    <span className="font-bold text-white">Bonus: 200 Free AC</span>
+                  </div>
+                  <div className="text-sm font-body text-white/80 flex gap-3">
+                    <Check className="text-primary text-[20px]" />
+                    Support up to 20 artists
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Payment Methods */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-white text-2xl font-bold leading-tight flex items-center gap-2 pt-4">
+              <CreditCard className="text-primary" />
+              Payment Method
+            </h2>
+            <div className="rounded-xl border border-border-dark bg-surface-dark p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* Mobile Money (Priority) */}
+                <label className="cursor-pointer relative group">
+                  <input
+                    defaultChecked
+                    className="peer sr-only"
+                    name="payment"
+                    type="radio"
+                  />
+                  <div className="h-full p-4 rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10 transition-all flex flex-col gap-3 items-center text-center">
+                    <div className="size-12 rounded-full bg-white flex items-center justify-center p-2">
+                      <Smartphone className="text-orange-600 text-2xl" />
+                    </div>
+                    <span className="text-white font-bold text-sm">
+                      Mobile Money
+                    </span>
+                    <span className="text-xs text-white/50">
+                      M-Pesa, Orange, Wave
+                    </span>
+                    <div className="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100">
+                      <CheckCircle className="text-xl" />
+                    </div>
+                  </div>
+                </label>
+                {/* Card */}
+                <label className="cursor-pointer relative group">
+                  <input className="peer sr-only" name="payment" type="radio" />
+                  <div className="h-full p-4 rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10 transition-all flex flex-col gap-3 items-center text-center">
+                    <div className="size-12 rounded-full bg-white flex items-center justify-center p-2">
+                      <CreditCard className="text-slate-800 text-2xl" />
+                    </div>
+                    <span className="text-white font-bold text-sm">
+                      Credit Card
+                    </span>
+                    <span className="text-xs text-white/50">
+                      Visa, Mastercard
+                    </span>
+                    <div className="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100">
+                      <CheckCircle className="text-xl" />
+                    </div>
+                  </div>
+                </label>
+                {/* PayPal */}
+                <label className="cursor-pointer relative group">
+                  <input className="peer sr-only" name="payment" type="radio" />
+                  <div className="h-full p-4 rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10 transition-all flex flex-col gap-3 items-center text-center">
+                    <div className="size-12 rounded-full bg-white flex items-center justify-center p-2">
+                      <Landmark className="text-blue-600 text-2xl" />
+                    </div>
+                    <span className="text-white font-bold text-sm">PayPal</span>
+                    <span className="text-xs text-white/50">Fast checkout</span>
+                    <div className="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100">
+                      <CheckCircle className="text-xl" />
+                    </div>
+                  </div>
+                </label>
+                {/* Crypto/Other */}
+                <label className="cursor-pointer relative group">
+                  <input className="peer sr-only" name="payment" type="radio" />
+                  <div className="h-full p-4 rounded-lg border border-border-dark bg-background-dark hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10 transition-all flex flex-col gap-3 items-center text-center">
+                    <div className="size-12 rounded-full bg-white flex items-center justify-center p-2">
+                      <Bitcoin className="text-indigo-600 text-2xl" />
+                    </div>
+                    <span className="text-white font-bold text-sm">Crypto</span>
+                    <span className="text-xs text-white/50">
+                      BTC, ETH, Stablecoins
+                    </span>
+                    <div className="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100">
+                      <CheckCircle className="text-xl" />
+                    </div>
+                  </div>
+                </label>
+              </div>
+              {/* Localization Note */}
+              <div className="mt-4 p-3 bg-primary/10 rounded-lg flex items-start gap-3 border border-primary/20">
+                <Info className="text-primary text-sm mt-0.5" />
+                <p className="text-xs text-[#cbb790] leading-relaxed">
+                  Prices are shown in USD but will be charged in your local
+                  currency (CFA, NGN, KES, ZAR) based on current exchange
+                  rates. Mobile Money transactions are processed instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Transaction History */}
+          <div className="flex flex-col gap-4 pb-12">
+            <div className="flex items-center justify-between pt-4">
+              <h2 className="text-white text-2xl font-bold leading-tight flex items-center gap-2">
+                <History className="text-primary" />
+                Recent Activity
+              </h2>
+              <a className="text-primary text-sm font-bold hover:underline" href="#">
+                View All
+              </a>
+            </div>
+            <div className="overflow-x-auto rounded-xl border border-border-dark">
+              <table className="w-full text-left text-sm text-white">
+                <thead className="bg-surface-dark text-xs uppercase text-[#cbb790]">
+                  <tr>
+                    <th
+                      className="px-6 py-4 font-bold tracking-wider"
+                      scope="col"
+                    >
+                      Date
+                    </th>
+                    <th
+                      className="px-6 py-4 font-bold tracking-wider"
+                      scope="col"
+                    >
+                      Description
+                    </th>
+                    <th
+                      className="px-6 py-4 font-bold tracking-wider text-right"
+                      scope="col"
+                    >
+                      Amount (AC)
+                    </th>
+                    <th
+                      className="px-6 py-4 font-bold tracking-wider text-center"
+                      scope="col"
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border-dark bg-background-dark">
+                  <tr className="hover:bg-surface-dark/50 transition-colors">
+                    <td className="px-6 py-4 whitespace-nowrap text-white/70">
+                      Oct 24, 2023
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="font-medium text-white">
+                        Purchased 'Reader's Choice'
+                      </div>
+                      <div className="text-xs text-white/50">
+                        Via Mobile Money (M-Pesa)
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-right font-bold text-green-400">
+                      +550
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <span className="inline-flex items-center rounded-full bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                        Completed
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-surface-dark/50 transition-colors">
+                    <td className="px-6 py-4 whitespace-nowrap text-white/70">
+                      Oct 22, 2023
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="font-medium text-white">
+                        Unlocked Chapter 5: "The Sun City"
+                      </div>
+                      <div className="text-xs text-white/50">Kwezi Series</div>
+                    </td>
+                    <td className="px-6 py-4 text-right font-bold text-white/80">
+                      -15
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <span className="inline-flex items-center rounded-full bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                        Completed
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-surface-dark/50 transition-colors">
+                    <td className="px-6 py-4 whitespace-nowrap text-white/70">
+                      Oct 20, 2023
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="font-medium text-white">
+                        Artist Donation
+                      </div>
+                      <div className="text-xs text-white/50">
+                        To: Nnedi Okorafor
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-right font-bold text-white/80">
+                      -50
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <span className="inline-flex items-center rounded-full bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                        Completed
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
+
+    

@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Merriweather', 'serif'],
+        display: ['Space Grotesk', 'Playfair Display', 'serif'],
+        body: ['Noto Sans', 'Merriweather', 'serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         news: ['Newsreader', 'serif'],
@@ -54,7 +54,7 @@ export default {
         // Custom colors from HTML
         'background-light': '#f8f7f5',
         'background-dark': '#221c10',
-        'surface-dark': '#342b18',
+        'surface-dark': '#2c2415',
         'surface-highlight': '#493c22',
         'text-secondary': '#cbb790',
         'text-muted': '#cbb790',
@@ -64,6 +64,7 @@ export default {
         'shop-surface-dark': '#493c22',
         'surface-input': '#342b18',
         'border-input': '#685631',
+        'border-dark': '#493c22',
       },
       borderRadius: {
         xl: '0.75rem',
@@ -109,3 +110,5 @@ export default {
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 } satisfies Config;
+
+    
