@@ -51,11 +51,13 @@ export default {
         },
         // Custom colors from HTML
         'background-light': '#f8f7f5',
-        'background-dark': '#18181b',
-        'surface-dark': '#2c2415',
+        'background-dark': '#231d10',
+        'surface-dark': '#2d2415',
+        'surface-light': '#3a2e1b',
         'background-surface': '#27272a',
         'surface-highlight': '#493c22',
         'text-secondary': '#cbb790',
+        'border-color': '#493c22',
       },
       borderRadius: {
         xl: '0.75rem',

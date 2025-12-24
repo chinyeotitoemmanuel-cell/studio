@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-hidden">
       <Header />
-      <main className="flex-1 flex justify-center py-6 px-4 md:px-8">
+      <main className="flex-1 flex justify-center py-6 px-4 md:px-8 bg-background dark:bg-background-dark text-foreground">
         <div className="w-full max-w-[1280px] flex flex-col gap-10">
           <HeroSection image={getImage("hero-image")} />
           <CategoryChips />

@@ -21,7 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
       </head>
-      <body className={cn("font-display bg-background text-foreground antialiased transition-colors duration-200 selection:bg-primary selection:text-background-dark")}>
+      <body className={cn("font-display bg-background-light dark:bg-background-dark text-foreground antialiased transition-colors duration-200 selection:bg-primary selection:text-background-dark")}>
         {children}
         <Toaster />
       </body>
