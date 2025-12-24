@@ -1,4 +1,4 @@
-import { Diamond, FilePenSquare, MessagesSquare, Handshake, HelpCircle, Palette, Globe, Pin, Search, TrendingUp } from "lucide-react";
+import { Diamond, FilePenLine, MessagesSquare, Handshake, HelpCircle, Palette, Globe, Pin, Search, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -137,7 +137,7 @@ export default function ForumPage() {
 
             <aside className="lg:col-span-4 flex flex-col gap-6">
               <Button className="w-full h-auto py-4 px-6 rounded-xl shadow-lg shadow-primary/10 transition-all transform hover:scale-[1.02]">
-                <FilePenSquare />
+                <FilePenLine />
                 Commencer une discussion
               </Button>
               <div className="rounded-xl p-1 bg-gradient-to-br from-[#cbb790] to-[#685631]">
