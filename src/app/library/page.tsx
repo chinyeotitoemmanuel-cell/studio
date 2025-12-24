@@ -18,8 +18,78 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
+
+function Header() {
+  return (
+     <header className="w-full border-b border-surface-border bg-white sticky top-0 z-50 shadow-sm">
+        <div className="px-4 md:px-10 py-3 max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+            <div className="flex items-center gap-8">
+                <a className="flex items-center gap-3 text-text-main hover:opacity-80 transition-opacity" href="#">
+                    <div className="size-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+                        <BookOpen />
+                    </div>
+                    <h2 className="text-text-main text-xl font-bold font-display tracking-tight">AfriStory</h2>
+                </a>
+                <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a className="text-text-muted hover:text-primary transition-colors" href="#">Découvrir</a>
+                    <a className="text-primary font-bold" href="#">Ma Bibliothèque</a>
+                    <a className="text-text-muted hover:text-primary transition-colors" href="#">Auteurs</a>
+                </nav>
+            </div>
+            <div className="flex items-center gap-4">
+                <button className="text-text-muted hover:text-primary transition-colors md:hidden">
+                    <Search />
+                </button>
+                <div className="hidden md:flex text-right flex-col mr-2">
+                    <span className="text-xs text-text-muted font-body">Lecteur</span>
+                    <span className="text-sm font-bold font-display text-text-main">Kwame Osei</span>
+                </div>
+                <div className="size-10 rounded-full bg-cover bg-center border-2 border-surface-border shadow-sm cursor-pointer" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBL8qt8rzWIyXpE-BqJMLgU4ucOTRGH1WeqTaW47K6MyprZNMB6lQ5MNNFhQztp176xkFk0usIHq_vMrzy3sORHmWBI6dez9zn8M8amhAp4AttvI03oqqWOfuZU8kpemKWV8uDJr4d7le8QKbDBK4c9lNWfPllH8Z-0j5jCdatC0Kbhhlon_qp-FtdLWTRLAj6nQ9UhwiwiwD9M7ulrZsZ1W4-QCIa25AOeVBQOq4gnMU9FAELBP4Si3ilM9P93DTGxX11B6cDpwYEF")'}}></div>
+            </div>
+        </div>
+    </header>
+  )
+}
+
+function Footer() {
+    return (
+        <footer className="border-t border-surface-border bg-white mt-auto">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-10 py-12">
+                <div className="flex flex-col md:flex-row justify-between gap-8">
+                    <div className="flex flex-col gap-4 max-w-sm">
+                        <div className="flex items-center gap-2 text-text-main">
+                            <BookOpen className="text-primary" />
+                            <span className="text-lg font-bold font-display">AfriStory</span>
+                        </div>
+                        <p className="text-text-muted text-sm font-body">Empowering the next generation of African visual storytellers. Join the movement.</p>
+                    </div>
+                    <div className="flex gap-8 md:gap-16">
+                        <div className="flex flex-col gap-3">
+                            <h4 className="text-text-main font-bold text-sm font-display">Communauté</h4>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Règles</a>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Classements</a>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Ateliers</a>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h4 className="text-text-main font-bold text-sm font-display">Plateforme</h4>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">AfriStory Pro</a>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">À Propos</a>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Carrières</a>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h4 className="text-text-main font-bold text-sm font-display">Légal</h4>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Confidentialité</a>
+                            <a className="text-text-muted text-sm hover:text-primary font-body" href="#">Conditions</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-12 pt-8 border-t border-surface-border text-center text-text-muted text-sm font-body">
+                    © 2023 AfriStory. Tous droits réservés.
+                </div>
+            </div>
+        </footer>
+    )
+}
 
 export default function LibraryPage() {
   const libraryItems = [
@@ -91,79 +161,53 @@ export default function LibraryPage() {
       <Header />
       <main className="flex-1 w-full bg-background-light py-8 px-4 md:py-12">
         <div className="max-w-[1440px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-6">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-text-main font-display mb-2">
-                Ma Bibliothèque
-              </h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-text-main font-display mb-2">Ma Bibliothèque</h1>
               <p className="text-text-muted font-body text-sm md:text-base max-w-lg">
-                Retrouvez vos lectures en cours, vos favoris et vos collections
-                achetées.
+                Gérez votre collection personnelle, suivez vos lectures et retrouvez vos coups de cœur.
               </p>
             </div>
             <div className="flex items-center gap-3 w-full md:w-auto">
-              <div className="relative flex-1 md:w-64">
+              <div className="relative flex-1 md:w-72">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted h-5 w-5" />
                 <Input
-                  className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-surface-border bg-white text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-shadow"
-                  placeholder="Rechercher un titre, un auteur..."
+                  className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-surface-border bg-white text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-shadow shadow-sm"
+                  placeholder="Rechercher dans votre bibliothèque..."
                   type="text"
                 />
               </div>
-              <Button
-                variant="outline"
-                className="bg-white border-surface-border p-2.5 text-text-muted hover:text-primary hover:border-primary transition-colors flex items-center justify-center"
-              >
-                <SlidersHorizontal />
-              </Button>
             </div>
           </div>
 
-          <div className="flex overflow-x-auto scrollbar-hide gap-3 mb-8 pb-2 border-b border-surface-border">
-            <Button
-              variant="default"
-              className="px-5 py-2 rounded-full shadow-md whitespace-nowrap"
-            >
-              Tout voir
-            </Button>
-            <Button
-              variant="ghost"
-              className="px-5 py-2 rounded-full bg-surface-light text-text-muted hover:bg-surface-border hover:text-text-main whitespace-nowrap transition-colors"
-            >
-              En cours (3)
-            </Button>
-            <Button
-              variant="ghost"
-              className="px-5 py-2 rounded-full bg-surface-light text-text-muted hover:bg-surface-border hover:text-text-main whitespace-nowrap transition-colors"
-            >
-              Favoris
-            </Button>
-            <Button
-              variant="ghost"
-              className="px-5 py-2 rounded-full bg-surface-light text-text-muted hover:bg-surface-border hover:text-text-main whitespace-nowrap transition-colors"
-            >
-              Achetés
-            </Button>
-            <Button
-              variant="ghost"
-              className="px-5 py-2 rounded-full bg-surface-light text-text-muted hover:bg-surface-border hover:text-text-main whitespace-nowrap transition-colors"
-            >
-              AfriStory Pro
-            </Button>
+          <div className="bg-white rounded-xl border border-surface-border shadow-sm p-4 mb-8">
+            <div className="flex items-center gap-2 overflow-x-auto pb-4 md:pb-0 md:border-b-0 border-b border-surface-border mb-4 md:mb-4 scrollbar-hide">
+              <Button variant="default" className="px-4 py-1.5 rounded-full bg-text-main text-white text-sm font-bold whitespace-nowrap shadow-sm transition-transform hover:scale-105 h-auto">Tout voir</Button>
+              <Button variant="ghost" className="px-4 py-1.5 rounded-full bg-surface-light border border-transparent hover:border-surface-border text-text-muted hover:text-text-main text-sm font-medium whitespace-nowrap transition-colors h-auto">Favoris</Button>
+              <Button variant="ghost" className="px-4 py-1.5 rounded-full bg-surface-light border border-transparent hover:border-surface-border text-text-muted hover:text-text-main text-sm font-medium whitespace-nowrap transition-colors h-auto">Abonnements</Button>
+              <Button variant="ghost" className="px-4 py-1.5 rounded-full bg-surface-light border border-transparent hover:border-surface-border text-text-muted hover:text-text-main text-sm font-medium whitespace-nowrap transition-colors h-auto">Achetés</Button>
+              <Button variant="ghost" className="px-4 py-1.5 rounded-full bg-surface-light border border-transparent hover:border-surface-border text-text-muted hover:text-text-main text-sm font-medium whitespace-nowrap transition-colors h-auto">AfriStory Pro</Button>
+            </div>
+            <div className="h-px bg-surface-border w-full hidden md:block mb-4"></div>
+            <div className="flex flex-col md:flex-row justify-between gap-4">
+              <div className="flex flex-wrap items-center gap-3">
+                {/* ... filter selects */}
+              </div>
+              <div className="flex items-center gap-2 w-full md:w-auto border-t md:border-t-0 border-surface-border pt-4 md:pt-0 mt-2 md:mt-0">
+                {/* ... sort select */}
+              </div>
+            </div>
           </div>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-6 gap-y-10">
             {libraryItems.map((item, index) => (
               <div key={index} className="group cursor-pointer">
                 <div
-                  className={`relative aspect-[2/3] bg-gradient-to-br ${
-                    item.cover.from
-                  } ${item.cover.via ? item.cover.via : ''} ${
-                    item.cover.to
-                  } rounded-lg shadow-md mb-4 overflow-hidden border border-surface-border group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1`}
+                  className={`relative aspect-[2/3] rounded-lg shadow-md mb-4 overflow-hidden border border-surface-border group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 ${
+                    item.cover.image ? 'bg-white' : `bg-gradient-to-br ${item.cover.from} ${item.cover.via || ''} ${item.cover.to}`
+                  }`}
                 >
                   {item.cover.image ? (
-                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614726365723-49cfae9e09cd?q=80&w=300&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500"></div>
+                     <div className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" style={{backgroundImage: `url(${item.cover.image})`}}></div>
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                      {item.cover.icon &&  <div className="size-12 border-2 border-primary/50 rounded-full mb-2 flex items-center justify-center">
@@ -265,3 +309,4 @@ export default function LibraryPage() {
   );
 }
 
+    
