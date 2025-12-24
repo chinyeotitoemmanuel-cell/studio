@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Inter', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+        body: ['Noto Sans', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
       },
@@ -50,14 +50,15 @@ export default {
           foreground: 'hsl(var(--card-foreground))',
         },
         // Custom colors from HTML
-        'background-light': '#f8f7f5',
-        'background-dark': '#231d10',
-        'surface-dark': '#2d2415',
+        'background-light': '#f7f6f8',
+        'background-dark': '#191022',
+        'surface-dark': '#2a1b3d',
+        'border-dark': '#362348',
         'surface-light': '#3a2e1b',
         'background-surface': '#27272a',
         'surface-highlight': '#493c22',
         'shop-surface-dark': '#493c22',
-        'text-secondary': '#cbb790',
+        'text-secondary': '#ad92c9',
         'border-color': '#493c22',
         'surface-border': '#493c22',
       },
