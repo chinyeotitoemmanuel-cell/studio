@@ -41,12 +41,12 @@ export default function DraftsPage() {
                 <h1 className="text-white text-4xl md:text-6xl font-black tracking-tight font-display leading-[1.1]">
                   AfriStory <span className="text-primary italic">Draft</span>
                 </h1>
-                <p className="text-text-muted text-lg md:text-xl font-normal leading-relaxed max-w-2xl font-body">
+                <div className="text-text-muted text-lg md:text-xl font-normal leading-relaxed max-w-2xl font-body">
                   L'incubateur de talents narratifs. Publiez vos esquisses,
                   recevez des retours constructifs de vos pairs et des{' '}
                   <span className="text-primary">Mentors Pro</span>, et
                   développez votre art dans un espace bienveillant.
-                </p>
+                </div>
               </div>
               <div className="flex flex-wrap gap-4 w-full md:w-auto">
                 <Button className="flex-1 md:flex-none whitespace-nowrap px-6 py-3.5">
@@ -103,13 +103,13 @@ export default function DraftsPage() {
                   <h3 className="text-white text-3xl md:text-4xl font-bold font-display mb-4 leading-tight">
                     Neo-Lagos : Études Architecturales
                   </h3>
-                  <p className="text-text-muted text-base mb-6 leading-relaxed font-body">
+                  <div className="text-text-muted text-base mb-6 leading-relaxed font-body">
                     "Je travaille sur les arrière-plans de mon prochain webtoon
                     cyberpunk. J'essaie de mélanger l'architecture
                     traditionnelle Yoruba avec des structures brutalistes
                     solaires. J'aimerais particulièrement vos avis sur la
                     palette de couleurs !"
-                  </p>
+                  </div>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-auto pt-6 border-t border-border-dark gap-4">
                     <div className="flex items-center gap-3">
                       <Image
@@ -387,10 +387,7 @@ export default function DraftsPage() {
         </div>
       </div>
     </div>
-  </body>
-</html>
-```
+  );
+}
 
-I've fixed the bug in `src/lib/data.ts`. Now, the app throws a new error related to a `div` element inside a `p` element on the drafts page. This is happening because the description text contains a `div`, which is not valid HTML inside a `<p>` tag. I will replace the `p` tag with a `div` to ensure the structure is correct.
-
-I will update `src/app/drafts/page.tsx` to fix this issue.
+    
