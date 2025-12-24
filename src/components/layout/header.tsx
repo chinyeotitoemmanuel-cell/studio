@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Search,
   Bell,
+  Book,
 } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -17,8 +18,10 @@ export function Header() {
       <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex size-8 items-center justify-center rounded bg-primary text-primary-foreground">
-              <Icons.logo className="h-5 w-5" />
+            <div className="flex size-8 items-center justify-center rounded text-primary">
+                <svg className="w-full h-full transition-transform group-hover:scale-110" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path clipRule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fillRule="evenodd"></path>
+                </svg>
             </div>
             <h1 className="text-xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
               AfriStory
@@ -29,7 +32,7 @@ export function Header() {
             <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Home
             </Link>
-            <Link href="/trending" className="text-sm font-bold text-primary border-b-2 border-primary pb-0.5">
+            <Link href="/trending" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Trending
             </Link>
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
@@ -38,7 +41,7 @@ export function Header() {
             <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               AfriStory Draft
             </Link>
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link href="/profile" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Community
             </Link>
           </nav>
@@ -50,7 +53,7 @@ export function Header() {
               <Search className="h-5 w-5" />
             </div>
             <Input
-              className="w-full h-full rounded-full bg-secondary dark:bg-card border-none pl-10 pr-4 text-sm text-foreground placeholder-muted-foreground focus:ring-2 focus:ring-primary transition-all"
+              className="block w-full rounded-lg border-none bg-gray-100 dark:bg-surface-dark py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:ring-2 focus:ring-primary dark:text-white dark:placeholder-gray-400 transition-all"
               placeholder="Search titles, artists, genres..."
               type="text"
             />
@@ -59,16 +62,11 @@ export function Header() {
           <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground">
             <Search />
           </Button>
-
-          <Button variant="ghost" size="icon" className="relative text-muted-foreground hover:text-primary transition-colors">
-            <Bell />
-            <span className="absolute top-2.5 right-2.5 size-2 rounded-full bg-red-500 border border-background"></span>
-          </Button>
-
-          <Avatar className="h-9 w-9 border-2 border-transparent hover:border-primary cursor-pointer transition-all">
-            <AvatarImage src={avatarImage?.imageUrl} alt={avatarImage?.description} />
-            <AvatarFallback>A</AvatarFallback>
-          </Avatar>
+          
+          <div className="flex items-center gap-2">
+              <Button variant="secondary" className="hidden sm:flex">Log In</Button>
+              <Button>Sign Up</Button>
+          </div>
         </div>
       </div>
     </header>
