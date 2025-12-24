@@ -258,5 +258,6 @@ export default function TrendingPage() {
           
         </div>
       </main>
-    
-</body></html>
+    </div>
+  );
+}

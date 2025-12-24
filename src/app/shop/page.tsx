@@ -1,4 +1,4 @@
-import { ArrowForward, Search, ShoppingCart, Star, VolunteerActivism } from "lucide-react";
+import { ArrowForward, Search, ShoppingCart, Star, VolunteerActivism, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -216,4 +216,12 @@ export default function ShopPage() {
               <p>© 2023 AfriStory. All rights reserved.</p>
               <div className="flex gap-4">
                 <Link href="#" className="hover:text-white">Privacy Policy</Link>
-                <Link href="#" className="hover:text-white">Terms of Service</Link
+                <Link href="#" className="hover:text-white">Terms of Service</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
