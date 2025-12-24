@@ -18,6 +18,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-6">
             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/trending">Tendances</Link>
             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/shop">Boutique</Link>
+             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/library">Bibliothèque</Link>
             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/africoins">AfriCoins</Link>
             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/forum">Communauté</Link>
             <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/profile">Profil</Link>
