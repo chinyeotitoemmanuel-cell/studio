@@ -24,7 +24,7 @@ export const storyData = {
   ],
 };
 
-export const draftData = [
+export const draftData: Omit<Story, 'tier' | 'imageHint' | 'imageUrl' | 'description'>[] = [
     { id: "draft-1", title: "Neon Accra", author: "Artist One" },
     { id: "draft-2", title: "Village Tales", author: "Artist Two" },
     { id: "draft-3", title: "The Last Warrior", author: "Artist Three" },
