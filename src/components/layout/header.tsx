@@ -16,10 +16,10 @@ export function Header() {
             <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AfriStory</h2>
           </Link>
           <nav className="hidden lg:flex items-center gap-6">
-            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/trending">Trending</Link>
-            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/shop">Shop</Link>
-            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/forum">Community</Link>
-            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/profile">Profile</Link>
+            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/trending">Tendances</Link>
+            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/shop">Boutique</Link>
+            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/forum">Communauté</Link>
+            <Link className="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="/profile">Profil</Link>
           </nav>
         </div>
         <div className="flex flex-1 justify-end gap-4 md:gap-8">
@@ -27,14 +27,14 @@ export function Header() {
                 <div className="absolute left-3">
                     <Search className="h-5 w-5" />
                 </div>
-                <Input placeholder="Search stories, artists..." className="pl-10 bg-surface-dark/70 border-none focus:ring-2 focus:ring-primary text-white placeholder:text-text-secondary" />
+                <Input placeholder="Rechercher des histoires, des artistes..." className="pl-10 bg-surface-dark/70 border-none focus:ring-2 focus:ring-primary text-white placeholder:text-text-secondary" />
             </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
-                <Link href="/login">Log In</Link>
+                <Link href="/login">Connexion</Link>
             </Button>
             <Button className="font-bold" asChild>
-                <Link href="/signup">Sign Up</Link>
+                <Link href="/signup">S'inscrire</Link>
             </Button>
              <Button size="icon" variant="outline" className="bg-surface-dark border-none hover:bg-surface-dark/70">
                 <ShoppingCart className="h-5 w-5" />
@@ -51,5 +51,3 @@ export function Header() {
     </header>
   );
 }
-
-    

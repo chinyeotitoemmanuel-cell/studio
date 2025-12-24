@@ -28,16 +28,16 @@ export default function ReadPage() {
             >
               <ArrowLeft className="h-5 w-5" />
               <span className="hidden text-sm font-medium sm:inline">
-                Series
+                Série
               </span>
             </Link>
 
             <div className="flex-1 px-4 text-center">
               <h1 className="truncate text-base font-bold text-slate-900 dark:text-white sm:text-lg">
-                Chapter 4: The Golden Savannah
+                Chapitre 4 : La Savane Dorée
               </h1>
               <p className="hidden text-xs text-slate-500 dark:text-slate-400 sm:block">
-                Kwame O. • 4 min read
+                Kwame O. • 4 min de lecture
               </p>
             </div>
 
@@ -45,7 +45,7 @@ export default function ReadPage() {
               <Button
                 variant="ghost"
                 size="icon"
-                aria-label="Share"
+                aria-label="Partager"
                 className="text-slate-600 dark:text-slate-300"
               >
                 <Share2 className="h-5 w-5" />
@@ -53,7 +53,7 @@ export default function ReadPage() {
               <Button
                 variant="ghost"
                 size="icon"
-                aria-label="Bookmark"
+                aria-label="Marque-page"
                 className="text-slate-600 dark:text-slate-300"
               >
                 <Bookmark className="h-5 w-5" />
@@ -61,7 +61,7 @@ export default function ReadPage() {
               <Button
                 variant="ghost"
                 size="icon"
-                aria-label="Settings"
+                aria-label="Paramètres"
                 className="text-slate-600 dark:text-slate-300"
               >
                 <Settings className="h-5 w-5" />
@@ -69,7 +69,7 @@ export default function ReadPage() {
               <Button
                 variant="ghost"
                 size="icon"
-                aria-label="More"
+                aria-label="Plus"
                 className="sm:hidden"
               >
                 <MoreVertical className="h-5 w-5" />
@@ -100,7 +100,7 @@ export default function ReadPage() {
             >
               <Image
                 src={src}
-                alt={`Comic panel ${index + 1}`}
+                alt={`Planche de BD ${index + 1}`}
                 width={800}
                 height={1200}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -115,12 +115,12 @@ export default function ReadPage() {
           <div className="flex flex-col items-center gap-6 text-center">
             <div className="h-1 w-16 rounded-full bg-slate-200 dark:bg-white/10"></div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Chapter Complete!
+              Chapitre Terminé !
             </h3>
             <div className="flex w-full max-w-md items-center gap-4 rounded-xl border border-slate-100 bg-slate-50 p-4 dark:border-white/5 dark:bg-black/20">
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5iUb3szgiXcBoudrX0SWGxZuEnh_1kE0OSqqWkXApJgreqgpZaK-bDfzFbYBI1TmH9vdx-lszzpZF8AHfIM8SpWGOOwjIDLwBMN1k9NQ3XHadEeL_KAgZr_sDNX-A2DAxXmq_44ypTiPus_IfjYkTek5kOHlItizqnhyeBgYl2bfcLmt9TTf-BbSh2cUWLhtPr5HQgD0CHaOjmTQbCyjdPEVryeiEVqI8Sh8moZi8BfHjsp6bJSv7NppiaTU7K5uJWSOXqavmK0wl"
-                alt="Portrait of the artist Kwame O."
+                alt="Portrait de l'artiste Kwame O."
                 width={48}
                 height={48}
                 className="h-12 w-12 flex-shrink-0 rounded-full border-2 border-primary object-cover"
@@ -130,7 +130,7 @@ export default function ReadPage() {
                   Kwame O.
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  Creator of "Golden Savannah"
+                  Créateur de "Golden Savannah"
                 </p>
               </div>
               <Button
@@ -138,7 +138,7 @@ export default function ReadPage() {
                 className="gap-2 border-primary/20 bg-primary/10 text-primary hover:bg-primary/20"
               >
                 <Heart className="h-4 w-4" />
-                <span>Support</span>
+                <span>Soutenir</span>
               </Button>
             </div>
             <div className="mt-2 flex w-full max-w-md flex-col gap-4 sm:flex-row">
@@ -147,17 +147,17 @@ export default function ReadPage() {
                 className="flex-1 gap-2 rounded-xl py-3"
               >
                 <MessageCircle className="h-5 w-5" />
-                Comments (24)
+                Commentaires (24)
               </Button>
               <Button className="flex-1 gap-2 rounded-xl py-3 font-bold shadow-lg shadow-primary/20">
-                Next Chapter
+                Chapitre Suivant
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
 
             <div className="mt-8 w-full border-t border-slate-200 pt-8 dark:border-white/10">
               <h4 className="mb-4 text-left text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                You might also like
+                Vous pourriez aussi aimer
               </h4>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {[
@@ -166,15 +166,15 @@ export default function ReadPage() {
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDX532NpnpwIhO2SfEeREwfcieaj3GcizrvvrqnfIw2dpUzTxWl4Xp-jj2n_Iteur0cpsatVQm5AYimk4xZ2cgbBh1R0yQMZvYemhvDxnTurcSNRT0i26xGJ-21hzvLVQZaRVT0PM1aivdQ50Lka17hW3QbwiuLfV91iL4Tytlk9MFed1qrAmXR_AhylOpqUrLV-xIjgHa5SNoNCTO8kOl_GU5GRjbE8Xd_uO6tnZjMP75YQ9xAt3huf6GzoxBprYaLS43baMvd34zE",
                   },
                   {
-                    title: "The Lion's Heart",
+                    title: "Le Cœur du Lion",
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDUCdsQaUy6Tq17nBQdclhGQ5cTbfHDU_8CCpypnBONV_pKmYxwugp0XOW0gLca8EsQNq59CTJrd2Nr3TiG6OLi_sulPT7dcFa4yu4mRyOjkOiOzDE151Io2adTXRiHzeV3HUG0uCTrn29UHbf45iBUKYPZvRqTtIuihZ2UQJiYs1et3iLkORKY1b9NxNgd_0T72mZ7Ir8pydHk8YtLE3_LuBO3PhEpjx8PCqaRXNz9oWjjuiCavXAp1pq4MNd6tDwPAikUpbhPNm4L",
                   },
                   {
-                    title: "Under the Baobab",
+                    title: "Sous le Baobab",
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBq2-zZnejkQJmdPZ0dARJt7FZ3YNO58Tn_uIx6S8VG5-nShJcxjS3tEG-jkEdgjoHtSytReiGOJkkHGPDIYgEbfn9g8BqN4HHd2TOzHmq3g7UmXQPdJ17cW-aZ2wQzoP8KRu1F7WqLXGjyytssG8OMNbzMdh4vUtVR_HRCdK5yS43SEoZ4xRenAX3Izd0VlBKoHENTEY-7vDWZZxdPTZcSrk-X5YTole1eX6Y1d3L0ZpaNsVw3dFXNgmRpZxC0Bm-hoSddXyR1jDY5",
                   },
                   {
-                    title: "Queen of Zazzau",
+                    title: "Reine de Zazzau",
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDicL62nai-rXLWd6GsxYsB6ZubLY7ZgJZ3j5ifaGK92MLKlvAd7SZjDThIQ1MWPOYFiv9Ul9vfFHuPWAaIQVnQzw7TVQREU7b_JfgAkRY7pulaUnxYWUOgkaHuu82PD6E4_lTfIVxeYKjWMfchY3W7iwwsToYhTs3tJildQ1N0_eQx06S40JxiMszTd5jv5W2I3AeNnJTTN2M84AUeM92W0ov8IJ27ZmmV014f5BUZLjl1FLof1aYdCsXP7y3FhWrEjcd-fJ155mCs",
                   },
                 ].map((item) => (
@@ -229,7 +229,7 @@ export default function ReadPage() {
           </div>
         </div>
         <Button size="sm" className="font-medium">
-          Next
+          Suivant
           <ArrowRight className="ml-1 h-4 w-4" />
         </Button>
       </div>

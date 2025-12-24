@@ -49,8 +49,8 @@ export default function Home() {
 
           <StoryCarousel
             id="trending"
-            title="Trending in Lagos"
-            description="Most read graphic novels in your region this week."
+            title="Tendances à Lagos"
+            description="Les romans graphiques les plus lus dans votre région cette semaine."
             icon={<TrendingUp className="text-primary" />}
             stories={trendingStories}
             cardType="portrait"
@@ -60,7 +60,7 @@ export default function Home() {
 
           <StoryCarousel
             id="new-releases"
-            title="New Releases"
+            title="Nouvelles Sorties"
             icon={<Sparkles className="text-primary" />}
             stories={newReleases}
             cardType="square"

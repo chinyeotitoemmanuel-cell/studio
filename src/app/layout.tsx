@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'AfriStory Hub',
-  description: 'A Panafrican platform for graphic and narrative artists to publish, read, exchange, and monetize their art.',
+  description: 'Une plateforme panafricaine pour les artistes graphiques et narratifs pour publier, lire, échanger et monétiser leur art.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="fr" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

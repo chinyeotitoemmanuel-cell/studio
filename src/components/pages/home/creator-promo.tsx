@@ -6,15 +6,15 @@ export function CreatorPromo() {
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(hsl(var(--primary-foreground)) 2px, transparent 2px)", backgroundSize: "20px 20px" }} />
       <div className="relative z-10 max-w-lg">
         <h2 className="text-2xl md:text-3xl font-black text-primary-foreground">
-          Join the AfriStory Creator Program
+          Rejoignez le Programme Créateur AfriStory
         </h2>
         <p className="mt-2 text-primary-foreground/80 font-medium">
-          Turn your passion into a profession. Publish on AfriStory Pro and start monetizing your art today.
+          Transformez votre passion en profession. Publiez sur AfriStory Pro et commencez à monétiser votre art dès aujourd'hui.
         </p>
       </div>
       <div className="relative z-10 shrink-0">
         <Button size="lg" className="bg-primary-foreground text-primary-foreground hover:bg-primary-foreground/90 shadow-lg text-white">
-          Start Creating
+          Commencer à créer
         </Button>
       </div>
     </section>

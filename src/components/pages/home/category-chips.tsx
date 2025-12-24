@@ -9,11 +9,11 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { name: "All", icon: <Grid className="h-[18px] w-[18px]" />, active: true },
+  { name: "Tout", icon: <Grid className="h-[18px] w-[18px]" />, active: true },
   { name: "Sci-Fi", icon: <Rocket className="h-[18px] w-[18px]" /> },
   { name: "Romance", icon: <Heart className="h-[18px] w-[18px]" /> },
   { name: "Folklore", icon: <ScrollText className="h-[18px] w-[18px]" /> },
-  { name: "Urban Life", icon: <Building2 className="h-[18px] w-[18px]" /> },
+  { name: "Vie Urbaine", icon: <Building2 className="h-[18px] w-[18px]" /> },
   { name: "Thriller", icon: <Skull className="h-[18px] w-[18px]" /> },
 ];
 

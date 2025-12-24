@@ -14,10 +14,10 @@ export function Footer() {
             <span className="font-bold text-muted-foreground">AfriStory © 2024</span>
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <Link className="hover:text-primary transition-colors" href="#">About</Link>
-            <Link className="hover:text-primary transition-colors" href="#">Careers</Link>
-            <Link className="hover:text-primary transition-colors" href="#">Privacy</Link>
-            <Link className="hover:text-primary transition-colors" href="#">Terms</Link>
+            <Link className="hover:text-primary transition-colors" href="#">À Propos</Link>
+            <Link className="hover:text-primary transition-colors" href="#">Carrières</Link>
+            <Link className="hover:text-primary transition-colors" href="#">Confidentialité</Link>
+            <Link className="hover:text-primary transition-colors" href="#">Conditions</Link>
           </div>
           <div className="flex gap-4">
             <Link className="text-muted-foreground hover:text-foreground transition-colors" href="#">

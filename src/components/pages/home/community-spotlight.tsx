@@ -17,13 +17,13 @@ export function CommunitySpotlight({ stories }: CommunitySpotlightProps) {
             <Paintbrush className="h-4 w-4 text-muted-foreground" />
             <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">AfriStory Draft</h2>
           </div>
-          <h3 className="text-2xl font-bold text-foreground">Community Spotlight</h3>
+          <h3 className="text-2xl font-bold text-foreground">Pleins feux sur la communauté</h3>
           <p className="text-muted-foreground mt-1 max-w-md">
-            Discover raw talent from emerging artists across the continent. Free to read and support.
+            Découvrez les talents bruts d'artistes émergents de tout le continent. Lecture et soutien gratuits.
           </p>
         </div>
         <Button variant="secondary" asChild>
-          <Link href="#">Explore Drafts</Link>
+          <Link href="#">Explorer les brouillons</Link>
         </Button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -41,7 +41,7 @@ export function CommunitySpotlight({ stories }: CommunitySpotlightProps) {
             </div>
             <div className="flex flex-col justify-center">
               <h4 className="font-bold text-foreground group-hover:text-primary transition-colors">{story.title}</h4>
-              <p className="text-xs text-muted-foreground mt-1">Updated 2h ago</p>
+              <p className="text-xs text-muted-foreground mt-1">Mis à jour il y a 2h</p>
               <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-1"><Eye className="h-3.5 w-3.5" /> 1.2k</span>
                 <span className="flex items-center gap-1"><Heart className="h-3.5 w-3.5" /> 85</span>

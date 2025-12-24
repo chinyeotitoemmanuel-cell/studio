@@ -33,7 +33,7 @@ export default function ArtistOnboardingPage() {
             variant="secondary"
             className="h-10 px-4 text-sm font-bold"
           >
-            Save &amp; Exit
+            Sauvegarder &amp; Quitter
           </Button>
         </div>
       </header>
@@ -43,10 +43,10 @@ export default function ArtistOnboardingPage() {
             <div className="flex flex-col gap-3">
               <div className="flex items-end justify-between gap-6">
                 <p className="text-base font-medium leading-normal text-foreground">
-                  Step 1 of 4: Artist Profile
+                  Étape 1 sur 4 : Profil d'artiste
                 </p>
                 <span className="text-sm font-medium text-primary">
-                  25% Completed
+                  25% Complété
                 </span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-secondary">
@@ -60,11 +60,11 @@ export default function ArtistOnboardingPage() {
             <div className="rounded-xl border bg-card p-6 shadow-sm sm:p-10">
               <div className="mb-8 flex flex-col gap-2 border-b pb-6">
                 <h1 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-[32px]">
-                  Artist Information
+                  Informations sur l'artiste
                 </h1>
                 <p className="text-sm font-normal leading-normal text-muted-foreground sm:text-base">
-                  Complete your profile to start publishing on AfriStory Pro or
-                  Draft. Establish your presence.
+                  Complétez votre profil pour commencer à publier sur AfriStory Pro ou
+                  Draft. Établissez votre présence.
                 </p>
               </div>
               <form className="flex flex-col gap-8">
@@ -72,7 +72,7 @@ export default function ArtistOnboardingPage() {
                   <div className="group relative cursor-pointer">
                     <Image
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4iNlsb7T4-Gs0eP21CcpjRhpZzZt6ZiBhqt55uvT_Gsf_AKN1kjjFqMnp4aikIKxQ9c7VL3i-RBZRQVVmiTbccp7l6SApzInEgwkLFznO19CQAzzUSqNaNUtPwk2CczXgC8xTlSCl3c4crnTfxpkF2kWi9Kuyub-jsXYuRDEvH67FcP_KzYLc2zhkfMnu_RSZrrPGHPbJ7ZeUyxrMw6s7MTmdu0GUTmeWrngP77keb45dIBHVF2op-2UtBfh7WYZBbo8PXRNhKd_a"
-                      alt="Abstract colorful artistic avatar placeholder"
+                      alt="Placeholder d'avatar artistique abstrait et coloré"
                       width={128}
                       height={128}
                       className="h-32 w-32 rounded-full ring-4 ring-card shadow-lg"
@@ -84,16 +84,16 @@ export default function ArtistOnboardingPage() {
                   <div className="flex flex-1 flex-col items-center gap-3 text-center sm:items-start sm:text-left">
                     <div>
                       <p className="text-lg font-bold leading-tight text-foreground">
-                        Profile Picture
+                        Photo de profil
                       </p>
                       <p className="mt-1 text-sm text-muted-foreground">
-                        Accepts JPG, PNG or GIF. Max size of 5MB.
+                        Accepte JPG, PNG ou GIF. Taille maximale de 5 Mo.
                       </p>
                     </div>
                     <div className="flex gap-3">
-                      <Button type="button">Upload New</Button>
+                      <Button type="button">Télécharger</Button>
                       <Button variant="secondary" type="button">
-                        Remove
+                        Supprimer
                       </Button>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ArtistOnboardingPage() {
                       className="text-sm font-medium leading-normal text-foreground"
                       htmlFor="artist-name"
                     >
-                      Professional Name / Pseudonym{' '}
+                      Nom professionnel / Pseudonyme{' '}
                       <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
@@ -127,13 +127,13 @@ export default function ArtistOnboardingPage() {
 
                   <div className="flex flex-col gap-2 md:col-span-2">
                     <label className="text-sm font-medium leading-normal text-foreground">
-                      Primary Artistic Genre{' '}
+                      Genre artistique principal{' '}
                       <span className="text-red-500">*</span>
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { label: 'Comics', icon: <Book className="h-4 w-4" /> },
-                        { label: 'Novel', icon: <BookCopy className="h-4 w-4" /> },
+                        { label: 'BD', icon: <Book className="h-4 w-4" /> },
+                        { label: 'Roman', icon: <BookCopy className="h-4 w-4" /> },
                         { label: 'Manga', icon: <Mountain className="h-4 w-4" /> },
                         { label: 'Folklore', icon: <ScrollText className="h-4 w-4" /> },
                       ].map((genre, index) => (
@@ -159,20 +159,20 @@ export default function ArtistOnboardingPage() {
                         className="text-sm font-medium leading-normal text-foreground"
                         htmlFor="bio"
                       >
-                        Short Biography
+                        Biographie courte
                       </label>
                       <span className="text-xs text-muted-foreground">
-                        0/150 characters
+                        0/150 caractères
                       </span>
                     </div>
                     <Textarea
                       id="bio"
-                      placeholder="Tell your story briefly..."
+                      placeholder="Racontez brièvement votre histoire..."
                       rows={4}
                       className="resize-none"
                     />
                     <p className="text-xs text-muted-foreground/70">
-                      This will be displayed on your public artist card.
+                      Ceci sera affiché sur votre carte d'artiste publique.
                     </p>
                   </div>
                 </div>
@@ -183,14 +183,14 @@ export default function ArtistOnboardingPage() {
                     variant="ghost"
                     className="w-full sm:w-auto"
                   >
-                    Skip for now
+                    Passer pour l'instant
                   </Button>
                   <Button
                     type="submit"
                     className="w-full sm:w-auto sm:ml-auto"
                     size="lg"
                   >
-                    <span>Save Profile</span>
+                    <span>Sauvegarder le profil</span>
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>

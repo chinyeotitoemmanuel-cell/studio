@@ -36,7 +36,7 @@ export function StoryCarousel({
           )}
         </div>
         <Link href={`#${id}`} className="text-sm font-bold text-primary hover:text-primary/80 flex items-center transition-colors">
-          View All <ChevronRight className="h-4 w-4 ml-1" />
+          Voir Tout <ChevronRight className="h-4 w-4 ml-1" />
         </Link>
       </div>
       {cardType === 'portrait' ? (

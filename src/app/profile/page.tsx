@@ -22,44 +22,44 @@ import { Header } from "@/components/layout/header";
 export default function ProfilePage() {
   const works = [
     {
-      title: "The Sun Warriors",
-      subtitle: "Vol. 1 - Awakening",
+      title: "Les Guerriers du Soleil",
+      subtitle: "Vol. 1 - L'Éveil",
       category: "Sci-Fi",
       likes: "1.2k",
       views: "45k",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuBFAprw70_w0wkJ6yVN1mIdYhoUMZMUvoBgawSqqkQ2nnoawhuaxqyLhZziFx44KBCMwbEVAhM_BVriNADtFRt1wH7NJ0XZFajCuNkoUTNlAduM-Ak7IVlxXxiMZm46r9T4GVu-ILtubQB_ae8tOpBDsM58rinYSQ2q4WO-Wv6z2Cq0nzd_AlHJFJXTu6_EQ4wF-grzi-y7C_CXgE7DYqSkh-PehYZdf9xmiREByS8IBXXwRf4aCNbkvFgW-JJlEOou-n4EJHzLCoPX",
-      alt: "Cover art for The Sun Warriors showing a futuristic african warrior with glowing shield",
+      alt: "Couverture de The Sun Warriors montrant un guerrier africain futuriste avec un bouclier lumineux",
     },
     {
-      title: "Tales of the Baobab",
-      subtitle: "Anthology Series",
-      category: "Fantasy",
+      title: "Contes du Baobab",
+      subtitle: "Série d'anthologies",
+      category: "Fantaisie",
       likes: "856",
       views: "12k",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuD4FT7TjF_USf8VcBAszWHRXJhAmN1ZFnqZ4GTiu47kQXu38O8D-GzFBIjEWO2GZ5UMBNq2PWoDKmskwzOsUtCgnHoZ7GQPlHprA96xwr9ILq86jafJ1WzwchA7XaO-bn9xTLsshecUDTb9N32mjVqVWjpje81BxnpWp2cgzSVBhmoMqVkRFiTw2bRx1qjQXU_gKREUprxFhssS2giQCDW8hgjY-ahpEMJBfk-5GXqT4BVYOEV7C6e3QMNJW8OABsp2mZD7ZR5sLX_E",
-      alt: "Cover art for Tales of the Baobab featuring a magical glowing tree at night",
+      alt: "Couverture de Tales of the Baobab représentant un baobab magique et lumineux la nuit",
     },
     {
-      title: "Red Dust",
-      subtitle: "Chapter 1",
+      title: "Poussière Rouge",
+      subtitle: "Chapitre 1",
       category: "Action",
       likes: "342",
       views: "8k",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuA9i2h-oEj3AZ9UcxZyoM2yMuEuBObWI5FivXXvcsN5SdnW4QWoWrkLVWmBfHxw-xQIunrKv-IRh_S9W87ozBPaJolOhVCYpYmYTRIlBN1dkP6rRUhpmS87XmvbKVVZ9Bzy5snh15y8zpfS66fOl9dNwIaaQ5o2wZ9OUrt4mVfD3LljgWt413T5kvNkAN2pJfy_8kOlEQpSfoUkpcU7yAcyJmtWEijyc5mbJOrQxIphNhMKHSr22JDP7FzFQ-8Ic8Z2uXIzPt6qt1nJ",
-      alt: "Abstract red and black digital art representing intense action",
+      alt: "Art numérique abstrait rouge et noir représentant une action intense",
     },
     {
-      title: "Kingdom of Gold",
-      subtitle: "Historical Fiction",
-      category: "History",
+      title: "Royaume d'Or",
+      subtitle: "Fiction historique",
+      category: "Histoire",
       likes: "2.1k",
       views: "89k",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuCoOwDDstMo1mk2raXoGStgfXsFaI6Vh4_m_6a3HO6VB02s7sM4rWmtHMqhhLw3w-Li_DnhxO_jokjYmvLbVCS3FBmng0YViT247fdpSiy_GMC2x-iFfljQ1MDihfdsplsx5fmE-i6MCtxQsa6k-K8tL0lJbAntO4WBTPGN02haXf4hf8IP0m6Ga75pWCpLo8X9KLC7uDR8OCnH7nQYugyn7znxiByJStES8tNZ20UKt6bh-X89VJh-Xt3ikF0MDHO9FhAPe20m-JQ_",
-      alt: "Golden patterns on dark background representing historical artifacts",
+      alt: "Motifs dorés sur fond sombre représentant des artefacts historiques",
     },
   ];
 
@@ -71,7 +71,7 @@ export default function ProfilePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-10"></div>
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaoApOEvOIR6xBzvn4BykblzhyHqZpHsM4m4Xw91mAY4Fq1WY_27b5zvQ8wQ3Vv3u0o4XyAJy7o-5244AaP_W6pLpThHpfnSIyRb-CQE__9h5LK2yphlKYJi-iRSyFM9z3AfVCQToPH1VFywxG8hJ1_IKr4IB0A4dBYzKHI1p1iMphe0MCVjRwtChgN03sT2__xXyOAWJh8jy6b5EUUgQ6lK8SinKY8DQgCqRHUrO64oUUw5JecU2gDZYqbqDvPuLBf53K6VsKj5RT"
-            alt="Abstract vibrant African geometric pattern banner in orange and dark browns"
+            alt="Bannière de motif géométrique africain abstrait et vibrant en orange et marron foncé"
             layout="fill"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             objectFit="cover"
@@ -84,7 +84,7 @@ export default function ProfilePage() {
               <div className="relative shrink-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-background-dark bg-gray-200 overflow-hidden shadow-lg">
                   <Image
-                    alt="Kwame Osei Profile"
+                    alt="Profil de Kwame Osei"
                     className="w-full h-full object-cover"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqqIscv-TrWcBfIjhrzTQbklonGt_4mOFH46eQUJp_4MRFViPwnH22Acr6DVMDBPhb2dSqNoS7YG3cnzJcuweEp4ClgTV9fuJJR-06O1ewelkmeNcpExxcJOob6opG42Hjmxp2q0zLHDNe-5zEhoA6aXF-GwuoWSh5KdLcjjczLb_lrmU8oVpQ9al2huuH3SiNw-EmkpxojvC1n4dpHpp15R28zkU01wDHoOc8gRnvqRNkHlvqN6YK23AvlG9zhNuVVxTpDbFvYIM"
                     width={160}
@@ -102,7 +102,7 @@ export default function ProfilePage() {
                       </h1>
                       <div
                         className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary"
-                        title="Pro Account"
+                        title="Compte Pro"
                       >
                         <Verified className="h-[18px] w-[18px] fill-current" />
                         <span className="text-xs font-bold uppercase tracking-wide">
@@ -111,7 +111,7 @@ export default function ProfilePage() {
                       </div>
                     </div>
                     <p className="text-gray-500 dark:text-gray-400 text-lg">
-                      Illustrator &amp; Storyteller from{" "}
+                      Illustrateur &amp; Conteur de{" "}
                       <span className="text-gray-700 dark:text-gray-200 font-medium">
                         Accra, Ghana
                       </span>
@@ -135,11 +135,7 @@ export default function ProfilePage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
                   <div className="lg:col-span-2 space-y-4">
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Creating afro-futurist narratives that inspire and
-                      challenge the status quo. Specializing in digital comics
-                      and graphic novels that blend traditional folklore with
-                      sci-fi elements. Currently working on "The Sun Warriors"
-                      saga.
+                      Créer des récits afro-futuristes qui inspirent et défient le statu quo. Spécialisé dans les bandes dessinées numériques et les romans graphiques qui mêlent folklore traditionnel et éléments de science-fiction. Travaille actuellement sur la saga "Les Guerriers du Soleil".
                     </p>
                     <div className="flex flex-wrap gap-4 pt-2">
                       <a
@@ -154,7 +150,7 @@ export default function ProfilePage() {
                         href="#"
                       >
                         <ShoppingBag className="h-5 w-5" />
-                        Amazon Store
+                        Boutique Amazon
                       </a>
                       <div className="w-px h-4 bg-gray-300 dark:bg-white/20 hidden sm:block"></div>
                       <div className="flex gap-3">
@@ -179,7 +175,7 @@ export default function ProfilePage() {
                         12.5k
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Followers
+                        Abonnés
                       </p>
                     </div>
                     <div className="w-px h-auto lg:h-px lg:w-full bg-gray-200 dark:bg-white/10"></div>
@@ -188,7 +184,7 @@ export default function ProfilePage() {
                         850k
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Views
+                        Vues
                       </p>
                     </div>
                     <div className="w-px h-auto lg:h-px lg:w-full bg-gray-200 dark:bg-white/10"></div>
@@ -197,7 +193,7 @@ export default function ProfilePage() {
                         24
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        Works
+                        Oeuvres
                       </p>
                     </div>
                   </div>
@@ -216,7 +212,7 @@ export default function ProfilePage() {
                 href="#"
               >
                 <Book className="h-[18px] w-[18px]" />
-                Published Works
+                Oeuvres Publiées
                 <span className="bg-primary/10 text-primary text-xs py-0.5 px-2 rounded-full ml-1">
                   Pro
                 </span>
@@ -226,14 +222,14 @@ export default function ProfilePage() {
                 href="#"
               >
                 <Edit className="h-[18px] w-[18px]" />
-                Drafts
+                Brouillons
               </a>
               <a
                 className="border-transparent text-gray-500 dark:text-gray-400 hover:border-gray-300 hover:text-gray-700 dark:hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2"
                 href="#"
               >
                 <Info className="h-[18px] w-[18px]" />
-                About
+                À Propos
               </a>
             </nav>
           </div>
@@ -259,7 +255,7 @@ export default function ProfilePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                     <Button>
                       <Eye className="h-[18px] w-[18px]" />
-                      Read Now
+                      Lire maintenant
                     </Button>
                   </div>
                 </div>
@@ -287,7 +283,7 @@ export default function ProfilePage() {
               variant="outline"
               className="border-gray-300 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5"
             >
-              Load More Works
+              Charger plus d'oeuvres
               <ChevronDown className="h-[18px] w-[18px]" />
             </Button>
           </div>
