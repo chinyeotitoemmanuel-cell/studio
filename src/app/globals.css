@@ -32,7 +32,7 @@
   }
 
   .dark {
-    --background: 40 36% 6%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 37 29% 11%;
     --card-foreground: 0 0% 98%;
@@ -67,19 +67,23 @@
     @apply bg-background text-foreground;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .dark ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
   .dark ::-webkit-scrollbar-track {
-      background: #221c10;
+    background: #18181b;
   }
   .dark ::-webkit-scrollbar-thumb {
-      background: #493c22;
-      border-radius: 4px;
+    background: #3f3f46;
+    border-radius: 4px;
   }
   .dark ::-webkit-scrollbar-thumb:hover {
-      background: #f2a60d;
+    background: #52525b;
   }
 }
 
