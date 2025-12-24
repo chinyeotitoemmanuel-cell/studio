@@ -59,6 +59,7 @@ export default {
         'shop-surface-dark': '#493c22',
         'text-secondary': '#cbb790',
         'border-color': '#493c22',
+        'surface-border': '#493c22',
       },
       borderRadius: {
         xl: '0.75rem',
