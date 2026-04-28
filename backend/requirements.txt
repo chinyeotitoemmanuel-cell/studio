@@ -1,0 +1,25 @@
+# ==============================================================================
+# DÉPENDANCES PYTHON - STICKER REMOVER
+# ==============================================================================
+
+# Serveur web
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+
+# Traitement d'image
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# IA (optionnel - Pour LaMa complet)
+# torch>=2.0.0
+# torchvision>=0.15.0
+# lapy>=1.0.0
+
+# ==============================================================================
+# INSTALLATION
+# ==============================================================================
+# pip install -r requirements.txt
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu  # Pour CPU
+# pip install --upgrade --force-reinstall torch torchvision  # Mise à jour
+# ==============================================================================
