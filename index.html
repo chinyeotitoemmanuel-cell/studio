@@ -198,6 +198,17 @@
         // Configuration des projets — Ajoute/modifie tes projets ici
         const PROJETS = [
             {
+                id: "remover-sticker",
+                nom: "Remover Sticker",
+                description: "Application mobile qui enleve les stickers utilises pour cacher une personne ou un objet. Fonctionne comme un scanner.",
+                icone: "📱",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    android: { url: "#", disponible: true },
+                    ios:     { url: "#", disponible: true }
+                }
+            },
+            {
                 id: "road-racer",
                 nom: "Road Racer",
                 description: "Jeu de course en vue de cote style arcade 80/90. Evite les obstacles et les adversaires, saute par-dessus les tonneaux et collectionne les points !",
@@ -275,7 +286,9 @@
         const BADGES = {
             windows: { icone: "🪟", nom: "Windows", classe: "badge-win" },
             linux:   { icone: "🐧", nom: "Linux",   classe: "badge-linux" },
-            macos:   { icone: "🍎", nom: "macOS",   classe: "badge-mac" }
+            macos:   { icone: "🍎", nom: "macOS",   classe: "badge-mac" },
+            android: { icone: "🤖", nom: "Android", classe: "badge-linux" },
+            ios:     { icone: "🍏", nom: "iOS",     classe: "badge-mac" }
         };
     </script>
 </head>
@@ -345,7 +358,7 @@
             <!-- Stats -->
             <div class="animate-fadeInUp delay-300 mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-center">
                 <div>
-                    <div class="text-2xl sm:text-3xl font-bold text-white">6</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-white">7</div>
                     <div class="text-xs sm:text-sm text-gray-500 mt-1">Projets</div>
                 </div>
                 <div class="w-px h-10 bg-white/10"></div>
