@@ -227,10 +227,11 @@
                 nom: "Remover Sticker",
                 description: "Application mobile qui enleve les stickers utilises pour cacher une personne ou un objet. Fonctionne comme un scanner.",
                 icone: "📱",
-                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio/tree/master/remover-sticker",
+                pdf: "https://github.com/chinyeotitoemmanuel-cell/studio/raw/master/remover-sticker/guide_utilisation.pdf",
                 plateformes: {
-                    android: { url: "#", disponible: true },
-                    ios:     { url: "#", disponible: true }
+                    android: { url: "https://github.com/chinyeotitoemmanuel-cell/studio/archive/refs/heads/master.zip", disponible: true },
+                    ios:     { url: "#", disponible: false }
                 }
             },
             {
@@ -544,7 +545,7 @@
         // --- Génération des cartes projets ---
         (function afficherProjets() {
             const grille = document.getElementById('grille-projets');
-            const nomsPlateformes = { windows: 'Windows', linux: 'Linux', macos: 'macOS' };
+            const nomsPlateformes = { windows: 'Windows', linux: 'Linux', macos: 'macOS', android: 'Android', ios: 'iOS' };
 
             PROJETS.forEach((projet, index) => {
                 const carte = document.createElement('div');
@@ -575,9 +576,10 @@
                     const nomPf = nomsPlateformes[cle];
                     const icone = BADGES[cle].icone;
                     if (pf.disponible) {
+                        const urlReelle = pf.url && pf.url !== "#";
                         html += `
-                            <a href="javascript:void(0)"
-                               onclick="showToast('📥 Téléchargement de ${projet.nom} pour ${nomPf} — bientôt disponible')"
+                            <a href="${urlReelle ? pf.url : 'javascript:void(0)'}"
+                               ${urlReelle ? 'target="_blank" rel="noopener"' : `onclick="showToast('📥 ${projet.nom} pour ${nomPf} — bientôt disponible')"`}
                                class="btn-download w-full text-gray-300 px-4 py-2.5 rounded-lg text-sm
                                       inline-flex items-center gap-2 font-medium download-link">
                                 <span>${icone}</span>
@@ -600,9 +602,10 @@
                 });
                 html += `</div>`;
 
-                // Lien GitHub
+                // Liens (GitHub + PDF)
+                let liensHtml = '';
                 if (projet.github) {
-                    html += `
+                    liensHtml += `
                         <a href="${projet.github}" target="_blank" rel="noopener noreferrer"
                            class="text-gray-500 hover:text-[#00ff88] text-xs transition-colors
                                   inline-flex items-center gap-1.5">
@@ -610,6 +613,15 @@
                             Voir sur GitHub
                         </a>`;
                 }
+                if (projet.pdf) {
+                    liensHtml += `
+                        <a href="${projet.pdf}" target="_blank" rel="noopener noreferrer"
+                           class="text-gray-500 hover:text-[#00ff88] text-xs transition-colors
+                                  inline-flex items-center gap-1.5 ml-3">
+                            📄 Guide PDF
+                        </a>`;
+                }
+                html += liensHtml;
 
                 carte.innerHTML = html;
                 grille.appendChild(carte);

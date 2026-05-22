@@ -1,0 +1,213 @@
+<!--
+  ============================================================
+  remover.kv — Interface KivyMD pour Remover Sticker
+  ============================================================
+-->
+
+ScreenManager:
+    id: screen_manager
+
+    HomeScreen:
+        name: "accueil"
+
+    EditScreen:
+        name: "edition"
+
+<HomeScreen>:
+    MDScreen:
+        md_bg_color: 0.04, 0.04, 0.06, 1
+
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: 20
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_x: 0.85
+            size_hint_y: None
+            height: 520
+
+            # Logo / icône
+            MDLabel:
+                text: "🧹"
+                font_size: 72
+                halign: "center"
+                size_hint_y: None
+                height: 80
+
+            # Titre
+            MDLabel:
+                text: "Remover Sticker"
+                font_name: "Roboto"
+                font_size: 30
+                bold: True
+                halign: "center"
+                theme_text_color: "Custom"
+                text_color: 0, 0.85, 0.5, 1
+                size_hint_y: None
+                height: 40
+
+            # Sous-titre
+            MDLabel:
+                text: "Supprimez les stickers, autocollants\net emojis de vos photos"
+                font_size: 15
+                halign: "center"
+                theme_text_color: "Hint"
+                size_hint_y: None
+                height: 50
+
+            # Espacement
+            Widget:
+                size_hint_y: None
+                height: 20
+
+            # Bouton Prendre une photo
+            MDRaisedButton:
+                id: btn_camera
+                text: "📷  Prendre une photo"
+                font_size: 17
+                md_bg_color: 0, 0.85, 0.5, 1
+                text_color: 0, 0, 0, 1
+                size_hint_y: None
+                height: 56
+                pos_hint: {"center_x": 0.5}
+                on_release: app.prendre_photo()
+
+            # Bouton Choisir dans la galerie
+            MDRaisedButton:
+                id: btn_gallery
+                text: "🖼️  Choisir dans la galerie"
+                font_size: 17
+                md_bg_color: 0.12, 0.12, 0.15, 1
+                text_color: 1, 1, 1, 1
+                size_hint_y: None
+                height: 56
+                pos_hint: {"center_x": 0.5}
+                on_release: app.choisir_photo()
+
+            # Espacement
+            Widget:
+                size_hint_y: None
+                height: 10
+
+            # Message d'info
+            MDLabel:
+                text: "Aucune photo n'est stockée ou partagée.\nTraitement 100% local."
+                font_size: 12
+                halign: "center"
+                theme_text_color: "Disabled"
+                size_hint_y: None
+                height: 40
+
+
+<EditScreen>:
+    MDScreen:
+        md_bg_color: 0.04, 0.04, 0.06, 1
+
+        # Barre du haut
+        MDTopAppBar:
+            id: toolbar
+            title: "Édition"
+            md_bg_color: 0.04, 0.04, 0.06, 1
+            left_action_items: [["arrow-left", lambda x: app.retour_accueil()]]
+            right_action_items: [["content-save", lambda x: app.sauvegarder()]]
+            elevation: 0
+
+        # Zone image + dessin
+        RelativeLayout:
+            id: zone_image
+            pos_hint: {"top": 0.92}
+            size_hint_y: 0.68
+
+            Image:
+                id: img_affichage
+                source: ""
+                allow_stretch: True
+                keep_ratio: True
+                size_hint: 1, 1
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            # Canvas de dessin (transparent, capture les touches)
+            Widget:
+                id: canvas_dessin
+                size_hint: 1, 1
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        # Barre d'outils en bas
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: 0.24
+            pos_hint: {"bottom": 0}
+
+            #Slider taille du pinceau
+            MDBoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: 40
+                padding: [20, 0, 20, 0]
+
+                MDLabel:
+                    text: "Pinceau:"
+                    font_size: 13
+                    size_hint_x: 0.25
+                    theme_text_color: "Hint"
+
+                MDSlider:
+                    id: slider_taille
+                    min: 5
+                    max: 50
+                    value: 20
+                    color: 0, 0.85, 0.5, 1
+                    size_hint_x: 0.6
+
+                MDLabel:
+                    id: lbl_taille
+                    text: "20"
+                    font_size: 13
+                    size_hint_x: 0.15
+                    halign: "center"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.85, 0.5, 1
+
+            # Boutons d'action
+            MDBoxLayout:
+                orientation: "horizontal"
+                spacing: 10
+                size_hint_y: None
+                height: 56
+                padding: [15, 0, 15, 10]
+
+                MDRaisedButton:
+                    id: btn_supprimer
+                    text: "🧹  Supprimer"
+                    font_size: 15
+                    md_bg_color: 0, 0.85, 0.5, 1
+                    text_color: 0, 0, 0, 1
+                    on_release: app.supprimer_zones()
+                    size_hint_x: 0.5
+
+                MDRaisedButton:
+                    id: btn_comparer
+                    text: "👁️  Avant"
+                    font_size: 14
+                    md_bg_color: 0.12, 0.12, 0.15, 1
+                    text_color: 1, 1, 1, 1
+                    on_release: app.basculer_comparaison()
+                    size_hint_x: 0.3
+
+                MDRaisedButton:
+                    id: btn_annuler
+                    text: "↩️"
+                    font_size: 18
+                    md_bg_color: 0.15, 0.05, 0.05, 1
+                    text_color: 1, 0.4, 0.4, 1
+                    on_release: app.annuler_dessin()
+                    size_hint_x: 0.2
+
+        MDLabel:
+            id: lbl_statut
+            text: "Dessinez sur les zones à supprimer, puis appuyez sur Supprimer"
+            font_size: 12
+            halign: "center"
+            theme_text_color: "Hint"
+            size_hint_y: None
+            height: 24
+            pos_hint: {"bottom": 0.24}
