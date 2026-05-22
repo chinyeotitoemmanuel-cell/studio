@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Jeux & Applications</title>
+    <meta name="description" content="Téléchargements gratuits de jeux et applications C++ avec Raylib">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ===== Variables et reset ===== */
+        * { scrollbar-width: thin; scrollbar-color: #00ff88 #0a0a0f; }
+        *::-webkit-scrollbar { width: 6px; }
+        *::-webkit-scrollbar-track { background: #0a0a0f; }
+        *::-webkit-scrollbar-thumb { background: #00ff88; border-radius: 3px; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0,255,136,0.3); }
+            50% { box-shadow: 0 0 40px rgba(0,255,136,0.6); }
+        }
+        @keyframes pulseNeon {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        @keyframes gridScroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+        .animate-slideDown {
+            animation: slideDown 0.6s ease-out;
+        }
+        .animate-pulse-neon {
+            animation: pulseNeon 2s ease-in-out infinite;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* ===== Hero background effect ===== */
+        .hero-bg {
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,255,136,0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(0,204,255,0.06), transparent),
+                radial-gradient(ellipse 50% 30% at 20% 80%, rgba(0,255,136,0.04), transparent),
+                #0a0a0f;
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* ===== Glow text ===== */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0,255,136,0.5), 0 0 30px rgba(0,255,136,0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00ff88, #00ccff, #00ff88);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+
+        /* ===== Cards ===== */
+        .project-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,255,136,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(0,255,136,0.3);
+            box-shadow: 0 20px 60px rgba(0,255,136,0.1), 0 0 30px rgba(0,255,136,0.05);
+        }
+        .project-card:hover .card-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .card-icon {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* ===== Buttons ===== */
+        .btn-primary {
+            background: linear-gradient(135deg, #00cc6a, #00ff88);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,255,136,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,255,136,0.4);
+        }
+
+        .btn-download {
+            background: rgba(0,255,136,0.08);
+            border: 1px solid rgba(0,255,136,0.2);
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            background: rgba(0,255,136,0.15);
+            border-color: rgba(0,255,136,0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            border: 1px solid rgba(0,255,136,0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-ghost:hover {
+            background: rgba(0,255,136,0.1);
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0,255,136,0.2);
+        }
+
+        /* ===== Platform badges ===== */
+        .badge-win { background: rgba(0,168,243,0.15); color: #00a8f3; border: 1px solid rgba(0,168,243,0.3); }
+        .badge-linux { background: rgba(255,165,0,0.15); color: #ffa500; border: 1px solid rgba(255,165,0,0.3); }
+        .badge-mac { background: rgba(130,130,140,0.15); color: #c0c0c0; border: 1px solid rgba(130,130,130,0.3); }
+
+        /* ===== Section dividers ===== */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,255,136,0.2), transparent);
+        }
+
+        /* ===== Stars background ===== */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .star {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+            opacity: 0.3;
+        }
+
+        /* ===== About avatar ===== */
+        .avatar-glow {
+            box-shadow: 0 0 30px rgba(0,255,136,0.3), 0 0 60px rgba(0,255,136,0.1);
+        }
+
+        /* ===== Loading states ===== */
+        .download-link { display: inline-block; }
+    </style>
+
+    <script>
+        // Configuration des projets — Ajoute/modifie tes projets ici
+        const PROJETS = [
+            {
+                id: "road-racer",
+                nom: "Road Racer",
+                description: "Jeu de course en vue de cote style arcade 80/90. Evite les obstacles et les adversaires, saute par-dessus les tonneaux et collectionne les points !",
+                icone: "🏎️",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: true },
+                    macos:   { url: "#", disponible: true }
+                }
+            },
+            {
+                id: "space-shooter",
+                nom: "Space Shooter",
+                description: "Jeu de tir spatial en 2D avec vagues d'ennemis et boss de fin. Developpe avec Raylib en C++.",
+                icone: "🚀",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: true },
+                    macos:   { url: "#", disponible: false }
+                }
+            },
+            {
+                id: "snake-arcade",
+                nom: "Snake Arcade",
+                description: "Le classique Snake revisite avec des graphismes modernes et des power-ups. Mode solo et multijoueur.",
+                icone: "🐍",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: false },
+                    macos:   { url: "#", disponible: false }
+                }
+            },
+            {
+                id: "platform-adventure",
+                nom: "Platform Adventure",
+                description: "Jeu de plateforme 2D avec 10 niveaux, des pieges, des ennemis et un boss final. Moteur physique custom.",
+                icone: "👾",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: true },
+                    macos:   { url: "#", disponible: true }
+                }
+            },
+            {
+                id: "tetris-clone",
+                nom: "Tetris Classic",
+                description: "Clone du celebre Tetris avec plusieurs modes de jeu, classement et effets visuels retro.",
+                icone: "🧩",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: true },
+                    macos:   { url: "#", disponible: false }
+                }
+            },
+            {
+                id: "pong-remake",
+                nom: "Pong Remake",
+                description: "Le premier jeu video d'arcade revisite en 4K avec effets lumineux et mode 4 joueurs.",
+                icone: "🏓",
+                github: "https://github.com/chinyeotitoemmanuel-cell/studio",
+                plateformes: {
+                    windows: { url: "#", disponible: true },
+                    linux:   { url: "#", disponible: false },
+                    macos:   { url: "#", disponible: false }
+                }
+            }
+        ];
+
+        // Badges plateforme
+        const BADGES = {
+            windows: { icone: "🪟", nom: "Windows", classe: "badge-win" },
+            linux:   { icone: "🐧", nom: "Linux",   classe: "badge-linux" },
+            macos:   { icone: "🍎", nom: "macOS",   classe: "badge-mac" }
+        };
+    </script>
+</head>
+<body class="bg-[#0a0a0f] text-gray-200 min-h-screen">
+
+    <!-- ===== Particules (étoiles) ===== -->
+    <div class="stars" id="stars"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="relative z-50 border-b border-white/5 bg-[#0a0a0f]/80 backdrop-blur-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center gap-2 text-lg font-bold">
+                    <span class="text-2xl">🎮</span>
+                    <span class="text-gradient">DevGames</span>
+                </a>
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#projets" class="text-gray-400 hover:text-[#00ff88] transition-colors">Projets</a>
+                    <a href="#a-propos" class="text-gray-400 hover:text-[#00ff88] transition-colors">À propos</a>
+                    <a href="#projets"
+                       class="btn-primary text-black font-semibold px-5 py-2 rounded-lg text-sm">
+                        Télécharger
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="relative hero-bg hero-grid overflow-hidden">
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 text-center">
+
+            <!-- Badge -->
+            <div class="animate-slideDown inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+                        bg-[#00ff88]/10 border border-[#00ff88]/20 text-[#00ff88] text-xs font-medium mb-8">
+                <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse-neon"></span>
+                Open source & gratuit
+            </div>
+
+            <!-- Titre -->
+            <h1 class="animate-fadeInUp text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                <span class="text-white">Mes</span>
+                <span class="text-gradient"> Jeux & Apps</span>
+            </h1>
+
+            <!-- Sous-titre -->
+            <p class="animate-fadeInUp delay-100 text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Téléchargements gratuits et open-source.
+                Des jeux développés avec passion en <span class="text-[#00ff88] font-semibold">C++</span>
+                et <span class="text-[#00ccff] font-semibold">Raylib</span>.
+            </p>
+
+            <!-- CTA -->
+            <div class="animate-fadeInUp delay-200 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projets"
+                   class="btn-primary text-black font-bold px-8 py-3.5 rounded-xl text-lg
+                          inline-flex items-center gap-2">
+                    🔽 Voir mes projets
+                </a>
+                <a href="#a-propos"
+                   class="btn-ghost text-gray-300 font-medium px-8 py-3.5 rounded-xl text-lg
+                          inline-flex items-center gap-2">
+                    👤 À propos
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="animate-fadeInUp delay-300 mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-center">
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold text-white">6</div>
+                    <div class="text-xs sm:text-sm text-gray-500 mt-1">Projets</div>
+                </div>
+                <div class="w-px h-10 bg-white/10"></div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold text-[#00ff88]">100%</div>
+                    <div class="text-xs sm:text-sm text-gray-500 mt-1">Gratuit</div>
+                </div>
+                <div class="w-px h-10 bg-white/10"></div>
+                <div>
+                    <div class="text-2xl sm:text-3xl font-bold text-white">C++</div>
+                    <div class="text-xs sm:text-sm text-gray-500 mt-1">Raylib</div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="animate-fadeInUp delay-500 mt-16 animate-float">
+                <svg class="w-6 h-6 mx-auto text-[#00ff88]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SECTION PROJETS ===== -->
+    <section id="projets" class="relative z-10 py-20 sm:py-28">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- En-tête section -->
+            <div class="text-center mb-16">
+                <span class="text-[#00ff88] text-sm font-semibold tracking-widest uppercase mb-4 block">
+                    📦 Téléchargements
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                    Mes <span class="text-gradient">projets</span>
+                </h2>
+                <p class="text-gray-500 max-w-lg mx-auto">
+                    Clique sur "Télécharger" pour chaque plateforme disponible.
+                </p>
+            </div>
+
+            <!-- Grille de cartes -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="grille-projets">
+                <!-- Les cartes sont injectées ici par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ===== SECTION À PROPOS ===== -->
+    <section id="a-propos" class="relative z-10 py-20 sm:py-28">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-12">
+                <span class="text-[#00ff88] text-sm font-semibold tracking-widest uppercase mb-4 block">
+                    👤 Qui suis-je ?
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                    À <span class="text-gradient">propos</span>
+                </h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+                <!-- Avatar -->
+                <div class="flex-shrink-0">
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-[#00ff88] to-[#00ccff]
+                                p-[3px] avatar-glow">
+                        <div class="w-full h-full rounded-full bg-[#0a0a0f] flex items-center justify-center text-5xl sm:text-6xl">
+                            👨‍💻
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Emmanuel</h3>
+                    <p class="text-[#00ff88] text-sm mb-4">Développeur C++ & passionné de jeux vidéo</p>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Je crée des jeux et des applications en C++ avec la librairie Raylib.
+                        Tous mes projets sont <span class="text-[#00ff88] font-medium">open-source</span>
+                        et <span class="text-[#00ff88] font-medium">gratuits</span>.
+                        N'hésite pas à me suivre sur GitHub pour voir l'évolution de mes travaux !
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                        <a href="https://github.com/chinyeotitoemmanuel-cell"
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn-ghost text-gray-300 px-5 py-2.5 rounded-lg text-sm
+                                  inline-flex items-center gap-2 font-medium">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="#projets"
+                           class="btn-primary text-black font-semibold px-5 py-2.5 rounded-lg text-sm
+                                  inline-flex items-center gap-2">
+                            📥 Voir les téléchargements
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="relative z-10 border-t border-white/5 bg-[#0a0a0f]/50 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🎮</span>
+                    <span class="font-bold text-gradient">DevGames</span>
+                </div>
+                <p class="text-gray-600 text-sm text-center">
+                    &copy; 2026 — Tous droits réservés. Open source sous licence MIT.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/chinyeotitoemmanuel-cell"
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-gray-500 hover:text-[#00ff88] transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // --- Génération des étoiles ---
+        (function creerEtoiles() {
+            const container = document.getElementById('stars');
+            for (let i = 0; i < 120; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.width = star.style.height = (1 + Math.random() * 2) + 'px';
+                container.appendChild(star);
+            }
+        })();
+
+        // --- Génération des cartes projets ---
+        (function afficherProjets() {
+            const grille = document.getElementById('grille-projets');
+            const nomsPlateformes = { windows: 'Windows', linux: 'Linux', macos: 'macOS' };
+
+            PROJETS.forEach((projet, index) => {
+                const carte = document.createElement('div');
+                carte.className = 'project-card rounded-2xl p-5 sm:p-6 animate-fadeInUp';
+                carte.style.animationDelay = (0.1 + index * 0.1) + 's';
+
+                // Icône
+                let html = `
+                    <div class="card-icon text-4xl sm:text-5xl mb-4">${projet.icone}</div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2">${projet.nom}</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">${projet.description}</p>
+                `;
+
+                // Badges plateformes disponibles
+                html += `<div class="flex flex-wrap gap-1.5 mb-5">`;
+                Object.entries(projet.plateformes).forEach(([cle, pf]) => {
+                    if (pf.disponible) {
+                        const badge = BADGES[cle];
+                        html += `<span class="${badge.classe} text-xs px-2.5 py-1 rounded-md font-medium
+                                       inline-flex items-center gap-1">${badge.icone} ${badge.nom}</span>`;
+                    }
+                });
+                html += `</div>`;
+
+                // Boutons de téléchargement par plateforme
+                html += `<div class="space-y-2 mb-4">`;
+                Object.entries(projet.plateformes).forEach(([cle, pf]) => {
+                    const nomPf = nomsPlateformes[cle];
+                    const icone = BADGES[cle].icone;
+                    if (pf.disponible) {
+                        html += `
+                            <a href="${pf.url}"
+                               class="btn-download w-full text-gray-300 px-4 py-2.5 rounded-lg text-sm
+                                      inline-flex items-center gap-2 font-medium download-link">
+                                <span>${icone}</span>
+                                Télécharger pour ${nomPf}
+                                <svg class="w-4 h-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                            </a>`;
+                    } else {
+                        html += `
+                            <div class="w-full text-gray-600 px-4 py-2.5 rounded-lg text-sm
+                                       inline-flex items-center gap-2 font-medium cursor-not-allowed
+                                       bg-white/[0.02] border border-white/5">
+                                <span>${icone}</span>
+                                ${nomPf} — bientôt
+                                <span class="ml-auto text-xs">🚧</span>
+                            </div>`;
+                    }
+                });
+                html += `</div>`;
+
+                // Lien GitHub
+                if (projet.github) {
+                    html += `
+                        <a href="${projet.github}" target="_blank" rel="noopener noreferrer"
+                           class="text-gray-500 hover:text-[#00ff88] text-xs transition-colors
+                                  inline-flex items-center gap-1.5">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            Voir sur GitHub
+                        </a>`;
+                }
+
+                carte.innerHTML = html;
+                grille.appendChild(carte);
+            });
+        })();
+    </script>
+</body>
+</html>
