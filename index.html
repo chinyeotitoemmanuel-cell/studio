@@ -192,6 +192,31 @@
 
         /* ===== Loading states ===== */
         .download-link { display: inline-block; }
+
+        /* ===== Toast notification ===== */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(0,255,136,0.12);
+            border: 1px solid rgba(0,255,136,0.25);
+            color: #00ff88;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            backdrop-filter: blur(16px);
+            z-index: 9999;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        #toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     </style>
 
     <script>
@@ -486,8 +511,21 @@
         </div>
     </footer>
 
+    <!-- ===== Toast notification ===== -->
+    <div id="toast">🔽 Le téléchargement sera bientôt disponible</div>
+
     <!-- ===== JAVASCRIPT ===== -->
     <script>
+        // --- Toast notification ---
+        let toastTimer = null;
+        function showToast(msg) {
+            const el = document.getElementById('toast');
+            el.textContent = msg || '🔽 Le téléchargement sera bientôt disponible';
+            el.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+        }
+
         // --- Génération des étoiles ---
         (function creerEtoiles() {
             const container = document.getElementById('stars');
@@ -538,7 +576,8 @@
                     const icone = BADGES[cle].icone;
                     if (pf.disponible) {
                         html += `
-                            <a href="${pf.url}"
+                            <a href="javascript:void(0)"
+                               onclick="showToast('📥 Téléchargement de ${projet.nom} pour ${nomPf} — bientôt disponible')"
                                class="btn-download w-full text-gray-300 px-4 py-2.5 rounded-lg text-sm
                                       inline-flex items-center gap-2 font-medium download-link">
                                 <span>${icone}</span>
